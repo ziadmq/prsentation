@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Smartphone, Map, Users, Bell, Tag, BrainCircuit, Search, Code, Server, Database, Sparkles } from "lucide-react";
+import { Smartphone, Map, Users, Bell, Tag, BrainCircuit, Search, Code, Server, Database, Sparkles, Briefcase, Flame, Calendar, TrendingUp, Bot } from "lucide-react";
 
 function IntroPage({ pageAnimation }) {
   return (
@@ -97,6 +97,35 @@ function IntroPage({ pageAnimation }) {
               <h4>قواعد البيانات وتخزين الوسائط</h4>
               <p>استخدام Firebase Storage لرفع الصور بكفاءة عالية، مع قاعدة بيانات قوية.</p>
             </div>
+          </div>
+        </div>
+
+        <h2 className="section-title">كيف يدعم JoMap أصحاب الأعمال؟</h2>
+        <div className="feature-cards-grid business-cards-grid">
+          <div className="info-card business-card">
+            <Briefcase className="info-icon business-icon" />
+            <h3>بيئة مخصصة للأعمال</h3>
+            <p>شاشة إشعارات مستقلة تماماً لأصحاب الأعمال لعدم التشتيت، مع توثيق الحسابات لمنح المستخدمين ثقة بأن المكان موثوق.</p>
+          </div>
+          <div className="info-card business-card">
+            <Flame className="info-icon business-icon" />
+            <h3>عروض ديناميكية ولحظية</h3>
+            <p>إنشاء عروض باستهداف جغرافي دقيق تظهر فوراً للمستخدمين القريبين، مع تصميم جذاب لجذب العملاء بشكل مباشر.</p>
+          </div>
+          <div className="info-card business-card">
+            <Calendar className="info-icon business-icon" />
+            <h3>إدارة الأنشطة والفعاليات</h3>
+            <p>تنظيم وترويج الأنشطة وتثبيتها جغرافياً على الخريطة التفاعلية، مما يشجع التفاعل العضوي ومشاركة المستخدمين للفعاليات.</p>
+          </div>
+          <div className="info-card business-card">
+            <TrendingUp className="info-icon business-icon" />
+            <h3>النمو عبر المجتمع</h3>
+            <p>تحويل كل زائر إلى مؤثر عبر منشوراته الخاصة في موقع العمل، وقياس الشعبية عبر نظام "المفضلة" لتحليل تفضيلات السوق.</p>
+          </div>
+          <div className="info-card business-card">
+            <Bot className="info-icon business-icon" />
+            <h3>ذكاء اصطناعي لدعم الأعمال</h3>
+            <p>تقديم توصيات للمستخدمين لزيارة أعمالك بناءً على سلوكياتهم، وتوفير رؤى مستقبلية تعتمد على البيانات لقياس نجاح حملاتك.</p>
           </div>
         </div>
 

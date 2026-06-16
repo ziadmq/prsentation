@@ -7,6 +7,7 @@ import Sidebar from "./components/Sidbar";
 import TeamPage from "./pages/TeamPage";
 import QRPage from "./pages/QrPage";
 import IntroPage from "./pages/IntroPage";
+import BuildDetailsPage from "./pages/BuildDetailsPage";
 import RoadmapPage from "./pages/RoadmapPage";
 import FeaturesPage from "./pages/FeaturesPage";
 import ScreensPage from "./pages/ScreensPage";
@@ -34,6 +35,9 @@ function App() {
 
       case "intro":
         return <IntroPage pageAnimation={pageAnimation} />;
+
+      case "build":
+        return <BuildDetailsPage pageAnimation={pageAnimation} />;
 
       case "roadmap":
         return <RoadmapPage pageAnimation={pageAnimation} />;

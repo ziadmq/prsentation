@@ -25,6 +25,7 @@ import {
   Database,
   MonitorSmartphone,
   Handshake,
+  Hammer,
 } from "lucide-react";
 
 export const supervisor = {
@@ -88,6 +89,7 @@ export const teamMembers = [
 
 export const menuItems = [
   { id: "intro", label: "مقدمة المشروع", icon: Home },
+  { id: "build", label: "تفاصيل البناء والمراحل", icon: Hammer },
   { id: "team", label: "فريق العمل", icon: Users },
   { id: "qr", label: "مسح الحضور", icon: QrCode },
   { id: "roadmap", label: "مسار المستخدم", icon: Route },
