@@ -1,73 +1,102 @@
 import { motion } from "framer-motion";
-import { Smartphone, Map, Users, Bell, Tag, BrainCircuit, Search, Code, Server, Database, Sparkles, Briefcase, Flame, Calendar, TrendingUp, Bot, Monitor, Layout, PenTool, Code2, Kanban, AlertTriangle, Lightbulb } from "lucide-react";
+import { Smartphone, Map, Users, Bell, Tag, BrainCircuit, Search, Code, Server, Database, Sparkles, Briefcase, Flame, Calendar, TrendingUp, Bot, Monitor, Layout, PenTool, Code2, Kanban, AlertTriangle, Lightbulb, MapPin, Star, Camera } from "lucide-react";
 
 function IntroPage({ pageAnimation }) {
   return (
     <motion.section key="intro" className="page intro-page" {...pageAnimation}>
-      <div className="hero-layout">
-        <div>
-          <h1 className="project-title">JoMap</h1>
-          <h2 className="project-slogan">اكتشف الأردن بطريقة أذكى</h2>
-          <p className="project-description">
-            تطبيق <strong>JoMap</strong> هو منصة اجتماعية تفاعلية وتطبيق خرائط متكامل، يجمع بين استكشاف الأماكن والمواقع، وبين ميزات التواصل الاجتماعي الحديثة. يهدف التطبيق إلى ربط المستخدمين بالأماكن والأنشطة من حولهم (خاصة في المحافظات)، مع إتاحة الفرصة للتفاعل مع الأصدقاء ومشاركة التجارب.
+      <div className="full-width-hero">
+        <h1 className="project-title">JOMAP</h1>
+        <div className="project-description">
+          <p style={{ marginBottom: "15px" }}>
+            <strong>JOMAP</strong> هو تطبيق أردني ذكي يجمع بين الخرائط التفاعلية ومنصات التواصل الاجتماعي في مكان واحد، بحيث يتيح للمستخدمين استكشاف الأماكن والمواقع والأنشطة المحيطة بهم بطريقة سهلة وممتعة، مع إمكانية مشاركة تجاربهم والتفاعل مع الآخرين.
           </p>
-
-
+          <p style={{ marginBottom: "15px" }}>
+            يهدف التطبيق إلى تشجيع الأردنيين على اكتشاف مختلف مناطق المملكة وتوثيق الأماكن السياحية والترفيهية والخدمية، مما يساهم في إنشاء دليل رقمي شامل للأماكن داخل الأردن يعتمد على محتوى وتجارب المستخدمين.
+          </p>
+          <p>
+            كما يدعم التطبيق أصحاب الأعمال والمشاريع المحلية من خلال توفير ميزات خاصة تساعدهم على الترويج لأعمالهم والوصول إلى عدد أكبر من العملاء، مما يعزز النشاط الاقتصادي المحلي ويخلق منصة تربط بين المستخدمين وأصحاب الأعمال بطريقة مبتكرة.
+          </p>
         </div>
-
-
       </div>
 
       <div className="extended-info-container">
         <div className="dual-users-intro">
           <h2 className="section-title text-center">تطبيق واحد.. وتجربتان مختلفتان</h2>
           <p className="dual-users-text">
-            تم تصميم JoMap ليكون منصة متكاملة تخدم فئتين أساسيتين من المستخدمين في وقت واحد. فهو يقدم واجهات وأدوات مخصصة لتلبية احتياجات كل فئة بدقة عالية، مما يجعله أكثر من مجرد خريطة تفاعلية!
+            تم تصميم JoMap ليكون منصة متكاملة تخدم فئتين أساسيتين من المستخدمين في وقت واحد: <strong>المستخدم العادي (User)</strong> وصاحب العمل <strong>(Owner)</strong>. فهو يقدم واجهات وأدوات مخصصة لتلبية احتياجات كل فئة بدقة عالية.
           </p>
         </div>
 
-        <h2 className="section-title">كيف يخدم JoMap المستخدم العادي (User)؟</h2>
+        <h2 className="section-title">أبرز ميزات تطبيق JoMap (للمستخدم العادي)</h2>
         <div className="modern-features-grid">
           <div className="modern-feature-card">
             <div className="feature-icon-box"><Map /></div>
             <div className="feature-text">
-              <h3>الخرائط والمواقع</h3>
-              <p>دمج كامل مع خرائط جوجل لتصفح الأماكن بسلاسة وتقسيمها بناءً على المحافظات والمناطق.</p>
+              <h3>استكشاف المواقع</h3>
+              <p>استكشاف جميع المواقع والأماكن في مختلف محافظات الأردن بسهولة.</p>
             </div>
           </div>
           <div className="modern-feature-card">
-            <div className="feature-icon-box"><Users /></div>
+            <div className="feature-icon-box"><MapPin /></div>
             <div className="feature-text">
-              <h3>المجتمع والتواصل</h3>
-              <p>إضافة منشورات، قصص (Stories)، تفاعلات، نظام طلبات الصداقة، والمفضلة لربط المستخدمين معاً.</p>
-            </div>
-          </div>
-          <div className="modern-feature-card">
-            <div className="feature-icon-box"><Bell /></div>
-            <div className="feature-text">
-              <h3>نظام إشعارات مزدوج</h3>
-              <p>إشعارات حية ومفصلة للمستخدمين، ونظام مخصص لأصحاب الأعمال لمتابعة التحديثات والتقييمات.</p>
+              <h3>اكتشاف الفعاليات</h3>
+              <p>اكتشاف أنشطة وفعاليات جديدة قريبة من موقع المستخدم.</p>
             </div>
           </div>
           <div className="modern-feature-card">
             <div className="feature-icon-box"><Tag /></div>
             <div className="feature-text">
-              <h3>العروض والأنشطة</h3>
-              <p>قسم مخصص لعرض التخفيضات الحصرية والفعاليات المتاحة في المنطقة للمشاركة فيها.</p>
+              <h3>أحدث العروض</h3>
+              <p>متابعة أحدث العروض والخصومات والفعاليات المحلية.</p>
             </div>
           </div>
           <div className="modern-feature-card">
-            <div className="feature-icon-box"><BrainCircuit /></div>
+            <div className="feature-icon-box"><Star /></div>
             <div className="feature-text">
-              <h3>الذكاء الاصطناعي (AI)</h3>
-              <p>تقديم توصيات مخصصة للأماكن، تحسين نتائج البحث، والتفاعل الذكي لتعزيز تجربة المستخدم.</p>
+              <h3>التقييمات والآراء</h3>
+              <p>مشاركة التقييمات والآراء حول الأماكن التي تمت زيارتها لمساعدة الآخرين.</p>
             </div>
           </div>
           <div className="modern-feature-card">
-            <div className="feature-icon-box"><Search /></div>
+            <div className="feature-icon-box"><Camera /></div>
             <div className="feature-text">
-              <h3>البحث المتقدم</h3>
-              <p>نظام بحث متكامل وسريع للعثور على الأصدقاء، الأماكن، العروض، والأنشطة بسهولة تامة.</p>
+              <h3>توثيق اللحظات</h3>
+              <p>توثيق أجمل اللحظات والتجارب ومشاركتها مع المجتمع.</p>
+            </div>
+          </div>
+          <div className="modern-feature-card">
+            <div className="feature-icon-box"><Users /></div>
+            <div className="feature-text">
+              <h3>التفاعل والمجتمع</h3>
+              <p>إنشاء منشورات وقصص (Stories) والتفاعل مع الأصدقاء والمستخدمين.</p>
+            </div>
+          </div>
+          <div className="modern-feature-card">
+            <div className="feature-icon-box"><Sparkles /></div>
+            <div className="feature-text">
+              <h3>الأماكن المميزة</h3>
+              <p>استعراض الأنشطة والأماكن المميزة في جميع أنحاء المملكة.</p>
+            </div>
+          </div>
+          <div className="modern-feature-card">
+            <div className="feature-icon-box"><Bot /></div>
+            <div className="feature-text">
+              <h3>المساعد الذكي "نشمي AI"</h3>
+              <p>الاستفادة من المساعد الذكي "نشمي AI" الذي يقترح أماكن جديدة ومميزة لاكتشافها بشكل يومي.</p>
+            </div>
+          </div>
+          <div className="modern-feature-card">
+            <div className="feature-icon-box"><Briefcase /></div>
+            <div className="feature-text">
+              <h3>دعم أصحاب الأعمال</h3>
+              <p>دعم أصحاب الأعمال من خلال توفير صفحة مخصصة للترويج لأعمالهم والوصول إلى عملاء جدد.</p>
+            </div>
+          </div>
+          <div className="modern-feature-card">
+            <div className="feature-icon-box"><Database /></div>
+            <div className="feature-text">
+              <h3>توثيق المعالم الأردنية</h3>
+              <p>المساهمة في توثيق المعالم والأماكن الأردنية وإنشاء قاعدة بيانات مجتمعية تعكس جمال الأردن وتنوعه.</p>
             </div>
           </div>
         </div>

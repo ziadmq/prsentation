@@ -316,7 +316,7 @@ button {
 .main-subtitle,
 .project-description,
 .metrics-hero p {
-  max-width: 780px;
+  max-width: 100%;
   color: var(--text-soft);
   line-height: 1.9;
   font-size: 15px;
