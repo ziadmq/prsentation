@@ -26,6 +26,7 @@ import {
   MonitorSmartphone,
   Handshake,
   Hammer,
+  Wrench,
 } from "lucide-react";
 import { BarChart3 } from "lucide-react";
 
@@ -91,12 +92,11 @@ export const teamMembers = [
 export const menuItems = [
   { id: "intro", label: "مقدمة المشروع", icon: Home },
   { id: "build", label: "تفاصيل البناء", icon: Hammer },
+  { id: "tools", label: "أدوات التطوير", icon: Wrench },
   { id: "team", label: "فريق العمل", icon: Users },
-  { id: "qr", label: "مسح الحضور", icon: QrCode },
   { id: "roadmap", label: "رحلة المستخدم", icon: Route },
   { id: "features", label: "مميزات التطبيق", icon: Star },
   { id: "screens", label: "شاشات التطبيق", icon: Image },
-  { id: "email", label: "خدمة البريد", icon: Mail },
   { id: "metrics", label: "إحصائيات المشروع", icon: BarChart3 },
 ];
 export const features = [

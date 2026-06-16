@@ -14,6 +14,8 @@ import ScreensPage from "./pages/ScreensPage";
 import TechPage from "./pages/TechPage";
 import EmailPage from "./pages/EmailPage";
 import ProjectMetrices from "./pages/ProjectMatrices";
+import ToolsPage from "./pages/ToolsPage";
+
 function App() {
   const [activePage, setActivePage] = useState("intro");
   const [menuOpen, setMenuOpen] = useState(true);
@@ -38,6 +40,9 @@ function App() {
 
       case "build":
         return <BuildDetailsPage pageAnimation={pageAnimation} />;
+
+      case "tools":
+        return <ToolsPage pageAnimation={pageAnimation} />;
 
       case "roadmap":
         return <RoadmapPage pageAnimation={pageAnimation} />;
