@@ -7,13 +7,12 @@ function RoadmapPage({ pageAnimation }) {
     <motion.section key="roadmap" className="page roadmap-page" {...pageAnimation}>
       <div className="page-badge">
         <Route size={18} />
-        User Journey
+        رحلة المستخدم
       </div>
 
-      <h1 className="main-title">JoMap Application Flow</h1>
+      <h1 className="main-title">مسار تطبيق JoMap</h1>
       <p className="main-subtitle">
-        This roadmap explains how users move inside JoMap from opening the app
-        until discovering places, saving favorites, writing reviews, and contacting owners.
+        توضح هذه الخريطة كيف يتنقل المستخدمون داخل تطبيق JoMap منذ فتحه وحتى استكشاف الأماكن، حفظ المفضلة، كتابة التقييمات، والتواصل مع أصحاب الأعمال.
       </p>
 
       <div className="roadmap-container">

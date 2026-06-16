@@ -14,7 +14,7 @@ import TechPage from "./pages/TechPage";
 import EmailPage from "./pages/EmailPage";
 
 function App() {
-  const [activePage, setActivePage] = useState("team");
+  const [activePage, setActivePage] = useState("intro");
   const [menuOpen, setMenuOpen] = useState(true);
 
   const pageAnimation = {
