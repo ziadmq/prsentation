@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Smartphone, Map, Users, Bell, Tag, BrainCircuit, Search, Code, Server, Database, Sparkles, Briefcase, Flame, Calendar, TrendingUp, Bot, Monitor, Layout, PenTool, Code2, Kanban } from "lucide-react";
+import { Smartphone, Map, Users, Bell, Tag, BrainCircuit, Search, Code, Server, Database, Sparkles, Briefcase, Flame, Calendar, TrendingUp, Bot, Monitor, Layout, PenTool, Code2, Kanban, AlertTriangle, Lightbulb } from "lucide-react";
 
 function IntroPage({ pageAnimation }) {
   return (
@@ -132,6 +132,64 @@ function IntroPage({ pageAnimation }) {
             <div className="tool-chip"><Code2 className="tool-icon" /> GitHub & Git</div>
             <div className="tool-chip"><Kanban className="tool-icon" /> Jira / Trello</div>
             <div className="tool-chip"><Database className="tool-icon" /> Postman & DBeaver</div>
+          </div>
+        </div>
+
+        <div className="solutions-section" style={{ marginTop: "60px", marginBottom: "40px" }}>
+          <h2 className="section-title text-center" style={{ textAlign: "right", borderBottom: "none" }}>المشاكل المعقدة والحلول التقنية (Technical Solutions)</h2>
+          <div className="solutions-list">
+            
+            <div className="solution-card">
+              <div className="problem-area">
+                <div className="area-header problem-header">
+                  <AlertTriangle className="area-icon" />
+                  <h4>المشكلة: تزاحم الإشعارات بين نوعي المستخدمين</h4>
+                </div>
+                <p>كيف يمكن تقديم إشعارات تواصل اجتماعي للمستخدم العادي وإشعارات أعمال (تقييمات، عروض) للمالك دون تداخل أو إزعاج؟</p>
+              </div>
+              <div className="solution-area">
+                <div className="area-header">
+                  <Lightbulb className="area-icon text-yellow" />
+                  <h4>الحل: نظام إشعارات مزدوج (Dual Notification System)</h4>
+                </div>
+                <p>بناء شاشات وقواعد بيانات منفصلة تماماً (OwnerNotificationScreen). يتم توجيه الإشعار بناءً على دور المستخدم (Role) وربط كل إشعار برابط عميق (Deep Link) يأخذ المستخدم للإجراء المطلوب فوراً.</p>
+              </div>
+            </div>
+
+            <div className="solution-card">
+              <div className="problem-area">
+                <div className="area-header problem-header">
+                  <AlertTriangle className="area-icon" />
+                  <h4>المشكلة: أداء الخريطة مع كثرة المواقع والعروض</h4>
+                </div>
+                <p>تحميل آلاف النقاط (Markers) على الخريطة دفعة واحدة يسبب بطء شديد في واجهة الهاتف (Lag) واستهلاك للبطارية.</p>
+              </div>
+              <div className="solution-area">
+                <div className="area-header">
+                  <Lightbulb className="area-icon text-yellow" />
+                  <h4>الحل: التجميع الجغرافي (Clustering) والتحديث اللحظي</h4>
+                </div>
+                <p>استخدام تقنية Marker Clustering لتجميع المواقع القريبة في أيقونة واحدة قابلة للتمدد عند التكبير (Zoom)، مع جلب البيانات بناءً على إحداثيات الشاشة الحالية فقط (Bounding Box) من خلال Spring Boot.</p>
+              </div>
+            </div>
+
+            <div className="solution-card">
+              <div className="problem-area">
+                <div className="area-header problem-header">
+                  <AlertTriangle className="area-icon" />
+                  <h4>المشكلة: سرعة جلب صور الأماكن والمستخدمين</h4>
+                </div>
+                <p>تحميل الصور عالية الدقة لمئات الأماكن والمراجعات يستهلك باقة الإنترنت للمستخدم ويزيد من وقت الانتظار.</p>
+              </div>
+              <div className="solution-area">
+                <div className="area-header">
+                  <Lightbulb className="area-icon text-yellow" />
+                  <h4>الحل: التخزين السحابي المُحسن (Firebase Storage & Caching)</h4>
+                </div>
+                <p>استخدام Firebase Storage لرفع الصور، مع الاعتماد على مكتبات التخزين المؤقت (Caching) في Jetpack Compose مثل (Coil) لضمان تحميل الصورة مرة واحدة فقط وحفظها محلياً، مع ضغط الصور قبل الرفع من الواجهة الخلفية.</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
