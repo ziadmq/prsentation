@@ -12,7 +12,7 @@ import FeaturesPage from "./pages/FeaturesPage";
 import ScreensPage from "./pages/ScreensPage";
 import TechPage from "./pages/TechPage";
 import EmailPage from "./pages/EmailPage";
-
+import ProjectMetrices from "./pages/ProjectMatrices";
 function App() {
   const [activePage, setActivePage] = useState("team");
   const [menuOpen, setMenuOpen] = useState(true);
@@ -49,6 +49,9 @@ function App() {
 
       case "email":
         return <EmailPage pageAnimation={pageAnimation} />;
+
+      case "metrics":
+          return <ProjectMetrices pageAnimation={pageAnimation} />;
 
       default:
         return <TeamPage pageAnimation={pageAnimation} />;

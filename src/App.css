@@ -1605,3 +1605,955 @@ textarea {
     width: 54px;
   }
 }
+/* =========================
+   Professional Responsive Fix
+   Add this at the END of App.css
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Better tablet layout */
+@media (max-width: 1100px) {
+  .page {
+    padding: 48px 5%;
+  }
+
+  .main-title {
+    font-size: clamp(34px, 6vw, 58px);
+  }
+
+  .main-subtitle {
+    max-width: 760px;
+    font-size: 17px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-box,
+  .email-layout,
+  .hero-layout,
+  .qr-layout,
+  .creative-screen-row,
+  .creative-screen-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .creative-screen-row.reverse .mobile-mockup,
+  .creative-screen-row.reverse .screen-description-card {
+    order: unset;
+  }
+
+  .connection-line {
+    width: 4px;
+    height: 42px;
+    margin: auto;
+  }
+}
+
+/* =========================
+   Mobile Team Page
+   Roadmap becomes elegant cards
+========================= */
+
+@media (max-width: 800px) {
+  .content.with-sidebar,
+  .content.small-sidebar {
+    margin-left: 74px;
+    width: calc(100% - 74px);
+  }
+
+  .sidebar,
+  .sidebar.open,
+  .sidebar.closed {
+    width: 74px;
+    padding: 18px 10px;
+  }
+
+  .sidebar.open .brand span,
+  .sidebar.open .menu-item span,
+  .sidebar.closed .brand span,
+  .sidebar.closed .menu-item span {
+    display: none;
+  }
+
+  .menu-item {
+    justify-content: center;
+    padding: 13px 10px;
+  }
+
+  .page {
+    padding: 34px 18px;
+  }
+
+  .page-badge {
+    width: fit-content;
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .main-title {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .main-subtitle {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .supervisor-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px;
+    border-radius: 28px;
+  }
+
+  .supervisor-image-wrap {
+    width: 185px;
+    height: 185px;
+    margin: auto;
+  }
+
+  .supervisor-info h2 {
+    font-size: 29px;
+  }
+
+  .team-roadmap {
+    margin-top: 38px;
+    padding: 0;
+  }
+
+  .team-roadmap-line {
+    left: 22px;
+    width: 3px;
+    background: linear-gradient(180deg, #38bdf8, #22c55e);
+    opacity: 0.9;
+  }
+
+  .team-roadmap-item,
+  .team-roadmap-item.left,
+  .team-roadmap-item.right {
+    width: 100%;
+    min-height: auto;
+    margin-left: 0;
+    padding-left: 54px;
+    padding-right: 0;
+    justify-content: flex-start;
+    margin-bottom: 26px;
+  }
+
+  .team-roadmap-dot,
+  .team-roadmap-item.left .team-roadmap-dot,
+  .team-roadmap-item.right .team-roadmap-dot {
+    left: 0;
+    right: auto;
+    top: 28px;
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+    box-shadow:
+      0 0 0 6px rgba(56, 189, 248, 0.1),
+      0 0 25px rgba(56, 189, 248, 0.45);
+  }
+
+  .team-roadmap-card {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .team-roadmap-card::after {
+    display: none;
+  }
+
+  .team-card-header {
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .team-avatar {
+    width: 82px;
+    height: 82px;
+    border-radius: 24px;
+    flex: 0 0 auto;
+  }
+
+  .team-avatar img {
+    border-radius: 20px;
+  }
+
+  .team-role-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+  }
+
+  .team-roadmap-card h3 {
+    font-size: 23px;
+  }
+
+  .team-roadmap-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .skills-list {
+    gap: 8px;
+  }
+
+  .skills-list span {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .linkedin-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================
+   Mobile User Flow Page
+   Timeline becomes clean vertical flow
+========================= */
+
+@media (max-width: 800px) {
+  .roadmap-container {
+    max-width: 100%;
+    margin-top: 32px;
+    padding: 0;
+  }
+
+  .roadmap-line {
+    left: 22px;
+    width: 3px;
+  }
+
+  .roadmap-step,
+  .roadmap-step.left,
+  .roadmap-step.right {
+    width: 100%;
+    min-height: auto;
+    margin-left: 0;
+    padding-left: 54px;
+    padding-right: 0;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .roadmap-dot,
+  .roadmap-step.left .roadmap-dot,
+  .roadmap-step.right .roadmap-dot {
+    left: 0;
+    right: auto;
+    top: 28px;
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .roadmap-card {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .roadmap-card::after {
+    display: none;
+  }
+
+  .roadmap-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 17px;
+    margin-bottom: 14px;
+  }
+
+  .roadmap-card h3 {
+    font-size: 22px;
+  }
+
+  .roadmap-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================
+   Other Pages Responsive
+========================= */
+
+@media (max-width: 800px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .feature-card {
+    min-height: auto;
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .feature-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .project-title {
+    font-size: 58px;
+  }
+
+  .project-slogan {
+    font-size: 26px;
+  }
+
+  .project-description {
+    font-size: 15px;
+  }
+
+  .intro-stats {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .intro-stats div {
+    width: 100%;
+  }
+
+  .phone-preview {
+    min-height: 330px;
+    border-radius: 30px;
+  }
+
+  .creative-screen-row,
+  .creative-screen-row.reverse {
+    padding: 20px;
+    gap: 24px;
+    border-radius: 26px;
+  }
+
+  .mobile-mockup {
+    width: min(245px, 100%);
+    height: 500px;
+  }
+
+  .screen-description-card {
+    text-align: center;
+  }
+
+  .screen-description-card h2 {
+    font-size: 29px;
+  }
+
+  .screen-description-card p {
+    font-size: 15px;
+  }
+
+  .screen-mini-line {
+    justify-content: center;
+  }
+
+  .tech-column {
+    min-height: auto;
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .tech-column h2 {
+    font-size: 25px;
+  }
+
+  .email-form {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .qr-image-box {
+    width: min(260px, 100%);
+  }
+
+  .big-qr-box {
+    width: min(330px, 100%);
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .page {
+    padding: 28px 14px;
+  }
+
+  .main-title {
+    font-size: 30px;
+  }
+
+  .project-title {
+    font-size: 48px;
+  }
+
+  .team-roadmap-item,
+  .team-roadmap-item.left,
+  .team-roadmap-item.right,
+  .roadmap-step,
+  .roadmap-step.left,
+  .roadmap-step.right {
+    padding-left: 48px;
+  }
+
+  .team-roadmap-dot,
+  .roadmap-dot {
+    width: 38px;
+    height: 38px;
+  }
+
+  .team-avatar {
+    width: 74px;
+    height: 74px;
+  }
+
+  .mobile-mockup {
+    width: 225px;
+    height: 460px;
+  }
+}.metrics-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 54px 42px;
+  overflow: hidden;
+  color: var(--text-main, #ffffff);
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.16), transparent 30%),
+    var(--bg-main, #070b14);
+}
+
+.metrics-hero,
+.metrics-total-grid,
+.repo-showcase-grid,
+.repo-access-panel,
+.metrics-bottom-panel {
+  position: relative;
+  z-index: 2;
+}
+
+.metrics-hero {
+  max-width: 850px;
+  margin-bottom: 34px;
+  animation: fadeUpMetrics 0.8s ease both;
+}
+
+.metrics-badge {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border-radius: 999px;
+  color: #dbeafe;
+  background: rgba(37, 99, 235, 0.14);
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.metrics-hero h1 {
+  margin: 18px 0 10px;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.metrics-hero p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--text-soft, #cbd5e1);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.metrics-total-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.metrics-total-card {
+  min-height: 140px;
+  padding: 22px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(18, 27, 47, 0.94), rgba(12, 19, 33, 0.96));
+  border: 1px solid rgba(96, 165, 250, 0.13);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
+  animation: popMetrics 0.65s ease both;
+  animation-delay: var(--delay);
+  transition: 0.25s ease;
+}
+
+.metrics-total-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.metrics-total-icon,
+.repo-icon-box {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  color: #e0f2fe;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.24);
+}
+
+.metrics-total-card h3 {
+  margin: 16px 0 4px;
+  font-size: 34px;
+  font-weight: 950;
+}
+
+.metrics-total-card p {
+  margin: 0;
+  color: var(--text-muted, #94a3b8);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.repo-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.repo-showcase-card {
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(18, 27, 47, 0.96), rgba(9, 14, 25, 0.98));
+  border: 1px solid rgba(96, 165, 250, 0.14);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
+  animation: fadeUpMetrics 0.75s ease both;
+  animation-delay: var(--delay);
+}
+
+.repo-card-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: -70px;
+  right: -40px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.22);
+  filter: blur(34px);
+  animation: repoGlowMove 5s ease-in-out infinite;
+}
+
+.repo-showcase-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(96, 165, 250, 0.14), transparent);
+  transform: translateX(-120%);
+  animation: cardShine 4.5s ease-in-out infinite;
+}
+
+.repo-card-head,
+.repo-stats-grid,
+.repo-progress-area,
+.repo-link-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.repo-card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.repo-number {
+  display: block;
+  color: #7dd3fc;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.repo-card-head h2 {
+  margin: 3px 0;
+  font-size: 25px;
+  font-weight: 950;
+}
+
+.repo-card-head p {
+  margin: 0;
+  color: var(--text-muted, #94a3b8);
+  font-size: 13px;
+}
+
+.repo-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.repo-stat-box {
+  min-height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 19px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(96, 165, 250, 0.12);
+  transition: 0.25s ease;
+}
+
+.repo-stat-box:hover {
+  transform: translateY(-4px);
+  background: rgba(37, 99, 235, 0.11);
+}
+
+.repo-stat-box strong {
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.repo-stat-box span {
+  margin-top: 5px;
+  color: var(--text-muted, #94a3b8);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.repo-progress-area {
+  margin-top: 24px;
+}
+
+.repo-progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #dbeafe;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.repo-progress-track {
+  height: 11px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.repo-progress-fill {
+  height: 100%;
+  width: var(--progress);
+  border-radius: inherit;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.38);
+  animation: growMetricsBar 1.4s ease both;
+}
+
+.repo-link-btn {
+  width: 100%;
+  margin-top: 22px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.24);
+  transition: 0.25s ease;
+}
+
+.repo-link-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 44px rgba(56, 189, 248, 0.28);
+}
+
+.repo-access-panel,
+.metrics-bottom-panel {
+  margin-top: 24px;
+  padding: 26px;
+  border-radius: 28px;
+  background: rgba(15, 22, 39, 0.86);
+  border: 1px solid rgba(96, 165, 250, 0.13);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+  animation: fadeUpMetrics 0.85s ease both;
+}
+
+.repo-access-title,
+.metrics-bottom-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.repo-access-title svg,
+.metrics-bottom-title svg {
+  color: #7dd3fc;
+}
+
+.repo-access-title h2,
+.metrics-bottom-title h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.repo-access-title p,
+.metrics-bottom-title p {
+  margin: 4px 0 0;
+  color: var(--text-muted, #94a3b8);
+}
+
+.repo-link-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.repo-mini-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 18px;
+  border-radius: 18px;
+  color: #dbeafe;
+  text-decoration: none;
+  font-weight: 850;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(96, 165, 250, 0.13);
+  transition: 0.25s ease;
+}
+
+.repo-mini-link:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+  background: rgba(37, 99, 235, 0.13);
+}
+
+.journey-line {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  color: #dbeafe;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  animation: journeyRise 0.65s ease both;
+  animation-delay: var(--delay);
+}
+
+.journey-dot {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(56, 189, 248, 0.95));
+  box-shadow: 0 0 0 7px rgba(37, 99, 235, 0.11);
+}
+
+.impact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  color: #dbeafe;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.14);
+}
+
+.impact-card p {
+  margin: 0;
+  color: var(--text-soft, #cbd5e1);
+  line-height: 1.7;
+}
+
+.metrics-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  pointer-events: none;
+  animation: rotateOrbit 18s linear infinite;
+}
+
+.metrics-orbit::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: 28px;
+  left: 28px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 24px #38bdf8;
+}
+
+.orbit-one {
+  width: 360px;
+  height: 360px;
+  right: -120px;
+  top: 80px;
+}
+
+.orbit-two {
+  width: 260px;
+  height: 260px;
+  left: -90px;
+  bottom: 100px;
+  animation-direction: reverse;
+}
+
+@keyframes fadeUpMetrics {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popMetrics {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes growMetricsBar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: var(--progress);
+  }
+}
+
+@keyframes cardShine {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  45%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes repoGlowMove {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-22px, 28px) scale(1.1);
+  }
+}
+
+@keyframes rotateOrbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes journeyRise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .metrics-total-grid,
+  .repo-showcase-grid,
+  .repo-link-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .repo-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .journey-line {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .metrics-page {
+    padding: 34px 18px;
+  }
+
+  .metrics-total-grid,
+  .repo-showcase-grid,
+  .repo-link-list,
+  .journey-line {
+    grid-template-columns: 1fr;
+  }
+
+  .repo-card-head {
+    align-items: flex-start;
+  }
+
+  .impact-card {
+    align-items: flex-start;
+  }
+}

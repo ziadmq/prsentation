@@ -10,10 +10,10 @@ function TechPage({ pageAnimation }) {
         <div className="tech-column">
           <h2>Frontend</h2>
           <p>
-            React JS is used to build the user interface with fast navigation,
+            Kotlin is used to build the user interface with fast navigation,
             reusable components, and a modern interactive design.
           </p>
-          <span>React JS</span>
+          <span>Kotlin</span>
           <span>Framer Motion</span>
           <span>Lucide Icons</span>
         </div>
@@ -41,7 +41,7 @@ function TechPage({ pageAnimation }) {
           </p>
           <span>Neon Database</span>
           <span>Firebase Storage</span>
-          <span>PostgreSQL</span>
+          <span>MySql</span>
         </div>
       </div>
     </motion.section>

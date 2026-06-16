@@ -26,6 +26,7 @@ import {
   MonitorSmartphone,
   Handshake,
 } from "lucide-react";
+import { BarChart3 } from "lucide-react";
 
 export const supervisor = {
   name: "Mohammad Zarour",
@@ -88,15 +89,14 @@ export const teamMembers = [
 
 export const menuItems = [
   { id: "team", label: "Team", icon: Users },
-  { id: "qr", label: "Attendance QR", icon: QrCode },
   { id: "intro", label: "Project Intro", icon: Home },
   { id: "roadmap", label: "User Flow", icon: Route },
   { id: "features", label: "Features", icon: Star },
   { id: "screens", label: "Screens", icon: Image },
   { id: "tech", label: "Technology", icon: Code2 },
   { id: "email", label: "Email Service", icon: Mail },
+  { id: "metrics", label: "Project Metrics", icon: BarChart3 },
 ];
-
 export const features = [
   {
     icon: MapPinned,
