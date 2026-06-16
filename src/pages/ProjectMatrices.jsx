@@ -15,10 +15,10 @@ import {
 
 function ProjectMetrics() {
   const totals = [
-    { label: "Completed Tasks", value: "225", icon: CheckCircle2 },
-    { label: "Code Commets", value: "450", icon: MessageSquareText },
-    { label: "Lines of Code", value: "50K", icon: Code2 },
-    { label: "Project Files", value: "186", icon: FileCode2 },
+    { label: "المهام المكتملة", value: "225", icon: CheckCircle2 },
+    { label: "تعليقات الكود", value: "450", icon: MessageSquareText },
+    { label: "أسطر الكود", value: "50K", icon: Code2 },
+    { label: "ملفات المشروع", value: "186", icon: FileCode2 },
   ];
 
   const repositories = [
@@ -26,24 +26,24 @@ function ProjectMetrics() {
       name: "Android Frontend",
       layer: "Kotlin Mobile Application",
       icon: Smartphone,
-      repoUrl: "PUT_FRONTEND_REPO_LINK_HERE",
+      repoUrl: "https://github.com/ziadmq/JoMap",
       completion: 88,
       stats: [
-        { label: "Tasks", value: "120" },
-        { label: "Commets", value: "250" },
+        { label: "المهام", value: "120" },
+        { label: "التعليقات", value: "250" },
         { label: "Kotlin Lines", value: "40K" },
-        { label: "Screens", value: "32" },
+        { label: "الشاشات", value: "32" },
       ],
     },
     {
       name: "Backend API",
       layer: "Java Spring Boot Services",
       icon: Server,
-      repoUrl: "PUT_BACKEND_REPO_LINK_HERE",
+      repoUrl: "https://github.com/ghalebshhab/GraduationProjectv1",
       completion: 92,
       stats: [
-        { label: "Tasks", value: "105" },
-        { label: "Comments", value: "200" },
+        { label: "المهام", value: "105" },
+        { label: "التعليقات", value: "200" },
         { label: "Java Lines", value: "12K" },
         { label: "APIs", value: "150" },
       ],
@@ -51,30 +51,31 @@ function ProjectMetrics() {
   ];
 
   const workFlow = [
-    "Planning",
+    "التخطيط",
     "UI Design",
     "Android",
     "Backend",
     "Database",
     "Testing",
-    "Delivery",
+    "التسليم",
   ];
 
   return (
-    <section className="metrics-page">
+    <section className="metrics-page" dir="rtl">
       <div className="metrics-orbit orbit-one"></div>
       <div className="metrics-orbit orbit-two"></div>
 
       <div className="metrics-hero">
         <div className="metrics-badge">
           <BarChart3 size={16} />
-          Project Work Analytics
+          تحليلات عمل المشروع
         </div>
 
-        <h1>JoMap Development Metrics</h1>
+        <h1>إحصائيات تطوير JoMap</h1>
         <p>
-          A visual summary of our real project work across the Android frontend,
-          Java backend, APIs, comments, code files, and completed tasks.
+          ملخص بصري يوضح العمل الحقيقي على مشروعنا عبر Android Frontend،
+          وJava Backend، وAPIs، وتعليقات الكود، وملفات المشروع، والمهام
+          المكتملة.
         </p>
       </div>
 
@@ -134,7 +135,7 @@ function ProjectMetrics() {
 
               <div className="repo-progress-area">
                 <div className="repo-progress-info">
-                  <span>Completion</span>
+                  <span>نسبة الإنجاز</span>
                   <strong>{repo.completion}%</strong>
                 </div>
 
@@ -153,7 +154,7 @@ function ProjectMetrics() {
                 rel="noreferrer"
               >
                 <GitBranch size={19} />
-                Open Repository
+                فتح Repository
                 <ExternalLink size={16} />
               </a>
             </article>
@@ -165,8 +166,8 @@ function ProjectMetrics() {
         <div className="repo-access-title">
           <GitBranch size={24} />
           <div>
-            <h2>Repository Access</h2>
-            <p>Direct links to the source code used to build JoMap.</p>
+            <h2>روابط Repository</h2>
+            <p>روابط مباشرة إلى Source Code المستخدم في بناء JoMap.</p>
           </div>
         </div>
 
@@ -191,8 +192,8 @@ function ProjectMetrics() {
         <div className="metrics-bottom-title">
           <Layers3 size={24} />
           <div>
-            <h2>Development Journey</h2>
-            <p>From idea to working mobile application.</p>
+            <h2>رحلة التطوير</h2>
+            <p>من فكرة المشروع إلى Mobile Application يعمل بشكل كامل.</p>
           </div>
         </div>
 
@@ -214,8 +215,8 @@ function ProjectMetrics() {
         <div className="impact-card">
           <Activity size={22} />
           <p>
-            These metrics show the teamwork, implementation, testing,
-            documentation, and improvements completed during the JoMap project.
+            هذه الإحصائيات توضح حجم العمل الجماعي، والتنفيذ، والاختبار،
+            والتوثيق، والتحسينات التي تم إنجازها خلال مشروع JoMap.
           </p>
           <Braces size={22} />
         </div>
