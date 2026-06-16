@@ -7,13 +7,12 @@ function ScreensPage({ pageAnimation }) {
     <motion.section key="screens" className="page screens-page" {...pageAnimation}>
       <div className="page-badge">
         <Smartphone size={18} />
-        App Screens
+        شاشات التطبيق
       </div>
 
-      <h1 className="main-title">Application Screens</h1>
+      <h1 className="main-title">شاشات التطبيق</h1>
       <p className="main-subtitle">
-        These screens show the main user experience inside JoMap, from opening
-        the app to discovering places and managing the user account.
+        تُظهر هذه الشاشات تجربة المستخدم الرئيسية داخل تطبيق JoMap، من فتح التطبيق إلى استكشاف الأماكن وإدارة حساب المستخدم.
       </p>
 
       <div className="creative-screens-wrapper">
@@ -42,7 +41,7 @@ function ScreensPage({ pageAnimation }) {
 
               <div className="screen-mini-line">
                 <div></div>
-                <small>JoMap Mobile Experience</small>
+                <small>تجربة الموبايل في JoMap</small>
               </div>
             </div>
           </motion.div>

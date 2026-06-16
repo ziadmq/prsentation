@@ -7,13 +7,12 @@ function TeamPage({ pageAnimation }) {
     <motion.section key="team" className="page team-page" {...pageAnimation}>
       <div className="page-badge">
         <Sparkles size={18} />
-        Graduation Project Team
+        فريق مشروع التخرج
       </div>
 
-      <h1 className="main-title">Meet The JoMap Team</h1>
+      <h1 className="main-title">تعرف على فريق JoMap</h1>
       <p className="main-subtitle">
-        A creative team combining development, design, testing, and documentation
-        to build a smarter way to discover Jordan.
+        فريق إبداعي يجمع بين التطوير، التصميم، الاختبار، والتوثيق لبناء طريقة أذكى لاكتشاف الأردن.
       </p>
 
       <motion.div
@@ -32,11 +31,10 @@ function TeamPage({ pageAnimation }) {
         </div>
 
         <div className="supervisor-info">
-          <span>Academic Supervisor</span>
+          <span>المشرف الأكاديمي</span>
           <h2>{supervisor.name}</h2>
           <p>
-            Guiding the team through planning, development, documentation, and
-            final presentation preparation.
+            توجيه الفريق خلال التخطيط، التطوير، التوثيق، وتجهيز العرض النهائي.
           </p>
         </div>
       </motion.div>
@@ -114,7 +112,7 @@ function TeamPage({ pageAnimation }) {
                   rel="noreferrer"
                 >
                   <ExternalLink size={19} />
-                  View LinkedIn
+                  عرض لينكد إن
                 </a>
               </motion.div>
             </motion.div>

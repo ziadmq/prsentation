@@ -6,22 +6,21 @@ function EmailPage({ pageAnimation }) {
     <motion.section key="email" className="page email-page" {...pageAnimation}>
       <div className="email-layout">
         <div className="email-info">
-          <div className="page-badge">Live Audience Service</div>
-          <h1 className="main-title">Send A Message To JoMap Team</h1>
+          <div className="page-badge">خدمة الجمهور المباشرة</div>
+          <h1 className="main-title">أرسل رسالة إلى فريق JoMap</h1>
           <p className="main-subtitle">
-            During the presentation, attendees can send questions,
-            suggestions, or feedback directly to our team.
+            أثناء العرض التقديمي، يمكن للحضور إرسال الأسئلة، الاقتراحات، أو الملاحظات مباشرة إلى فريقنا.
           </p>
         </div>
 
         <form className="email-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
-          <textarea placeholder="Write your message or question..." />
+          <input type="text" placeholder="اسمك" />
+          <input type="email" placeholder="بريدك الإلكتروني" />
+          <textarea placeholder="اكتب رسالتك أو سؤالك..." />
 
           <button type="button">
             <Send size={18} />
-            Send Message
+            إرسال الرسالة
           </button>
         </form>
       </div>

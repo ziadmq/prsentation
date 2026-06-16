@@ -16,19 +16,18 @@ function QRPage({ pageAnimation }) {
         >
           <div className="page-badge">
             <ScanLine size={18} />
-            Audience Attendance
+            حضور الجمهور
           </div>
 
-          <h1 className="main-title">Scan The QR Code</h1>
+          <h1 className="main-title">امسح رمز QR</h1>
           <p className="main-subtitle">
-            Before starting our presentation, attendees can scan this QR code
-            to register attendance and send feedback or questions to the JoMap team.
+            قبل بدء عرضنا التقديمي، يمكن للحضور مسح رمز QR هذا لتسجيل الحضور وإرسال الملاحظات أو الأسئلة إلى فريق JoMap.
           </p>
 
           <div className="qr-points">
-            <span>Attendance</span>
-            <span>Questions</span>
-            <span>Feedback</span>
+            <span>الحضور</span>
+            <span>الأسئلة</span>
+            <span>الملاحظات</span>
           </div>
         </motion.div>
 
@@ -47,8 +46,8 @@ function QRPage({ pageAnimation }) {
             <div className="scan-line"></div>
           </div>
 
-          <h3>Hover To Enlarge</h3>
-          <p>Move the mouse over the QR code to scan it easily</p>
+          <h3>مرر الماوس للتكبير</h3>
+          <p>حرك الماوس فوق رمز QR لمسحه بسهولة</p>
         </motion.div>
       </div>
 
@@ -71,7 +70,7 @@ function QRPage({ pageAnimation }) {
             >
               <div className="qr-modal-title">
                 <QrCode />
-                <span>JoMap Attendance QR</span>
+                <span>رمز QR لحضور JoMap</span>
               </div>
 
               <div className="big-qr-box">
@@ -79,9 +78,9 @@ function QRPage({ pageAnimation }) {
                 <div className="big-scan-line"></div>
               </div>
 
-              <p>Scan this QR code using your phone camera</p>
+              <p>امسح رمز QR هذا باستخدام كاميرا هاتفك</p>
 
-              <button onClick={() => setQrOpen(false)}>Close</button>
+              <button onClick={() => setQrOpen(false)}>إغلاق</button>
             </motion.div>
           </motion.div>
         )}
