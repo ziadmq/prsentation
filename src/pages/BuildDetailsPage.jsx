@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, Code2, Database, Layout, Server, Smartphone } from "lucide-react";
+import { 
+  Smartphone, Server, Database, Layout, 
+  Clock, GitBranch, CheckSquare, Activity,
+  Wrench, Monitor, PenTool, Code2, Kanban,
+  AlertTriangle, Lightbulb, CheckCircle2
+} from "lucide-react";
 
 function BuildDetailsPage({ pageAnimation }) {
   return (
@@ -10,6 +15,47 @@ function BuildDetailsPage({ pageAnimation }) {
       </div>
 
       <div className="build-content">
+        
+        {/* Statistics Section */}
+        <div className="stats-section">
+          <h3 className="section-title-small">إحصائيات المشروع (GitHub & Jira)</h3>
+          <div className="stats-grid">
+            <div className="stat-card">
+              <Clock className="stat-icon text-blue" />
+              <div className="stat-info">
+                <h4>المدة الزمنية</h4>
+                <strong>+4 أشهر</strong>
+                <p>من التطوير المستمر</p>
+              </div>
+            </div>
+            <div className="stat-card">
+              <Activity className="stat-icon text-purple" />
+              <div className="stat-info">
+                <h4>حجم المشروع</h4>
+                <strong>ضخم (Large)</strong>
+                <p>نظام مزدوج (مستخدمين + ملاك)</p>
+              </div>
+            </div>
+            <div className="stat-card">
+              <CheckSquare className="stat-icon text-green" />
+              <div className="stat-info">
+                <h4>مهام Jira</h4>
+                <strong>+150 مهمة</strong>
+                <p>مقسمة بين تصميم، وتطوير، واختبار</p>
+              </div>
+            </div>
+            <div className="stat-card">
+              <GitBranch className="stat-icon text-orange" />
+              <div className="stat-info">
+                <h4>نشاط GitHub</h4>
+                <strong>+300 Commit</strong>
+                <p>تحديثات وإصلاحات مستمرة</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tech Stack Section */}
         <div className="tech-details-section">
           <h3 className="section-title-small">التفاصيل التقنية (Tech Stack)</h3>
           <div className="tech-grid">
@@ -36,6 +82,79 @@ function BuildDetailsPage({ pageAnimation }) {
           </div>
         </div>
 
+        {/* Tools Section */}
+        <div className="tools-section">
+          <h3 className="section-title-small">أدوات التطوير (Tools Used)</h3>
+          <div className="tools-row">
+            <div className="tool-chip"><Monitor className="tool-icon" /> Android Studio & IntelliJ</div>
+            <div className="tool-chip"><Layout className="tool-icon" /> VS Code</div>
+            <div className="tool-chip"><PenTool className="tool-icon" /> Figma (UI/UX)</div>
+            <div className="tool-chip"><Code2 className="tool-icon" /> GitHub & Git</div>
+            <div className="tool-chip"><Kanban className="tool-icon" /> Jira / Trello</div>
+            <div className="tool-chip"><Database className="tool-icon" /> Postman & DBeaver</div>
+          </div>
+        </div>
+
+        {/* Technical Solutions Section */}
+        <div className="solutions-section">
+          <h3 className="section-title-small">المشاكل المعقدة والحلول التقنية (Technical Solutions)</h3>
+          <div className="solutions-list">
+            
+            <div className="solution-card">
+              <div className="problem-area">
+                <div className="area-header problem-header">
+                  <AlertTriangle className="area-icon" />
+                  <h4>المشكلة: تزاحم الإشعارات بين نوعي المستخدمين</h4>
+                </div>
+                <p>كيف يمكن تقديم إشعارات تواصل اجتماعي للمستخدم العادي وإشعارات أعمال (تقييمات، عروض) للمالك دون تداخل أو إزعاج؟</p>
+              </div>
+              <div className="solution-area">
+                <div className="area-header">
+                  <Lightbulb className="area-icon text-yellow" />
+                  <h4>الحل: نظام إشعارات مزدوج (Dual Notification System)</h4>
+                </div>
+                <p>بناء شاشات وقواعد بيانات منفصلة تماماً (OwnerNotificationScreen). يتم توجيه الإشعار بناءً على دور المستخدم (Role) وربط كل إشعار برابط عميق (Deep Link) يأخذ المستخدم للإجراء المطلوب فوراً.</p>
+              </div>
+            </div>
+
+            <div className="solution-card">
+              <div className="problem-area">
+                <div className="area-header problem-header">
+                  <AlertTriangle className="area-icon" />
+                  <h4>المشكلة: أداء الخريطة مع كثرة المواقع والعروض</h4>
+                </div>
+                <p>تحميل آلاف النقاط (Markers) على الخريطة دفعة واحدة يسبب بطء شديد في واجهة الهاتف (Lag) واستهلاك للبطارية.</p>
+              </div>
+              <div className="solution-area">
+                <div className="area-header">
+                  <Lightbulb className="area-icon text-yellow" />
+                  <h4>الحل: التجميع الجغرافي (Clustering) والتحديث اللحظي</h4>
+                </div>
+                <p>استخدام تقنية Marker Clustering لتجميع المواقع القريبة في أيقونة واحدة قابلة للتمدد عند التكبير (Zoom)، مع جلب البيانات بناءً على إحداثيات الشاشة الحالية فقط (Bounding Box) من خلال Spring Boot.</p>
+              </div>
+            </div>
+
+            <div className="solution-card">
+              <div className="problem-area">
+                <div className="area-header problem-header">
+                  <AlertTriangle className="area-icon" />
+                  <h4>المشكلة: سرعة جلب صور الأماكن والمستخدمين</h4>
+                </div>
+                <p>تحميل الصور عالية الدقة لمئات الأماكن والمراجعات يستهلك باقة الإنترنت للمستخدم ويزيد من وقت الانتظار.</p>
+              </div>
+              <div className="solution-area">
+                <div className="area-header">
+                  <Lightbulb className="area-icon text-yellow" />
+                  <h4>الحل: التخزين السحابي المُحسن (Firebase Storage & Caching)</h4>
+                </div>
+                <p>استخدام Firebase Storage لرفع الصور، مع الاعتماد على مكتبات التخزين المؤقت (Caching) في Jetpack Compose مثل (Coil) لضمان تحميل الصورة مرة واحدة فقط وحفظها محلياً، مع ضغط الصور قبل الرفع من الواجهة الخلفية.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Development Phases Section */}
         <div className="phases-section">
           <h3 className="section-title-small">مراحل بناء المشروع (Development Phases)</h3>
           <div className="timeline">
@@ -76,6 +195,7 @@ function BuildDetailsPage({ pageAnimation }) {
             </div>
           </div>
         </div>
+
       </div>
     </motion.section>
   );

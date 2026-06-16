@@ -41,7 +41,14 @@ function IntroPage({ pageAnimation }) {
       </div>
 
       <div className="extended-info-container">
-        <h2 className="section-title">الميزات الرئيسية للتطبيق</h2>
+        <div className="dual-users-intro">
+          <h2 className="section-title text-center">تطبيق واحد.. وتجربتان مختلفتان</h2>
+          <p className="dual-users-text">
+            تم تصميم JoMap ليكون منصة متكاملة تخدم فئتين أساسيتين من المستخدمين في وقت واحد. فهو يقدم واجهات وأدوات مخصصة لتلبية احتياجات كل فئة بدقة عالية، مما يجعله أكثر من مجرد خريطة تفاعلية!
+          </p>
+        </div>
+
+        <h2 className="section-title">كيف يخدم JoMap المستخدم العادي (User)؟</h2>
         <div className="feature-cards-grid">
           <div className="info-card">
             <Map className="info-icon" />
@@ -75,30 +82,6 @@ function IntroPage({ pageAnimation }) {
           </div>
         </div>
 
-        <h2 className="section-title">البنية التقنية</h2>
-        <div className="tech-cards-row">
-          <div className="tech-card">
-            <Smartphone className="tech-icon" />
-            <div className="tech-text">
-              <h4>الواجهة الأمامية (Frontend)</h4>
-              <p>أندرويد (Kotlin, Jetpack Compose) بتصميم Material Design 3 المتجاوب.</p>
-            </div>
-          </div>
-          <div className="tech-card">
-            <Server className="tech-icon" />
-            <div className="tech-text">
-              <h4>الخادم (Backend)</h4>
-              <p>نظام خلفي قوي وموثوق مبني باستخدام Spring Boot لضمان سرعة الاستجابة.</p>
-            </div>
-          </div>
-          <div className="tech-card">
-            <Database className="tech-icon" />
-            <div className="tech-text">
-              <h4>قواعد البيانات وتخزين الوسائط</h4>
-              <p>استخدام Firebase Storage لرفع الصور بكفاءة عالية، مع قاعدة بيانات قوية.</p>
-            </div>
-          </div>
-        </div>
 
         <h2 className="section-title">كيف يدعم JoMap أصحاب الأعمال؟</h2>
         <div className="feature-cards-grid business-cards-grid">
@@ -129,12 +112,7 @@ function IntroPage({ pageAnimation }) {
           </div>
         </div>
 
-        <div className="summary-highlight">
-          <Sparkles className="highlight-icon" />
-          <p>
-            <strong>باختصار:</strong> JoMap ليس مجرد تطبيق خرائط كلاسيكي، بل هو شبكة اجتماعية جغرافية تدمج بين حيوية منصات التواصل الاجتماعي وفائدة تطبيقات استكشاف الأماكن والعروض!
-          </p>
-        </div>
+
       </div>
     </motion.section>
   );
