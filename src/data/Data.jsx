@@ -27,6 +27,7 @@ import {
   Handshake,
   Hammer,
 } from "lucide-react";
+import { BarChart3 } from "lucide-react";
 
 export const supervisor = {
   name: "محمد زعرور",
@@ -88,17 +89,15 @@ export const teamMembers = [
 ];
 
 export const menuItems = [
-  { id: "intro", label: "مقدمة المشروع", icon: Home },
-  { id: "build", label: "تفاصيل البناء والمراحل", icon: Hammer },
-  { id: "team", label: "فريق العمل", icon: Users },
-  { id: "qr", label: "مسح الحضور", icon: QrCode },
-  { id: "roadmap", label: "مسار المستخدم", icon: Route },
-  { id: "features", label: "المميزات", icon: Star },
-  { id: "screens", label: "شاشات التطبيق", icon: Image },
-  { id: "tech", label: "التقنيات المستخدمة", icon: Code2 },
-  { id: "email", label: "خدمة البريد", icon: Mail },
+  { id: "team", label: "Team", icon: Users },
+  { id: "intro", label: "Project Intro", icon: Home },
+  { id: "roadmap", label: "User Flow", icon: Route },
+  { id: "features", label: "Features", icon: Star },
+  { id: "screens", label: "Screens", icon: Image },
+  { id: "tech", label: "Technology", icon: Code2 },
+  { id: "email", label: "Email Service", icon: Mail },
+  {id: "metrics", label: "Project Metrics", icon: BarChart3 },
 ];
-
 export const features = [
   {
     icon: MapPinned,
