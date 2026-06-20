@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Crown, ExternalLink, Sparkles } from "lucide-react";
 import { supervisor, teamMembers } from "../data/Data";
 
 function TeamPage({ pageAnimation }) {
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.language === "ar";
+
   return (
     <motion.section key="team" className="page team-page" {...pageAnimation}>
       <div className="page-badge">
         <Sparkles size={18} />
-        فريق مشروع التخرج
+        {t("teamPage.badge")}
       </div>
 
-      <h1 className="main-title">تعرف على فريق JoMap</h1>
-      <p className="main-subtitle">
-        فريق إبداعي يجمع بين التطوير، التصميم، الاختبار، والتوثيق لبناء طريقة أذكى لاكتشاف الأردن.
-      </p>
+      <h1 className="main-title">{t("teamPage.title")}</h1>
+      <p className="main-subtitle">{t("teamPage.subtitle")}</p>
 
       <motion.div
         className="supervisor-section"
@@ -24,18 +26,16 @@ function TeamPage({ pageAnimation }) {
         <div className="supervisor-glow"></div>
 
         <div className="supervisor-image-wrap">
-          <img src={supervisor.image} alt={supervisor.name} />
+          <img src={supervisor.image} alt={t(supervisor.nameKey)} />
           <div className="crown-icon">
             <Crown />
           </div>
         </div>
 
         <div className="supervisor-info">
-          <span>المشرف الأكاديمي</span>
-          <h2>{supervisor.name}</h2>
-          <p>
-            توجيه الفريق خلال التخطيط، التطوير، التوثيق، وتجهيز العرض النهائي.
-          </p>
+          <span>{t("teamPage.supervisorLabel")}</span>
+          <h2>{t(supervisor.nameKey)}</h2>
+          <p>{t("teamPage.supervisorDesc")}</p>
         </div>
       </motion.div>
 
@@ -48,17 +48,15 @@ function TeamPage({ pageAnimation }) {
         />
 
         {teamMembers.map((member, index) => {
-          const Icon = member.icon;
-
           return (
             <motion.div
               key={index}
               className={
                 index % 2 === 0
-                  ? "team-roadmap-item left"
-                  : "team-roadmap-item right"
+                  ? "team-roadmap-item start"
+                  : "team-roadmap-item end"
               }
-              initial={{ opacity: 0, x: index % 2 === 0 ? -90 : 90 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? (isRtl ? -90 : 90) : (isRtl ? 90 : -90) }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.15, duration: 0.55 }}
             >
@@ -87,23 +85,11 @@ function TeamPage({ pageAnimation }) {
 
                 <div className="team-card-header">
                   <div className="team-avatar">
-                    <img src={member.image} alt={member.name} />
-                  </div>
-
-                  <div className="team-role-icon">
-                    <Icon size={24} />
+                    <img src={member.image} alt={t(member.nameKey)} />
                   </div>
                 </div>
 
-                <span className="team-role">{member.role}</span>
-                <h3>{member.name}</h3>
-                <p>{member.description}</p>
-
-                <div className="skills-list">
-                  {member.skills.map((skill, skillIndex) => (
-                    <span key={skillIndex}>{skill}</span>
-                  ))}
-                </div>
+                <h3>{t(member.nameKey)}</h3>
 
                 <a
                   className="linkedin-button"
@@ -112,7 +98,7 @@ function TeamPage({ pageAnimation }) {
                   rel="noreferrer"
                 >
                   <ExternalLink size={19} />
-                  عرض لينكد إن
+                  {t("teamPage.linkedinButton")}
                 </a>
               </motion.div>
             </motion.div>

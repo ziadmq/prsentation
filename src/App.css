@@ -1,19 +1,44 @@
 :root {
-  --bg-main: #050816;
-  --bg-panel: rgba(10, 18, 35, 0.9);
-  --bg-card: rgba(15, 23, 42, 0.88);
-  --bg-card-strong: rgba(18, 27, 47, 0.96);
-  --line: rgba(96, 165, 250, 0.14);
-  --line-strong: rgba(96, 165, 250, 0.28);
-  --text-main: #ffffff;
-  --text-soft: #cbd5e1;
-  --text-muted: #94a3b8;
-  --blue: #2563eb;
-  --cyan: #38bdf8;
-  --cyan-soft: #7dd3fc;
+  /* Android Semantic Colors (Base Hex) */
+  --color-primary: #1E88E5;
+  --color-secondary: #26C6DA;
+  --color-background: #2C2C2C;
+  --color-surface: #2C2C2C;
+  --color-surface-variant: #383838;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #000000;
+  --color-on-background: #ffffff;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #E0E0E0;
+
+  /* RGB representations for rgba() transparency use */
+  --color-primary-rgb: 30, 136, 229;
+  --color-secondary-rgb: 38, 198, 218;
+  --color-background-rgb: 44, 44, 44;
+  --color-surface-rgb: 44, 44, 44;
+  --color-surface-variant-rgb: 56, 56, 56;
+
+  /* Legacy Mapping for Seamless Integration */
+  --bg-main: var(--color-background);
+  --bg-panel: rgba(var(--color-surface-variant-rgb), 0.9);
+  --bg-card: rgba(var(--color-surface-variant-rgb), 0.75);
+  --bg-card-strong: rgba(var(--color-surface-variant-rgb), 0.96);
+  
+  --line: rgba(var(--color-primary-rgb), 0.18);
+  --line-strong: rgba(var(--color-primary-rgb), 0.35);
+  
+  --text-main: var(--color-on-background);
+  --text-soft: var(--color-on-surface-variant);
+  --text-muted: rgba(224, 224, 224, 0.65); /* on-surface-variant with opacity */
+  
+  --blue: var(--color-primary);
+  --cyan: var(--color-secondary);
+  --cyan-soft: rgba(var(--color-secondary-rgb), 0.6);
   --green: #22c55e;
-  --shadow-card: 0 22px 50px rgba(0, 0, 0, 0.28);
-  --shadow-blue: 0 18px 38px rgba(37, 99, 235, 0.2);
+  
+  --shadow-card: 0 22px 50px rgba(0, 0, 0, 0.4);
+  --shadow-blue: 0 18px 38px rgba(var(--color-primary-rgb), 0.25);
+  
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
@@ -31,7 +56,6 @@ html {
 }
 
 body {
-  direction: rtl;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
@@ -115,8 +139,15 @@ button {
 }
 
 .brand svg,
-.menu-item svg {
+.menu-item svg,
+.language-toggle svg {
   flex-shrink: 0;
+}
+
+.sidebar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .menu-toggle {
@@ -134,6 +165,44 @@ button {
 .menu-toggle:hover {
   background: rgba(56, 189, 248, 0.18);
   transform: translateY(-2px);
+}
+
+.language-toggle {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.28), rgba(56, 189, 248, 0.18));
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.language-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+}
+
+.sidebar.closed .sidebar-header {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar.closed .sidebar-actions {
+  flex-direction: column;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 30px 0;
 }
 
 .menu-list {
@@ -402,6 +471,15 @@ button {
   height: 330px;
   top: -120px;
   left: -80px;
+}
+
+.team-card-light,
+.roadmap-card-glow,
+.repo-card-glow {
+  width: 250px;
+  height: 250px;
+  top: -100px;
+  right: -100px;
 }
 
 .supervisor-image-wrap {
@@ -747,9 +825,9 @@ button {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 50%;
+  inset-inline-start: 50%;
   width: 3px;
-  transform: translateX(50%);
+  margin-inline-start: -1.5px;
   background: linear-gradient(to bottom, transparent, var(--cyan), var(--blue), transparent);
 }
 
@@ -757,20 +835,29 @@ button {
 .team-roadmap-item {
   position: relative;
   width: 50%;
-  margin-bottom: 34px;
+  margin-bottom: 10px;
   animation: fadeUpMetrics 0.7s ease both;
 }
 
-.roadmap-step.left,
-.team-roadmap-item.left {
-  padding-left: 48px;
-  text-align: left;
+.team-roadmap-item:nth-child(n+3) {
+  margin-top: -100px;
 }
 
-.roadmap-step.right,
-.team-roadmap-item.right {
-  margin-right: 50%;
-  padding-right: 48px;
+.roadmap-step.start,
+.team-roadmap-item.start {
+  display: flex;
+  justify-content: flex-end;
+  padding-inline-end: 48px;
+  text-align: end;
+}
+
+.roadmap-step.end,
+.team-roadmap-item.end {
+  display: flex;
+  justify-content: flex-start;
+  margin-inline-start: 50%;
+  padding-inline-start: 48px;
+  text-align: start;
 }
 
 .roadmap-dot,
@@ -787,20 +874,21 @@ button {
 .roadmap-dot,
 .team-roadmap-dot {
   position: absolute;
-  top: 22px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 48px;
   height: 48px;
   z-index: 3;
 }
 
-.roadmap-step.left .roadmap-dot,
-.team-roadmap-item.left .team-roadmap-dot {
-  left: -24px;
+.roadmap-step.start .roadmap-dot,
+.team-roadmap-item.start .team-roadmap-dot {
+  inset-inline-end: -24px;
 }
 
-.roadmap-step.right .roadmap-dot,
-.team-roadmap-item.right .team-roadmap-dot {
-  right: -24px;
+.roadmap-step.end .roadmap-dot,
+.team-roadmap-item.end .team-roadmap-dot {
+  inset-inline-start: -24px;
 }
 
 .roadmap-card,
@@ -811,10 +899,67 @@ button {
   border-radius: 26px;
 }
 
-.roadmap-card h3,
+.team-roadmap-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  padding: 34px 28px;
+  isolation: isolate;
+  min-width: 250px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.team-roadmap-item.start .team-roadmap-card {
+  margin-inline-start: 0;
+}
+
+.team-roadmap-item.end .team-roadmap-card {
+  margin-inline-end: 0;
+}
+
+.team-roadmap-card::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  z-index: -1;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(56, 189, 248, 0.08), transparent 70%),
+    rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+}
+
+.team-roadmap-card:hover::before {
+  background:
+    linear-gradient(180deg, rgba(56, 189, 248, 0.15), transparent 80%),
+    rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.roadmap-card h3 {
+  width: 100%;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.25;
+  margin: 4px 0 0;
+}
+
 .team-roadmap-card h3 {
-  font-size: 22px;
-  margin: 8px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.25;
+  margin: 0;
 }
 
 .roadmap-icon,
@@ -826,16 +971,38 @@ button {
 .team-card-header {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 16px;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .team-avatar {
-  width: 72px;
-  height: 72px;
-  padding: 4px;
+  position: relative;
+  width: 126px;
+  height: 126px;
+  flex-shrink: 0;
+  padding: 5px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--blue), var(--cyan));
+  box-shadow:
+    0 18px 34px rgba(37, 99, 235, 0.24),
+    0 0 0 8px rgba(56, 189, 248, 0.06);
+  transition: var(--transition);
+}
+
+.team-roadmap-card:hover .team-avatar {
+  transform: scale(1.05);
+  box-shadow:
+    0 22px 40px rgba(37, 99, 235, 0.35),
+    0 0 0 10px rgba(56, 189, 248, 0.12);
+}
+
+.team-avatar::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: inherit;
+  border: 1px solid rgba(125, 211, 252, 0.22);
 }
 
 .team-avatar img {
@@ -869,17 +1036,18 @@ button {
 }
 
 .linkedin-button {
-  width: fit-content;
+  width: min(100%, 190px);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  margin-top: 18px;
-  padding: 10px 14px;
+  padding: 12px 16px;
   border-radius: 14px;
   text-decoration: none;
   color: white;
   background: linear-gradient(135deg, var(--blue), var(--cyan));
   font-weight: 900;
+  white-space: nowrap;
   transition: var(--transition);
 }
 
@@ -1605,7 +1773,7 @@ button {
   position: relative;
   display: grid;
   gap: 18px;
-  padding-right: 34px;
+  padding-inline-start: 34px;
 }
 
 .timeline::before {
@@ -1613,7 +1781,7 @@ button {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 24px;
+  inset-inline-start: 24px;
   width: 3px;
   border-radius: 999px;
   background: linear-gradient(to bottom, transparent, var(--cyan), var(--blue), transparent);
@@ -1665,7 +1833,7 @@ button {
   }
 
   .timeline {
-    padding-right: 0;
+    padding-inline-start: 0;
   }
 
   .timeline::before {
@@ -1862,28 +2030,42 @@ button {
 
   .roadmap-line,
   .team-roadmap-line {
-    right: 24px;
+    inset-inline-start: 24px;
   }
 
   .roadmap-step,
   .team-roadmap-item,
-  .roadmap-step.right,
-  .team-roadmap-item.right,
-  .roadmap-step.left,
-  .team-roadmap-item.left {
+  .roadmap-step.end,
+  .team-roadmap-item.end,
+  .roadmap-step.start,
+  .team-roadmap-item.start {
     width: 100%;
-    margin-right: 0;
-    padding-right: 62px;
-    padding-left: 0;
-    text-align: right;
+    margin-inline-start: 0;
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-inline-start: 62px;
+    padding-inline-end: 0;
+    text-align: start;
+    justify-content: flex-start;
   }
 
-  .roadmap-step.left .roadmap-dot,
-  .roadmap-step.right .roadmap-dot,
-  .team-roadmap-item.left .team-roadmap-dot,
-  .team-roadmap-item.right .team-roadmap-dot {
-    right: 0;
-    left: auto;
+  .roadmap-step.start .roadmap-dot,
+  .roadmap-step.end .roadmap-dot,
+  .team-roadmap-item.start .team-roadmap-dot,
+  .team-roadmap-item.end .team-roadmap-dot {
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+  }
+
+  .team-roadmap-card {
+    min-height: 250px;
+    max-width: 430px;
+    padding: 30px 22px 24px;
+  }
+
+  .team-avatar {
+    width: 104px;
+    height: 104px;
   }
 }
 
@@ -1908,6 +2090,27 @@ button {
   .page,
   .metrics-page {
     padding: 34px 18px;
+  }
+
+  .team-roadmap-item,
+  .team-roadmap-item.end,
+  .team-roadmap-item.start {
+    padding-inline-start: 54px;
+  }
+
+  .team-roadmap-card {
+    min-height: 235px;
+    padding: 26px 18px 22px;
+  }
+
+  .team-roadmap-card h3 {
+    min-height: 50px;
+    font-size: 20px;
+  }
+
+  .linkedin-button {
+    width: 100%;
+    max-width: 180px;
   }
 
   .main-title,

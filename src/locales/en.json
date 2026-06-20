@@ -1,0 +1,224 @@
+{
+  "translation": {
+    "sidebar": {
+      "brand": "JoMap"
+    },
+    "langSwitch": "العربية",
+    "menu": {
+      "intro": "Project Intro",
+      "build": "Build Details",
+      "tools": "Dev Tools",
+      "solutions": "Tech Solutions",
+      "team": "Team",
+      "roadmap": "User Journey",
+      "features": "App Features",
+      "screens": "App Screens",
+      "metrics": "Project Metrics"
+    },
+    "introPage": {
+      "title": "JOMAP",
+      "p1": "<strong>JOMAP</strong> is a smart Jordanian app that combines interactive maps with social media platforms in one place, allowing users to explore nearby places, locations, and activities in an easy and enjoyable way, with the ability to share their experiences and interact with others.",
+      "p2": "The app aims to encourage Jordanians to discover different regions of the Kingdom and document tourist, entertainment, and service places, contributing to creating a comprehensive digital guide for places in Jordan based on user content and experiences.",
+      "p3": "It also supports local business owners and projects by providing special features that help them promote their businesses and reach a larger number of customers, boosting local economic activity and creating a platform that connects users and business owners in an innovative way.",
+      "dualTitle": "One App.. Two Different Experiences",
+      "dualText": "JoMap was designed as an integrated platform serving two main user groups simultaneously: <strong>Regular User</strong> and <strong>Business Owner</strong>. It provides customized interfaces and tools to meet the needs of each group with high precision.",
+      "userFeaturesTitle": "Key JoMap Features (For Regular Users)",
+      "userFeatures": {
+        "exploreLocations": { "title": "Explore Locations", "text": "Easily explore all locations and places across Jordan's various governorates." },
+        "discoverEvents": { "title": "Discover Events", "text": "Discover new activities and events near the user's location." },
+        "latestOffers": { "title": "Latest Offers", "text": "Follow the latest offers, discounts, and local events." },
+        "ratings": { "title": "Ratings & Reviews", "text": "Share ratings and reviews about visited places to help others." },
+        "moments": { "title": "Capture Moments", "text": "Document the best moments and experiences and share them with the community." },
+        "community": { "title": "Interaction & Community", "text": "Create posts and stories, and interact with friends and other users." },
+        "featured": { "title": "Featured Places", "text": "Browse featured activities and places across the Kingdom." },
+        "nashmiAI": { "title": "Smart Assistant \"Nashmi AI\"", "text": "Benefit from the smart assistant \"Nashmi AI\" that suggests new and unique places to discover daily." },
+        "businessSupport": { "title": "Business Owner Support", "text": "Support business owners by providing a dedicated page to promote their businesses and reach new customers." },
+        "landmarks": { "title": "Documenting Jordanian Landmarks", "text": "Contribute to documenting Jordanian landmarks and places, creating a community database that reflects the beauty and diversity of Jordan." }
+      },
+      "ownerFeaturesTitle": "How Does JoMap Support Business Owners?",
+      "ownerFeatures": {
+        "businessEnv": { "title": "Dedicated Business Environment", "text": "A completely separate notification screen for business owners to avoid distractions, with account verification to give users confidence that the place is trustworthy." },
+        "dynamicOffers": { "title": "Dynamic & Instant Offers", "text": "Create offers with precise geographic targeting that appear instantly to nearby users, with attractive designs to directly attract customers." },
+        "eventManagement": { "title": "Activity & Event Management", "text": "Organize and promote activities, pin them geographically on the interactive map, encouraging organic interaction and user sharing of events." },
+        "communityGrowth": { "title": "Community-Driven Growth", "text": "Turn every visitor into an influencer through their own posts at the business location, and measure popularity through the \"Favorites\" system to analyze market preferences." },
+        "aiSupport": { "title": "AI for Business Support", "text": "Provide user recommendations to visit your business based on their behavior, and offer data-driven future insights to measure your campaign success." }
+      }
+    },
+    "buildPage": {
+      "title": "Build Details & Phases",
+      "subtitle": "How JoMap was built step by step",
+      "phasesTitle": "Development Phases",
+      "phases": {
+        "planning": { "title": "Planning & Analysis", "text": "Identifying the problem JoMap solves, studying the Jordanian market, and gathering requirements for users and business owners." },
+        "design": { "title": "UI/UX Design", "text": "Designing screens and user experience (User Flow) for the app and website using modern design tools to ensure usability and aesthetics." },
+        "backend": { "title": "Backend Development", "text": "Building the database, setting up Spring Boot servers, and programming APIs to connect data with the frontend." },
+        "mobile": { "title": "Mobile App Development", "text": "Developing the actual app using Kotlin, integrating maps (Google Maps), and enabling the notification system and AI." },
+        "testing": { "title": "Testing & Integration", "text": "Conducting comprehensive system tests to verify performance, absence of bugs, and ensuring the app responds effectively." }
+      }
+    },
+    "emailPage": {
+      "badge": "Direct Audience Service",
+      "title": "Send a Message to JoMap Team",
+      "subtitle": "During the presentation, attendees can send questions, suggestions, or feedback directly to our team.",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Your Email",
+      "messagePlaceholder": "Write your message or question...",
+      "sendButton": "Send Message"
+    },
+    "featuresPage": {
+      "badge": "App Features",
+      "title": "What Does JoMap Offer?"
+    },
+    "features": {
+      "interactiveMap": { "title": "Interactive Map of Jordan", "text": "Users can explore Jordan's governorates and discover tourist sites, restaurants, hotels, and markets." },
+      "nearbyPlaces": { "title": "Nearby Places", "text": "The app helps users find nearby places based on their current location." },
+      "reviews": { "title": "Reviews & Ratings", "text": "Users can rate places, write reviews, and share their experiences." },
+      "ownerDashboard": { "title": "Owner Dashboard", "text": "Owners can add locations, upload photos, and update their business information." },
+      "systemAdmin": { "title": "System Administration", "text": "Administrators approve locations, manage users, and monitor reports." },
+      "directComm": { "title": "Direct Communication", "text": "Users can communicate with business owners and ask questions directly." }
+    },
+    "metricsPage": {
+      "badge": "Project Work Analytics",
+      "title": "JoMap Development Statistics",
+      "subtitle": "A visual summary showing the real work on our project across Android Frontend, Java Backend, APIs, code comments, project files, and completed tasks.",
+      "completedTasks": "Completed Tasks",
+      "codeComments": "Code Comments",
+      "codeLines": "Lines of Code",
+      "projectFiles": "Project Files",
+      "tasks": "Tasks",
+      "comments": "Comments",
+      "screens": "Screens",
+      "completionRate": "Completion Rate",
+      "openRepo": "Open Repository",
+      "repoLinksTitle": "Repository Links",
+      "repoLinksSubtitle": "Direct links to the Source Code used in building JoMap.",
+      "journeyTitle": "Development Journey",
+      "journeySubtitle": "From project idea to a fully working Mobile Application.",
+      "impactText": "These statistics show the scope of teamwork, implementation, testing, documentation, and improvements accomplished during the JoMap project.",
+      "workflow": {
+        "planning": "Planning",
+        "delivery": "Delivery"
+      }
+    },
+    "qrPage": {
+      "badge": "Audience Attendance",
+      "title": "Scan QR Code",
+      "subtitle": "Before our presentation begins, attendees can scan this QR code to register attendance and send feedback or questions to the JoMap team.",
+      "attendance": "Attendance",
+      "questions": "Questions",
+      "notes": "Feedback",
+      "hoverToZoom": "Hover to Zoom",
+      "hoverInstruction": "Move your mouse over the QR code to scan it easily",
+      "modalTitle": "JoMap Attendance QR Code",
+      "scanInstruction": "Scan this QR code using your phone camera",
+      "close": "Close"
+    },
+    "roadmapPage": {
+      "badge": "User Journey",
+      "title": "JoMap App Flow",
+      "subtitle": "This map shows how users navigate within JoMap from opening it to exploring places, saving favorites, writing reviews, and contacting business owners."
+    },
+    "userFlow": {
+      "openApp": { "title": "Open JoMap App", "text": "The user opens the mobile app and begins the exploration journey.", "tag": "Start" },
+      "login": { "title": "Login / Create Account", "text": "The user creates an account or logs in to access personalized features.", "tag": "Account" },
+      "explore": { "title": "Explore Jordan's Map", "text": "The user browses Jordan's governorates using the interactive map.", "tag": "Map" },
+      "search": { "title": "Search for Places", "text": "The user can search for tourist sites, restaurants, hotels, or markets.", "tag": "Explore" },
+      "selectLocation": { "title": "Select Location", "text": "The user taps on a location marker or card to open place details.", "tag": "Location" },
+      "viewDetails": { "title": "View Details", "text": "The app displays photos, description, working hours, rating, and location info.", "tag": "Details" },
+      "saveRate": { "title": "Save / Rate", "text": "The user can add the place to favorites and share a review or rating.", "tag": "Interact" },
+      "contactOwner": { "title": "Contact Owner", "text": "The user can contact the place owner to ask questions or request services.", "tag": "Connect" },
+      "complete": { "title": "Experience Complete", "text": "The user finishes their journey with an easier and smarter way to discover Jordan.", "tag": "Done" }
+    },
+    "screensPage": {
+      "badge": "App Screens",
+      "title": "Application Screens",
+      "subtitle": "These screens show the main user experience within JoMap, from opening the app to exploring places and managing the user account.",
+      "mobileExperience": "Mobile Experience in JoMap"
+    },
+    "screens": {
+      "home": { "title": "Home Screen", "tag": "Starting Point", "text": "The home screen that welcomes users and provides quick access to key features." },
+      "map": { "title": "Interactive Map", "tag": "Map Experience", "text": "Users can explore Jordan using an interactive map with location markers." },
+      "details": { "title": "Location Details", "tag": "Place Info", "text": "Displays photos, description, ratings, reviews, and communication options for each place." },
+      "profile": { "title": "Profile Screen", "tag": "User Account", "text": "Users can manage profile data, favorites, reviews, and personal settings." }
+    },
+    "solutionsPage": {
+      "title": "Technical Solutions",
+      "subtitle": "Complex Problems We Faced and How We Solved Them",
+      "problems": {
+        "notifications": {
+          "problem": "Problem: Notification Congestion Between User Types",
+          "problemText": "How can we deliver social notifications to regular users and business notifications (ratings, offers) to owners without overlap or disturbance?",
+          "solution": "Solution: Dual Notification System",
+          "solutionText": "Building completely separate screens and databases (OwnerNotificationScreen). Notifications are routed based on user role (Role) and each notification is linked to a deep link that takes the user to the required action immediately."
+        },
+        "mapPerformance": {
+          "problem": "Problem: Map Performance with Many Locations and Offers",
+          "problemText": "Loading thousands of markers on the map at once causes severe lag on the phone interface and battery consumption.",
+          "solution": "Solution: Geographic Clustering & Real-time Updates",
+          "solutionText": "Using Marker Clustering technology to group nearby locations into a single expandable icon when zooming, while fetching data based on current screen coordinates only (Bounding Box) through Spring Boot."
+        },
+        "imageSpeed": {
+          "problem": "Problem: Image Loading Speed for Places and Users",
+          "problemText": "Loading high-resolution images for hundreds of places and reviews consumes user data and increases waiting time.",
+          "solution": "Solution: Optimized Cloud Storage (Firebase Storage & Caching)",
+          "solutionText": "Using Firebase Storage for image uploads, relying on caching libraries in Jetpack Compose like Coil to ensure images are loaded only once and saved locally, with image compression before uploading from the backend."
+        }
+      }
+    },
+    "teamPage": {
+      "badge": "Graduation Project Team",
+      "title": "Meet the JoMap Team",
+      "subtitle": "A creative team combining development, design, testing, and documentation to build a smarter way to discover Jordan.",
+      "supervisorLabel": "Academic Supervisor",
+      "supervisorDesc": "Guiding the team through planning, development, documentation, and preparing the final presentation.",
+      "linkedinButton": "View LinkedIn"
+    },
+    "supervisor": {
+      "name": "Mohammad Zarour",
+      "role": "Project Supervisor"
+    },
+    "teamMembers": {
+      "ghaleb": {
+        "name": "Ghaleb Shihab",
+        "role": "Backend Developer",
+        "description": "Responsible for building backend services, handling API business logic, authentication flow, and connecting the app to the database."
+      },
+      "musaab": {
+        "name": "Musaab Makahleh",
+        "role": "Database Administrator",
+        "description": "Responsible for database design, organizing app data, managing relationships, and supporting backend integration."
+      },
+      "eyad": {
+        "name": "Eyad Abu Fares",
+        "role": "Frontend Developer",
+        "description": "Responsible for building UI screens, improving page structure, and creating a smooth visual experience for users."
+      },
+      "abd": {
+        "name": "Abdulqader Frokh",
+        "role": "Full stack developer",
+        "description": "Supports the development lifecycle through front-end and back-end implementation, API integration, rigorous code testing, and optimizing overall application performance."
+      },
+      "ziad": {
+        "name": "Ziad Qufeishah",
+        "role": "Frontend Developer",
+        "description": "Works on frontend implementation, page layout, animations, and making the app interface more creative and professional."
+      }
+    },
+    "techPage": {
+      "badge": "System Architecture",
+      "title": "Technologies Used",
+      "frontend": "Frontend",
+      "frontendDesc": "React JS is used to build the user interface with fast navigation, reusable components, and a modern interactive design.",
+      "backend": "Backend",
+      "backendDesc": "Spring Boot provides REST APIs, authentication, business logic, database connection, and email sending service.",
+      "database": "Database & Storage",
+      "databaseDesc": "The system stores user data, places, ratings, favorites, reports, and owner location data.",
+      "FullStack" : "Full Stack Development",
+      "FullStackDesc": "The team worked on both frontend and backend development, ensuring seamless"
+    },
+    "toolsPage": {
+      "title": "Development Tools Used",
+      "subtitle": "The tools used in building JoMap"
+    }
+  }
+}

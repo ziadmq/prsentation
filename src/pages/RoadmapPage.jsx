@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Route } from "lucide-react";
-import { userFlowSteps } from "../data/Data";
+import { userFlowStepKeys } from "../data/Data";
 
 function RoadmapPage({ pageAnimation }) {
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.language === "ar";
+
   return (
     <motion.section key="roadmap" className="page roadmap-page" {...pageAnimation}>
       <div className="page-badge">
         <Route size={18} />
-        رحلة المستخدم
+        {t("roadmapPage.badge")}
       </div>
 
-      <h1 className="main-title">مسار تطبيق JoMap</h1>
-      <p className="main-subtitle">
-        توضح هذه الخريطة كيف يتنقل المستخدمون داخل تطبيق JoMap منذ فتحه وحتى استكشاف الأماكن، حفظ المفضلة، كتابة التقييمات، والتواصل مع أصحاب الأعمال.
-      </p>
+      <h1 className="main-title">{t("roadmapPage.title")}</h1>
+      <p className="main-subtitle">{t("roadmapPage.subtitle")}</p>
 
       <div className="roadmap-container">
         <motion.div
@@ -23,14 +25,14 @@ function RoadmapPage({ pageAnimation }) {
           transition={{ duration: 1.6, ease: "easeInOut" }}
         />
 
-        {userFlowSteps.map((step, index) => {
+        {userFlowStepKeys.map((step, index) => {
           const Icon = step.icon;
 
           return (
             <motion.div
-              className={index % 2 === 0 ? "roadmap-step left" : "roadmap-step right"}
+              className={index % 2 === 0 ? "roadmap-step start" : "roadmap-step end"}
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -90 : 90 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? (isRtl ? -90 : 90) : (isRtl ? 90 : -90) }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.13, duration: 0.55 }}
             >
@@ -52,9 +54,9 @@ function RoadmapPage({ pageAnimation }) {
                   <Icon size={28} />
                 </div>
 
-                <span>{step.tag}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+                <span>{t(`${step.key}.tag`)}</span>
+                <h3>{t(`${step.key}.title`)}</h3>
+                <p>{t(`${step.key}.text`)}</p>
               </motion.div>
             </motion.div>
           );

@@ -1,22 +1,23 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Smartphone } from "lucide-react";
-import { screens } from "../data/Data";
+import { screenKeys } from "../data/Data";
 
 function ScreensPage({ pageAnimation }) {
+  const { t } = useTranslation();
+
   return (
     <motion.section key="screens" className="page screens-page" {...pageAnimation}>
       <div className="page-badge">
         <Smartphone size={18} />
-        شاشات التطبيق
+        {t("screensPage.badge")}
       </div>
 
-      <h1 className="main-title">شاشات التطبيق</h1>
-      <p className="main-subtitle">
-        تُظهر هذه الشاشات تجربة المستخدم الرئيسية داخل تطبيق JoMap، من فتح التطبيق إلى استكشاف الأماكن وإدارة حساب المستخدم.
-      </p>
+      <h1 className="main-title">{t("screensPage.title")}</h1>
+      <p className="main-subtitle">{t("screensPage.subtitle")}</p>
 
       <div className="creative-screens-wrapper">
-        {screens.map((screen, index) => (
+        {screenKeys.map((screen, index) => (
           <motion.div
             className={index % 2 === 0 ? "creative-screen-row" : "creative-screen-row reverse"}
             key={index}
@@ -30,18 +31,18 @@ function ScreensPage({ pageAnimation }) {
             >
               <div className="phone-notch"></div>
               <div className="phone-screen">
-                <img src={screen.image} alt={screen.title} />
+                <img src={screen.image} alt={t(`${screen.key}.title`)} />
               </div>
             </motion.div>
 
             <div className="screen-description-card">
-              <span>{screen.tag}</span>
-              <h2>{screen.title}</h2>
-              <p>{screen.text}</p>
+              <span>{t(`${screen.key}.tag`)}</span>
+              <h2>{t(`${screen.key}.title`)}</h2>
+              <p>{t(`${screen.key}.text`)}</p>
 
               <div className="screen-mini-line">
                 <div></div>
-                <small>تجربة الموبايل في JoMap</small>
+                <small>{t("screensPage.mobileExperience")}</small>
               </div>
             </div>
           </motion.div>

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   Activity,
   BarChart3,
@@ -14,11 +15,13 @@ import {
 } from "lucide-react";
 
 function ProjectMetrics() {
+  const { t } = useTranslation();
+
   const totals = [
-    { label: "المهام المكتملة", value: "225", icon: CheckCircle2 },
-    { label: "تعليقات الكود", value: "450", icon: MessageSquareText },
-    { label: "أسطر الكود", value: "50K", icon: Code2 },
-    { label: "ملفات المشروع", value: "186", icon: FileCode2 },
+    { labelKey: "metricsPage.completedTasks", value: "225", icon: CheckCircle2 },
+    { labelKey: "metricsPage.codeComments", value: "450", icon: MessageSquareText },
+    { labelKey: "metricsPage.codeLines", value: "50K", icon: Code2 },
+    { labelKey: "metricsPage.projectFiles", value: "186", icon: FileCode2 },
   ];
 
   const repositories = [
@@ -29,10 +32,10 @@ function ProjectMetrics() {
       repoUrl: "https://github.com/ziadmq/JoMap",
       completion: 88,
       stats: [
-        { label: "المهام", value: "120" },
-        { label: "التعليقات", value: "250" },
+        { labelKey: "metricsPage.tasks", value: "120" },
+        { labelKey: "metricsPage.comments", value: "250" },
         { label: "Kotlin Lines", value: "40K" },
-        { label: "الشاشات", value: "32" },
+        { labelKey: "metricsPage.screens", value: "32" },
       ],
     },
     {
@@ -42,8 +45,8 @@ function ProjectMetrics() {
       repoUrl: "https://github.com/ghalebshhab/GraduationProjectv1",
       completion: 92,
       stats: [
-        { label: "المهام", value: "105" },
-        { label: "التعليقات", value: "200" },
+        { labelKey: "metricsPage.tasks", value: "105" },
+        { labelKey: "metricsPage.comments", value: "200" },
         { label: "Java Lines", value: "12K" },
         { label: "APIs", value: "150" },
       ],
@@ -51,32 +54,28 @@ function ProjectMetrics() {
   ];
 
   const workFlow = [
-    "التخطيط",
+    t("metricsPage.workflow.planning"),
     "UI Design",
     "Android",
     "Backend",
     "Database",
     "Testing",
-    "التسليم",
+    t("metricsPage.workflow.delivery"),
   ];
 
   return (
-    <section className="metrics-page" dir="rtl">
+    <section className="metrics-page">
       <div className="metrics-orbit orbit-one"></div>
       <div className="metrics-orbit orbit-two"></div>
 
       <div className="metrics-hero">
         <div className="metrics-badge">
           <BarChart3 size={16} />
-          تحليلات عمل المشروع
+          {t("metricsPage.badge")}
         </div>
 
-        <h1>إحصائيات تطوير JoMap</h1>
-        <p>
-          ملخص بصري يوضح العمل الحقيقي على مشروعنا عبر Android Frontend،
-          وJava Backend، وAPIs، وتعليقات الكود، وملفات المشروع، والمهام
-          المكتملة.
-        </p>
+        <h1>{t("metricsPage.title")}</h1>
+        <p>{t("metricsPage.subtitle")}</p>
       </div>
 
       <div className="metrics-total-grid">
@@ -86,7 +85,7 @@ function ProjectMetrics() {
           return (
             <div
               className="metrics-total-card"
-              key={item.label}
+              key={item.labelKey}
               style={{ "--delay": `${index * 0.12}s` }}
             >
               <div className="metrics-total-icon">
@@ -94,7 +93,7 @@ function ProjectMetrics() {
               </div>
 
               <h3>{item.value}</h3>
-              <p>{item.label}</p>
+              <p>{t(item.labelKey)}</p>
             </div>
           );
         })}
@@ -126,16 +125,16 @@ function ProjectMetrics() {
 
               <div className="repo-stats-grid">
                 {repo.stats.map((stat) => (
-                  <div className="repo-stat-box" key={stat.label}>
+                  <div className="repo-stat-box" key={stat.labelKey || stat.label}>
                     <strong>{stat.value}</strong>
-                    <span>{stat.label}</span>
+                    <span>{stat.labelKey ? t(stat.labelKey) : stat.label}</span>
                   </div>
                 ))}
               </div>
 
               <div className="repo-progress-area">
                 <div className="repo-progress-info">
-                  <span>نسبة الإنجاز</span>
+                  <span>{t("metricsPage.completionRate")}</span>
                   <strong>{repo.completion}%</strong>
                 </div>
 
@@ -154,7 +153,7 @@ function ProjectMetrics() {
                 rel="noreferrer"
               >
                 <GitBranch size={19} />
-                فتح Repository
+                {t("metricsPage.openRepo")}
                 <ExternalLink size={16} />
               </a>
             </article>
@@ -166,8 +165,8 @@ function ProjectMetrics() {
         <div className="repo-access-title">
           <GitBranch size={24} />
           <div>
-            <h2>روابط Repository</h2>
-            <p>روابط مباشرة إلى Source Code المستخدم في بناء JoMap.</p>
+            <h2>{t("metricsPage.repoLinksTitle")}</h2>
+            <p>{t("metricsPage.repoLinksSubtitle")}</p>
           </div>
         </div>
 
@@ -192,8 +191,8 @@ function ProjectMetrics() {
         <div className="metrics-bottom-title">
           <Layers3 size={24} />
           <div>
-            <h2>رحلة التطوير</h2>
-            <p>من فكرة المشروع إلى Mobile Application يعمل بشكل كامل.</p>
+            <h2>{t("metricsPage.journeyTitle")}</h2>
+            <p>{t("metricsPage.journeySubtitle")}</p>
           </div>
         </div>
 
@@ -214,10 +213,7 @@ function ProjectMetrics() {
 
         <div className="impact-card">
           <Activity size={22} />
-          <p>
-            هذه الإحصائيات توضح حجم العمل الجماعي، والتنفيذ، والاختبار،
-            والتوثيق، والتحسينات التي تم إنجازها خلال مشروع JoMap.
-          </p>
+          <p>{t("metricsPage.impactText")}</p>
           <Braces size={22} />
         </div>
       </div>

@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import { Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import "./App.css";
 
 import Sidebar from "./components/Sidbar";
@@ -20,6 +22,18 @@ import SolutionsPage from "./pages/SolutionsPage";
 function App() {
   const [activePage, setActivePage] = useState("intro");
   const [menuOpen, setMenuOpen] = useState(true);
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const dir = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.setAttribute("dir", dir);
+    document.documentElement.setAttribute("lang", i18n.language);
+  }, [i18n.language]);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "ar" ? "en" : "ar";
+    i18n.changeLanguage(newLang);
+  };
 
   const pageAnimation = {
     initial: { opacity: 0, y: 40, scale: 0.98 },
@@ -81,6 +95,12 @@ function App() {
       />
 
       <main className={menuOpen ? "content with-sidebar" : "content small-sidebar"}>
+        <div className="top-nav">
+          <button className="language-toggle" onClick={toggleLanguage}>
+            <Globe size={20} />
+            <span>{i18n.language === "ar" ? "English" : "العربية"}</span>
+          </button>
+        </div>
         <AnimatePresence mode="wait">{renderPage()}</AnimatePresence>
       </main>
     </div>

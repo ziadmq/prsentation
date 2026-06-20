@@ -32,188 +32,95 @@ import {
 import { BarChart3 } from "lucide-react";
 
 export const supervisor = {
-  name: "محمد زعرور",
-  role: "مشرف المشروع",
+  nameKey: "supervisor.name",
+  roleKey: "supervisor.role",
   image: "/team/Dr.jpg",
 };
 
 export const teamMembers = [
   {
-    name: "غالب شهاب",
-    role: "مطور الواجهة الخلفية (Backend)",
+    nameKey: "teamMembers.ghaleb.name",
+    roleKey: "teamMembers.ghaleb.role",
     image: "/team/Me.JPEG",
     icon: Server,
     linkedin: "#",
-    description:
-      "مسؤول عن بناء خدمات الواجهة الخلفية، التعامل مع المنطق البرمجي لواجهات برمجة التطبيقات (API)، تدفق المصادقة، وربط التطبيق بقاعدة البيانات.",
+    descriptionKey: "teamMembers.ghaleb.description",
     skills: ["Spring Boot", "REST API", "Authentication", "Backend Logic"],
   },
   {
-    name: "مصعب مكاحلة",
-    role: "مسؤول قاعدة البيانات",
+    nameKey: "teamMembers.musaab.name",
+    roleKey: "teamMembers.musaab.role",
     image: "/team/Mous.jpg",
     icon: Database,
     linkedin: "https://www.linkedin.com/in/mousaab-makahleh-480a04340",
-    description:
-      "مسؤول عن تصميم قاعدة البيانات، تنظيم بيانات التطبيق، إدارة العلاقات، ودعم التكامل مع الواجهة الخلفية.",
+    descriptionKey: "teamMembers.musaab.description",
     skills: ["Neon DB", "PostgreSQL", "Firebase", "Data Modeling"],
   },
   {
-    name: "إياد أبو فارس",
-    role: "مطور الواجهة الأمامية (Frontend)",
+    nameKey: "teamMembers.eyad.name",
+    roleKey: "teamMembers.eyad.role",
     image: "/team/Eyad.jpg",
     icon: MonitorSmartphone,
     linkedin: "#",
-    description:
-      "مسؤول عن بناء شاشات واجهة المستخدم، تحسين هيكل الصفحات، وخلق تجربة بصرية سلسة للمستخدمين.",
+    descriptionKey: "teamMembers.eyad.description",
     skills: ["React", "UI Design", "Components", "Responsive Design"],
   },
   {
-    name: "عبد القادر فروخ",
-    role: "دعم الفريق",
+    nameKey: "teamMembers.abd.name",
+    roleKey: "teamMembers.abd.role",
     image: "/team/Abd.jpg",
     icon: Handshake,
     linkedin: "#",
-    description:
-      "يدعم الفريق في تنسيق المشروع، تجهيز المحتوى، دعم الاختبارات، وتحسين جودة العرض النهائي.",
-    skills: ["Teamwork", "Testing Support", "Documentation", "Coordination"],
+    descriptionKey: "teamMembers.abd.description",
+    skills: ["Spring Boot", "Testing Support", "REST API", "Coordination" , "Kotlin"],
   },
   {
-    name: "زياد قفيشة",
-    role: "مطور الواجهة الأمامية (Frontend)",
+    nameKey: "teamMembers.ziad.name",
+    roleKey: "teamMembers.ziad.role",
     image: "/team/Zoz.jpg",
     icon: Code2,
     linkedin: "#",
-    description:
-      "يعمل على تنفيذ الواجهة الأمامية، تنسيق الصفحات، الحركات (Animations)، وجعل واجهة التطبيق أكثر إبداعًا واحترافية.",
+    descriptionKey: "teamMembers.ziad.description",
     skills: ["React", "CSS", "Animations", "Frontend Styling"],
   },
 ];
 
 export const menuItems = [
-  { id: "intro", label: "مقدمة المشروع", icon: Home },
-  { id: "build", label: "تفاصيل البناء", icon: Hammer },
-  { id: "tools", label: "أدوات التطوير", icon: Wrench },
-  { id: "solutions", label: "الحلول التقنية", icon: Lightbulb },
-  { id: "team", label: "فريق العمل", icon: Users },
-  { id: "roadmap", label: "رحلة المستخدم", icon: Route },
-  { id: "features", label: "مميزات التطبيق", icon: Star },
-  { id: "screens", label: "شاشات التطبيق", icon: Image },
-  { id: "metrics", label: "إحصائيات المشروع", icon: BarChart3 },
-];
-export const features = [
-  {
-    icon: MapPinned,
-    title: "خريطة الأردن التفاعلية",
-    text: "يمكن للمستخدمين استكشاف محافظات الأردن واكتشاف الأماكن السياحية، المطاعم، الفنادق، والأسواق.",
-  },
-  {
-    icon: Navigation,
-    title: "الأماكن القريبة",
-    text: "يساعد التطبيق المستخدمين في العثور على الأماكن القريبة بناءً على موقعهم الحالي.",
-  },
-  {
-    icon: Star,
-    title: "المراجعات والتقييمات",
-    text: "يمكن للمستخدمين تقييم الأماكن، كتابة المراجعات، ومشاركة تجاربهم.",
-  },
-  {
-    icon: Building2,
-    title: "لوحة تحكم المالك",
-    text: "يمكن للملاك إضافة المواقع، رفع الصور، وتحديث المعلومات الخاصة بأعمالهم.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "إدارة النظام",
-    text: "يقوم المشرفون بالموافقة على المواقع، إدارة المستخدمين، ومراقبة البلاغات.",
-  },
-  {
-    icon: MessageCircle,
-    title: "تواصل مباشر",
-    text: "يمكن للمستخدمين التواصل مع أصحاب الأعمال وطرح الأسئلة مباشرة.",
-  },
+  { id: "intro", labelKey: "menu.intro", icon: Home },
+  { id: "build", labelKey: "menu.build", icon: Hammer },
+  { id: "tools", labelKey: "menu.tools", icon: Wrench },
+  { id: "solutions", labelKey: "menu.solutions", icon: Lightbulb },
+  { id: "team", labelKey: "menu.team", icon: Users },
+  { id: "roadmap", labelKey: "menu.roadmap", icon: Route },
+  { id: "features", labelKey: "menu.features", icon: Star },
+  { id: "screens", labelKey: "menu.screens", icon: Image },
+  { id: "metrics", labelKey: "menu.metrics", icon: BarChart3 },
 ];
 
-export const screens = [
-  {
-    title: "الشاشة الرئيسية",
-    image: "/screens/home.png",
-    tag: "نقطة البداية",
-    text: "الشاشة الرئيسية التي ترحب بالمستخدمين وتوفر وصولاً سريعًا للمميزات الهامة.",
-  },
-  {
-    title: "الخريطة التفاعلية",
-    image: "/screens/map.png",
-    tag: "تجربة الخريطة",
-    text: "يمكن للمستخدمين استكشاف الأردن باستخدام خريطة تفاعلية مع علامات المواقع.",
-  },
-  {
-    title: "تفاصيل الموقع",
-    image: "/screens/details.png",
-    tag: "معلومات المكان",
-    text: "تعرض الصور، الوصف، التقييمات، المراجعات، وخيارات التواصل لكل مكان.",
-  },
-  {
-    title: "شاشة الملف الشخصي",
-    image: "/screens/profile.png",
-    tag: "حساب المستخدم",
-    text: "يمكن للمستخدمين إدارة بيانات الملف الشخصي، المفضلة، المراجعات، والإعدادات الشخصية.",
-  },
+export const featureKeys = [
+  { icon: MapPinned, key: "features.interactiveMap" },
+  { icon: Navigation, key: "features.nearbyPlaces" },
+  { icon: Star, key: "features.reviews" },
+  { icon: Building2, key: "features.ownerDashboard" },
+  { icon: ShieldCheck, key: "features.systemAdmin" },
+  { icon: MessageCircle, key: "features.directComm" },
 ];
 
-export const userFlowSteps = [
-  {
-    icon: Smartphone,
-    title: "فتح تطبيق JoMap",
-    text: "يفتح المستخدم تطبيق الهاتف المحمول ويبدأ رحلة الاستكشاف.",
-    tag: "البداية",
-  },
-  {
-    icon: LogIn,
-    title: "تسجيل الدخول / إنشاء حساب",
-    text: "ينشئ المستخدم حسابًا أو يسجل الدخول للوصول إلى المميزات المخصصة.",
-    tag: "الحساب",
-  },
-  {
-    icon: Map,
-    title: "استكشاف خريطة الأردن",
-    text: "يتصفح المستخدم محافظات الأردن باستخدام الخريطة التفاعلية.",
-    tag: "الخريطة",
-  },
-  {
-    icon: Search,
-    title: "البحث عن الأماكن",
-    text: "يمكن للمستخدم البحث عن الأماكن السياحية، المطاعم، الفنادق، أو الأسواق.",
-    tag: "استكشاف",
-  },
-  {
-    icon: MapPin,
-    title: "اختيار الموقع",
-    text: "ينقر المستخدم على علامة الموقع أو البطاقة لفتح تفاصيل المكان.",
-    tag: "الموقع",
-  },
-  {
-    icon: FileText,
-    title: "عرض التفاصيل",
-    text: "يعرض التطبيق الصور، الوصف، ساعات العمل، التقييم، ومعلومات الموقع.",
-    tag: "التفاصيل",
-  },
-  {
-    icon: Heart,
-    title: "حفظ / تقييم",
-    text: "يمكن للمستخدم إضافة المكان إلى المفضلة ومشاركة مراجعة أو تقييم.",
-    tag: "تفاعل",
-  },
-  {
-    icon: PhoneCall,
-    title: "التواصل مع المالك",
-    text: "يمكن للمستخدم التواصل مع صاحب المكان لطرح الأسئلة أو طلب الخدمات.",
-    tag: "تواصل",
-  },
-  {
-    icon: CheckCircle2,
-    title: "اكتمال التجربة",
-    text: "ينهي المستخدم رحلته بطريقة أسهل وأكثر ذكاءً لاكتشاف الأردن.",
-    tag: "تم",
-  },
+export const screenKeys = [
+  { key: "screens.home", image: "/screens/home.png" },
+  { key: "screens.map", image: "/screens/map.png" },
+  { key: "screens.details", image: "/screens/details.png" },
+  { key: "screens.profile", image: "/screens/profile.png" },
+];
+
+export const userFlowStepKeys = [
+  { icon: Smartphone, key: "userFlow.openApp" },
+  { icon: LogIn, key: "userFlow.login" },
+  { icon: Map, key: "userFlow.explore" },
+  { icon: Search, key: "userFlow.search" },
+  { icon: MapPin, key: "userFlow.selectLocation" },
+  { icon: FileText, key: "userFlow.viewDetails" },
+  { icon: Heart, key: "userFlow.saveRate" },
+  { icon: PhoneCall, key: "userFlow.contactOwner" },
+  { icon: CheckCircle2, key: "userFlow.complete" },
 ];

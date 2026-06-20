@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { QrCode, ScanLine } from "lucide-react";
 
 function QRPage({ pageAnimation }) {
   const [qrOpen, setQrOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <motion.section key="qr" className="page qr-page" {...pageAnimation}>
@@ -16,18 +18,16 @@ function QRPage({ pageAnimation }) {
         >
           <div className="page-badge">
             <ScanLine size={18} />
-            حضور الجمهور
+            {t("qrPage.badge")}
           </div>
 
-          <h1 className="main-title">امسح رمز QR</h1>
-          <p className="main-subtitle">
-            قبل بدء عرضنا التقديمي، يمكن للحضور مسح رمز QR هذا لتسجيل الحضور وإرسال الملاحظات أو الأسئلة إلى فريق JoMap.
-          </p>
+          <h1 className="main-title">{t("qrPage.title")}</h1>
+          <p className="main-subtitle">{t("qrPage.subtitle")}</p>
 
           <div className="qr-points">
-            <span>الحضور</span>
-            <span>الأسئلة</span>
-            <span>الملاحظات</span>
+            <span>{t("qrPage.attendance")}</span>
+            <span>{t("qrPage.questions")}</span>
+            <span>{t("qrPage.notes")}</span>
           </div>
         </motion.div>
 
@@ -46,8 +46,8 @@ function QRPage({ pageAnimation }) {
             <div className="scan-line"></div>
           </div>
 
-          <h3>مرر الماوس للتكبير</h3>
-          <p>حرك الماوس فوق رمز QR لمسحه بسهولة</p>
+          <h3>{t("qrPage.hoverToZoom")}</h3>
+          <p>{t("qrPage.hoverInstruction")}</p>
         </motion.div>
       </div>
 
@@ -70,7 +70,7 @@ function QRPage({ pageAnimation }) {
             >
               <div className="qr-modal-title">
                 <QrCode />
-                <span>رمز QR لحضور JoMap</span>
+                <span>{t("qrPage.modalTitle")}</span>
               </div>
 
               <div className="big-qr-box">
@@ -78,9 +78,9 @@ function QRPage({ pageAnimation }) {
                 <div className="big-scan-line"></div>
               </div>
 
-              <p>امسح رمز QR هذا باستخدام كاميرا هاتفك</p>
+              <p>{t("qrPage.scanInstruction")}</p>
 
-              <button onClick={() => setQrOpen(false)}>إغلاق</button>
+              <button onClick={() => setQrOpen(false)}>{t("qrPage.close")}</button>
             </motion.div>
           </motion.div>
         )}

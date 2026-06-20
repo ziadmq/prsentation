@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function TechPage({ pageAnimation }) {
+  const { t } = useTranslation();
+
   return (
     <motion.section key="tech" className="page tech-page" {...pageAnimation}>
-      <div className="page-badge">هيكلية النظام</div>
-      <h1 className="main-title">التقنيات المستخدمة</h1>
+      <div className="page-badge">{t("techPage.badge")}</div>
+      <h1 className="main-title">{t("techPage.title")}</h1>
 
       <div className="tech-box">
         <div className="tech-column">
-          <h2>الواجهة الأمامية</h2>
-          <p>
-            React JS is used to build the user interface with fast navigation,
-            reusable components, and a modern interactive design.
-          </p>
+          <h2>{t("techPage.frontend")}</h2>
+          <p>{t("techPage.frontendDesc")}</p>
           <span>Kotlin</span>
           <span>Framer Motion</span>
           <span>Lucide Icons</span>
@@ -21,10 +21,8 @@ function TechPage({ pageAnimation }) {
         <div className="connection-line"></div>
 
         <div className="tech-column">
-          <h2>الواجهة الخلفية</h2>
-          <p>
-            يوفر Spring Boot واجهات برمجة التطبيقات REST، المصادقة، منطق العمل، الاتصال بقاعدة البيانات، وخدمة إرسال البريد الإلكتروني.
-          </p>
+          <h2>{t("techPage.backend")}</h2>
+          <p>{t("techPage.backendDesc")}</p>
           <span>Spring Boot</span>
           <span>REST API</span>
           <span>Email Service</span>
@@ -33,15 +31,16 @@ function TechPage({ pageAnimation }) {
         <div className="connection-line"></div>
 
         <div className="tech-column">
-          <h2>قاعدة البيانات والتخزين</h2>
-          <p>
-            يخزن النظام بيانات المستخدمين، الأماكن، التقييمات، المفضلة، البلاغات، وبيانات مواقع المالكين.
-          </p>
+          <h2>{t("techPage.database")}</h2>
+          <p>{t("techPage.databaseDesc")}</p>
           <span>Neon Database</span>
           <span>Firebase Storage</span>
           <span>MySql</span>
         </div>
       </div>
+      <div className="connection-line"></div>
+
+      
     </motion.section>
   );
 }
