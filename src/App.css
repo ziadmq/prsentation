@@ -299,7 +299,7 @@ button {
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 26px;
   color: #f8fafc;
   margin-bottom: 40px;
   text-align: right;
@@ -374,7 +374,7 @@ button {
 .main-title,
 .project-title,
 .metrics-hero h1 {
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(24px, 3.5vw, 38px);
   line-height: 1.1;
   font-weight: 950;
   letter-spacing: 0;
@@ -529,7 +529,7 @@ button {
 }
 
 .supervisor-info h2 {
-  font-size: 38px;
+  font-size: 30px;
   margin: 8px 0;
 }
 
@@ -549,7 +549,7 @@ button {
 }
 
 .team-section-title h2 {
-  font-size: 32px;
+  font-size: 26px;
 }
 
 .creative-team-grid {
@@ -583,7 +583,7 @@ button {
 
 .member-number {
   color: rgba(255, 255, 255, 0.1);
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 950;
 }
 
@@ -778,7 +778,7 @@ button {
 
 .intro-stats strong {
   display: block;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .intro-stats span {
@@ -801,7 +801,7 @@ button {
 }
 
 .phone-preview h3 {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .phone-preview p {
@@ -945,7 +945,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(20px, 2vw, 24px);
+  font-size: clamp(18px, 1.8vw, 20px);
   line-height: 1.25;
   margin: 4px 0 0;
 }
@@ -955,7 +955,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(20px, 2vw, 24px);
+  font-size: clamp(18px, 1.8vw, 20px);
   line-height: 1.25;
   margin: 0;
 }
@@ -1110,13 +1110,13 @@ button {
 }
 
 .feature-text h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 10px;
   color: #f8fafc;
 }
 
 .feature-text p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.7;
   color: var(--text-soft);
 }
@@ -1646,7 +1646,7 @@ button {
 
 .section-title,
 .page-title {
-  font-size: clamp(24px, 3.5vw, 36px);
+  font-size: clamp(20px, 3vw, 30px);
   line-height: 1.15;
   font-weight: 950;
   margin-bottom: 16px;
