@@ -5,7 +5,10 @@ import { menuItems } from "../data/Data";
 function Sidbar({ activePage, setActivePage, menuOpen, setMenuOpen }) {
   const { t, i18n } = useTranslation();
 
-
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "ar" ? "en" : "ar";
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <aside className={menuOpen ? "sidebar open" : "sidebar closed"}>
@@ -16,8 +19,6 @@ function Sidbar({ activePage, setActivePage, menuOpen, setMenuOpen }) {
         </div>
 
         <div className="sidebar-actions">
-
-
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X /> : <Menu />}
           </button>
@@ -40,8 +41,16 @@ function Sidbar({ activePage, setActivePage, menuOpen, setMenuOpen }) {
           );
         })}
       </div>
+
+      <div className="sidebar-footer">
+        <button className="language-toggle-btn" onClick={toggleLanguage} title={i18n.language === "ar" ? "Switch to English" : "تغيير إلى العربية"}>
+          <Globe size={20} />
+          {menuOpen && <span>{i18n.language === "ar" ? "English" : "العربية"}</span>}
+        </button>
+      </div>
     </aside>
   );
 }
 
 export default Sidbar;
+
