@@ -74,11 +74,7 @@ button {
 .presentation {
   min-height: 100vh;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 24%),
-    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.18), transparent 30%),
-    radial-gradient(circle at center, rgba(34, 197, 94, 0.06), transparent 34%),
-    var(--bg-main);
+  background: var(--bg-main);
 }
 
 .presentation::before {
@@ -219,8 +215,8 @@ html[dir="ltr"] .sidebar {
 
 .language-toggle-btn:hover {
   color: #ffffff;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(56, 189, 248, 0.16));
-  border-color: rgba(96, 165, 250, 0.3);
+  background: linear-gradient(135deg, rgba(var(--color-secondary-rgb), 0.25), rgba(var(--color-secondary-rgb), 0.08));
+  border-color: rgba(var(--color-secondary-rgb), 0.3);
   transform: translateY(-1px);
 }
 
@@ -282,8 +278,9 @@ html[dir="ltr"] .sidebar {
 .menu-item:hover,
 .menu-item.active {
   color: #ffffff;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(56, 189, 248, 0.16));
-  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.16);
+  background: linear-gradient(135deg, rgba(var(--color-secondary-rgb), 0.25), rgba(var(--color-secondary-rgb), 0.08));
+  box-shadow: 0 12px 26px rgba(var(--color-secondary-rgb), 0.12);
+  border: 1px solid rgba(var(--color-secondary-rgb), 0.15);
 }
 
 html[dir="rtl"] .menu-item:hover,
@@ -332,24 +329,12 @@ html[dir="ltr"] .content.small-sidebar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 24%),
-    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.16), transparent 30%),
-    var(--bg-main);
+  background: var(--bg-main);
 }
 
 .page::before,
 .metrics-page::before {
-  content: "";
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  left: -130px;
-  top: 70px;
-  border-radius: 50%;
-  border: 1px solid rgba(96, 165, 250, 0.18);
-  pointer-events: none;
-  animation: rotateOrbit 18s linear infinite;
+  display: none;
 }
 
 .section-title {
@@ -388,17 +373,7 @@ html[dir="ltr"] .content.small-sidebar {
 
 .page::after,
 .metrics-page::after {
-  content: "";
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  right: -100px;
-  bottom: 90px;
-  border-radius: 50%;
-  background: rgba(37, 99, 235, 0.18);
-  filter: blur(58px);
-  pointer-events: none;
-  animation: floatGlow 7s ease-in-out infinite;
+  display: none;
 }
 
 .page > *,
