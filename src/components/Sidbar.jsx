@@ -1,4 +1,4 @@
-import { MapPinned, Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { menuItems } from "../data/Data";
 
@@ -14,8 +14,7 @@ function Sidbar({ activePage, setActivePage, menuOpen, setMenuOpen }) {
     <aside className={menuOpen ? "sidebar open" : "sidebar closed"}>
       <div className="sidebar-header">
         <div className="brand">
-          <MapPinned />
-          {menuOpen && <span>{t("sidebar.brand")}</span>}
+          <img src="/logo.png" alt="JoMap" className="brand-logo" />
         </div>
 
         <div className="sidebar-actions">
