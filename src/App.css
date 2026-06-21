@@ -1,22 +1,22 @@
 :root {
   /* Android Semantic Colors (Base Hex) */
-  --color-primary: #38bdf8;
+  --color-primary: #1E88E5;
   --color-secondary: #26C6DA;
-  --color-background: #090e19;
-  --color-surface: #0f172a;
-  --color-surface-variant: #1e293b;
+  --color-background: #2C2C2C;
+  --color-surface: #383838;
+  --color-surface-variant: #444444;
   --color-on-primary: #ffffff;
   --color-on-secondary: #000000;
-  --color-on-background: #f8fafc;
-  --color-on-surface: #f1f5f9;
-  --color-on-surface-variant: #94a3b8;
+  --color-on-background: #ffffff;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #E0E0E0;
 
   /* RGB representations for rgba() transparency use */
-  --color-primary-rgb: 56, 189, 248;
+  --color-primary-rgb: 30, 136, 229;
   --color-secondary-rgb: 38, 198, 218;
-  --color-background-rgb: 9, 14, 25;
-  --color-surface-rgb: 15, 23, 42;
-  --color-surface-variant-rgb: 30, 41, 59;
+  --color-background-rgb: 44, 44, 44;
+  --color-surface-rgb: 56, 56, 56;
+  --color-surface-variant-rgb: 68, 68, 68;
 
   /* Legacy Mapping for Seamless Integration */
   --bg-main: var(--color-background);
@@ -56,7 +56,7 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Outfit', 'Cairo', 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
 }
