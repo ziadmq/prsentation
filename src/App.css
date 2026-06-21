@@ -2230,3 +2230,73 @@ html[dir="ltr"] .content.small-sidebar {
     align-items: flex-start;
   }
 }
+
+/* Introduction Page Theme & Alignment Styling */
+.intro-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding-top: 50px;
+}
+
+.intro-page .full-width-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto 50px;
+}
+
+.intro-page .project-title {
+  font-size: clamp(38px, 6vw, 68px) !important;
+  font-weight: 1000 !important;
+  line-height: 1.25 !important;
+  color: var(--color-primary) !important;
+  text-shadow: 0 0 35px rgba(30, 136, 229, 0.35);
+  text-align: center !important;
+  margin: 0 auto 28px !important;
+  max-width: 100%;
+  letter-spacing: -1px;
+}
+
+.intro-page .project-description {
+  text-align: center !important;
+  font-size: clamp(15px, 2.5vw, 18px) !important;
+  line-height: 1.85 !important;
+  max-width: 850px;
+  margin: 0 auto 30px !important;
+}
+
+.intro-page .project-description p {
+  text-align: center !important;
+}
+
+.intro-page .extended-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-page .dual-users-intro {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 40px;
+}
+
+.intro-page .dual-users-text {
+  text-align: center !important;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.intro-page .section-title {
+  text-align: center !important;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
