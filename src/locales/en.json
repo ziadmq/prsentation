@@ -16,32 +16,30 @@
       "metrics": "Project Metrics"
     },
     "introPage": {
-      "title": "JOMAP: A community based locations and activities",
-      "p1": "<strong>JOMAP</strong> is a smart Jordanian app that combines interactive maps with social media platforms in one place, allowing users to explore nearby places, locations, and activities in an easy and enjoyable way, with the ability to share their experiences and interact with others.",
-      "p2": "The app aims to encourage Jordanians to discover different regions of the Kingdom and document tourist, entertainment, and service places, contributing to creating a comprehensive digital guide for places in Jordan based on user content and experiences.",
-      "p3": "It also supports local business owners and projects by providing special features that help them promote their businesses and reach a larger number of customers, boosting local economic activity and creating a platform that connects users and business owners in an innovative way.",
-      "dualTitle": "One App.. Two Different Experiences",
-      "dualText": "JoMap was designed as an integrated platform serving two main user groups simultaneously: <strong>Regular User</strong> and <strong>Business Owner</strong>. It provides customized interfaces and tools to meet the needs of each group with high precision.",
-      "userFeaturesTitle": "Key JoMap Features (For Regular Users)",
-      "userFeatures": {
-        "exploreLocations": { "title": "Explore Locations", "text": "Easily explore all locations and places across Jordan's various governorates." },
-        "discoverEvents": { "title": "Discover Events", "text": "Discover new activities and events near the user's location." },
-        "latestOffers": { "title": "Latest Offers", "text": "Follow the latest offers, discounts, and local events." },
-        "ratings": { "title": "Ratings & Reviews", "text": "Share ratings and reviews about visited places to help others." },
-        "moments": { "title": "Capture Moments", "text": "Document the best moments and experiences and share them with the community." },
-        "community": { "title": "Interaction & Community", "text": "Create posts and stories, and interact with friends and other users." },
-        "featured": { "title": "Featured Places", "text": "Browse featured activities and places across the Kingdom." },
-        "nashmiAI": { "title": "Smart Assistant \"Nashmi AI\"", "text": "Benefit from the smart assistant \"Nashmi AI\" that suggests new and unique places to discover daily." },
-        "businessSupport": { "title": "Business Owner Support", "text": "Support business owners by providing a dedicated page to promote their businesses and reach new customers." },
-        "landmarks": { "title": "Documenting Jordanian Landmarks", "text": "Contribute to documenting Jordanian landmarks and places, creating a community database that reflects the beauty and diversity of Jordan." }
+      "badge": "Project Introduction",
+      "title": "JOMAP",
+      "subtitle": "A community based locations and activities",
+      "description": "A unified digital community platform dedicated and tailored to the Jordanian context. The platform integrates interactive geographical services with activities and events management, enhanced by a collaborative social environment that hosts two main types of entities: profit-seeking commercial businesses that benefit from an innovative promotional system offering exclusive and attractive discounts, and non-profit volunteer teams and organizations that organize community initiatives and events. This actively contributes to stimulating the local economy, supporting youth and volunteer work, and creates a seamless link connecting location discovery, activity participation, and exclusive offers.",
+      "pillarsTitle": "The Four Pillars of the Project",
+      "pillars": {
+        "community": { "title": "Social Network", "desc": "Sharing moments and experiences to build genuine interaction" },
+        "maps": { "title": "Interactive Locations", "desc": "Smart geographical exploration of landmarks and services in Jordan" },
+        "events": { "title": "Events & Activities", "desc": "Organizing and participating in local and youth initiatives" },
+        "offers": { "title": "Offers & Discounts", "desc": "A smart promotional system targeting users geographically" }
       },
-      "ownerFeaturesTitle": "How Does JoMap Support Business Owners?",
-      "ownerFeatures": {
-        "businessEnv": { "title": "Dedicated Business Environment", "text": "A completely separate notification screen for business owners to avoid distractions, with account verification to give users confidence that the place is trustworthy." },
-        "dynamicOffers": { "title": "Dynamic & Instant Offers", "text": "Create offers with precise geographic targeting that appear instantly to nearby users, with attractive designs to directly attract customers." },
-        "eventManagement": { "title": "Activity & Event Management", "text": "Organize and promote activities, pin them geographically on the interactive map, encouraging organic interaction and user sharing of events." },
-        "communityGrowth": { "title": "Community-Driven Growth", "text": "Turn every visitor into an influencer through their own posts at the business location, and measure popularity through the \"Favorites\" system to analyze market preferences." },
-        "aiSupport": { "title": "AI for Business Support", "text": "Provide user recommendations to visit your business based on their behavior, and offer data-driven future insights to measure your campaign success." }
+      "problemsTitle": "The Problem & Motivation",
+      "problems": {
+        "p1": { "title": "Fragmented Tourist Info", "desc": "Tourism and activity details in Jordan are scattered across multiple unspecialized platforms." },
+        "p2": { "title": "Geographic Access Difficulty", "desc": "Difficult for local business owners and projects to reach their target audience geographically." },
+        "p3": { "title": "Lack of Interactive Rewards", "desc": "Absence of a social aspect connecting experience sharing with receiving valuable rewards." },
+        "p4": { "title": "Content Credibility Challenges", "desc": "Difficult to moderate content and verify offers and locations without a unified authority." }
+      },
+      "objectivesTitle": "Project Objectives & Vision",
+      "objectives": {
+        "o1": { "title": "Unified Integrated Hub", "desc": "Integrating maps, events, and offers with a community network in a single application." },
+        "o2": { "title": "Boost Tourism & Social Work", "desc": "Promoting local tourism, family activities, and supporting youth volunteer initiatives." },
+        "o3": { "title": "Support Local Economy", "desc": "Enabling merchants to promote their offers with smart geolocated targeting to attract customers." },
+        "o4": { "title": "Ensure Quality & Trust", "desc": "Providing an admin moderation dashboard to verify the credibility of locations and offers." }
       }
     },
     "buildPage": {
