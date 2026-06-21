@@ -16,7 +16,9 @@ import {
   Layers,
   Heart,
   Handshake,
-  BrainCircuit
+  BrainCircuit,
+  Briefcase,
+  Monitor
 } from "lucide-react";
 
 function IntroPage({ pageAnimation }) {
@@ -62,6 +64,12 @@ function IntroPage({ pageAnimation }) {
     { icon: Sparkles, key: "o6", color: "#26C6DA" }
   ];
 
+  const roles = [
+    { icon: Compass, key: "user", color: "#1E88E5" },
+    { icon: Briefcase, key: "owner", color: "#26C6DA" },
+    { icon: Monitor, key: "admin", color: "#1E88E5" }
+  ];
+
   return (
     <motion.section key="intro" className="page intro-page" {...pageAnimation}>
       
@@ -77,8 +85,44 @@ function IntroPage({ pageAnimation }) {
         </div>
       </div>
 
-      {/* 4 Pillars Section */}
+      {/* Extended Info Wrapper */}
       <div className="extended-info-container">
+
+        {/* System Roles Section */}
+        <h2 className="section-title">{t("introPage.rolesTitle")}</h2>
+        <div className="system-roles-grid">
+          {roles.map((role, index) => {
+            const Icon = role.icon;
+            return (
+              <motion.div 
+                className="role-card" 
+                key={role.key}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                whileHover={{ y: -6 }}
+                style={{ "--role-color": role.color }}
+              >
+                <div className="role-header">
+                  <div className="role-icon-box">
+                    <Icon size={26} />
+                  </div>
+                  <div className="role-titles">
+                    <h3>{t(`introPage.roles.${role.key}.title`)}</h3>
+                    <h4>{t(`introPage.roles.${role.key}.subtitle`)}</h4>
+                  </div>
+                </div>
+                <p className="role-desc">{t(`introPage.roles.${role.key}.desc`)}</p>
+                <div className="role-actions-box">
+                  <strong className="role-actions-label">{t("introPage.roles.actionsLabel")}</strong>
+                  <p className="role-actions-text">{t(`introPage.roles.${role.key}.actions`)}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* 4 Pillars Section */}
         <h2 className="section-title">{t("introPage.pillarsTitle")}</h2>
         <motion.div 
           className="pillars-grid"

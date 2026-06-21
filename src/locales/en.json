@@ -20,6 +20,28 @@
       "title": "JOMAP",
       "subtitle": "A community based locations and activities",
       "description": "A unified digital community platform dedicated and tailored to the Jordanian context. The platform integrates interactive geographical services with activities and events management, enhanced by a collaborative social environment that hosts two main types of entities: profit-seeking commercial businesses that benefit from an innovative promotional system offering exclusive and attractive discounts, and non-profit volunteer teams and organizations that organize community initiatives and events. This actively contributes to stimulating the local economy, supporting youth and volunteer work, and creates a seamless link connecting location discovery, activity participation, and exclusive offers.",
+      "rolesTitle": "The Three Main Roles in JOMAP Ecosystem",
+      "roles": {
+        "actionsLabel": "What do they do?",
+        "user": {
+          "title": "The Explorer / Regular User",
+          "subtitle": "Mobile App User",
+          "desc": "Represents the wide audience of youth, families, and tourists interested in exploring Jordan and community interaction.",
+          "actions": "Explores interactive maps, joins events, redeems local offers, posts daily stories, and uses Nashmi AI to plan trips."
+        },
+        "owner": {
+          "title": "Business Owner / Entity",
+          "subtitle": "Mobile Business Panel",
+          "desc": "Represents local businesses (restaurants, cafes, shops) and non-profit youth/volunteer event organizers.",
+          "actions": "Registers business on maps, launches geolocated promotional offers, manages events, and tracks performance on mobile."
+        },
+        "admin": {
+          "title": "Platform Administrator (Admin)",
+          "subtitle": "Web Control Dashboard",
+          "desc": "Represents the regulatory and monitoring entity ensuring safety, reliability, and quality of platform content.",
+          "actions": "Moderates the ecosystem via Web Admin Dashboard, approves locations, reviews reports, and monitors global metrics."
+        }
+      },
       "pillarsTitle": "The Four Pillars of the Project",
       "pillars": {
         "community": { "title": "Social Network", "desc": "Sharing moments and experiences to build genuine interaction" },
