@@ -14,7 +14,9 @@ import {
   Target,
   Compass,
   Layers,
-  Heart
+  Heart,
+  Handshake,
+  BrainCircuit
 } from "lucide-react";
 
 function IntroPage({ pageAnimation }) {
@@ -36,24 +38,28 @@ function IntroPage({ pageAnimation }) {
   };
 
   const pillars = [
-    { icon: Users, key: "community", color: "#4CAF50" },
+    { icon: Users, key: "community", color: "#26C6DA" },
     { icon: Map, key: "maps", color: "#1E88E5" },
     { icon: Calendar, key: "events", color: "#26C6DA" },
-    { icon: Tag, key: "offers", color: "#FF9800" }
+    { icon: Tag, key: "offers", color: "#1E88E5" }
   ];
 
   const problems = [
-    { icon: AlertTriangle, key: "p1", color: "#EF5350" },
-    { icon: Target, key: "p2", color: "#FF7043" },
-    { icon: Heart, key: "p3", color: "#AB47BC" },
-    { icon: ShieldAlert, key: "p4", color: "#D4E157" }
+    { icon: AlertTriangle, key: "p1", color: "#1E88E5" },
+    { icon: Target, key: "p2", color: "#26C6DA" },
+    { icon: Heart, key: "p3", color: "#1E88E5" },
+    { icon: ShieldAlert, key: "p4", color: "#26C6DA" },
+    { icon: Handshake, key: "p5", color: "#1E88E5" },
+    { icon: BrainCircuit, key: "p6", color: "#26C6DA" }
   ];
 
   const objectives = [
-    { icon: Layers, key: "o1", color: "#42A5F5" },
-    { icon: Compass, key: "o2", color: "#26A69A" },
-    { icon: TrendingUp, key: "o3", color: "#66BB6A" },
-    { icon: Lightbulb, key: "o4", color: "#FFCA28" }
+    { icon: Layers, key: "o1", color: "#1E88E5" },
+    { icon: Compass, key: "o2", color: "#26C6DA" },
+    { icon: TrendingUp, key: "o3", color: "#1E88E5" },
+    { icon: Lightbulb, key: "o4", color: "#26C6DA" },
+    { icon: Users, key: "o5", color: "#1E88E5" },
+    { icon: Sparkles, key: "o6", color: "#26C6DA" }
   ];
 
   return (
