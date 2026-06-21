@@ -152,6 +152,14 @@ html[dir="ltr"] .sidebar {
   white-space: nowrap;
 }
 
+.brand-logo {
+  height: 32px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
 .brand svg,
 .menu-item svg,
 .language-toggle svg {
