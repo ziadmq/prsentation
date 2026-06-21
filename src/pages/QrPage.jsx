@@ -22,13 +22,7 @@ function QRPage({ pageAnimation }) {
           </div>
 
           <h1 className="main-title">{t("qrPage.title")}</h1>
-          <p className="main-subtitle">{t("qrPage.subtitle")}</p>
-
-          <div className="qr-points">
-            <span>{t("qrPage.attendance")}</span>
-            <span>{t("qrPage.questions")}</span>
-            <span>{t("qrPage.notes")}</span>
-          </div>
+          <p className="main-subtitle" style={{ maxWidth: '460px', marginBottom: 0 }}>{t("qrPage.subtitle")}</p>
         </motion.div>
 
         <motion.div

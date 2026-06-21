@@ -15,9 +15,12 @@ import TechPage from "./pages/TechPage";
 import EmailPage from "./pages/EmailPage";
 import ProjectMetrices from "./pages/ProjectMatrices";
 import ToolsPage from "./pages/ToolsPage";
+import OwnerFlowPage from "./pages/OwnerFlowPage";
+import AdminFlowPage from "./pages/AdminFlowPage";
+import FutureWorkPage from "./pages/FutureWorkPage";
 
 function App() {
-  const [activePage, setActivePage] = useState("intro");
+  const [activePage, setActivePage] = useState("qr");
   const [menuOpen, setMenuOpen] = useState(true);
   const { i18n } = useTranslation();
 
@@ -53,6 +56,15 @@ function App() {
 
       case "roadmap":
         return <RoadmapPage pageAnimation={pageAnimation} />;
+
+      case "ownerFlow":
+        return <OwnerFlowPage pageAnimation={pageAnimation} />;
+
+      case "adminFlow":
+        return <AdminFlowPage pageAnimation={pageAnimation} />;
+
+      case "future":
+        return <FutureWorkPage pageAnimation={pageAnimation} />;
 
       case "screens":
         return <ScreensPage pageAnimation={pageAnimation} />;

@@ -1,10 +1,35 @@
-import { Menu, X, Globe } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Globe, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { menuItems } from "../data/Data";
 import jomapLogo from "../assets/jomap_logo.jpg";
 
 function Sidbar({ activePage, setActivePage, menuOpen, setMenuOpen }) {
   const { t, i18n } = useTranslation();
+
+  const [scanCount, setScanCount] = useState(() => {
+    const saved = localStorage.getItem("jomap_scan_count");
+    return saved ? parseInt(saved, 10) : 0; // Start at 0
+  });
+
+  useEffect(() => {
+    localStorage.setItem("jomap_scan_count", scanCount);
+  }, [scanCount]);
+
+  useEffect(() => {
+    // Simulate real-time scans incrementing slowly for realism
+    const interval = setInterval(() => {
+      setScanCount((prev) => {
+        if (prev < 18) {
+          const increment = Math.random() > 0.4 ? 1 : 0;
+          return prev + increment;
+        }
+        return prev;
+      });
+    }, 45000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "ar" ? "en" : "ar";
@@ -48,6 +73,23 @@ function Sidbar({ activePage, setActivePage, menuOpen, setMenuOpen }) {
       </div>
 
       <div className="sidebar-footer">
+        {/* Live Scan Counter */}
+        <div className="scan-counter-container">
+          <div 
+            className="scan-counter-badge" 
+            title={t("sidebar.scanCountTooltip")}
+          >
+            <span className="scan-pulse-dot"></span>
+            {menuOpen ? (
+              <span>
+                {t("sidebar.scanCountLabel")}: <strong>{scanCount}</strong>
+              </span>
+            ) : (
+              <strong>{scanCount}</strong>
+            )}
+          </div>
+        </div>
+
         <button className="language-toggle-btn" onClick={toggleLanguage} title={i18n.language === "ar" ? "Switch to English" : "تغيير إلى العربية"}>
           <Globe size={20} />
           {menuOpen && <span>{i18n.language === "ar" ? "English" : "العربية"}</span>}

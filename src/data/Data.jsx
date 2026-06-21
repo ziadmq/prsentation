@@ -28,8 +28,19 @@ import {
   Hammer,
   Wrench,
   Lightbulb,
+  Lock,
+  PlusCircle,
+  Calendar,
+  TrendingUp,
+  Eye,
+  ShieldAlert,
+  BadgePlus,
+  Settings,
+  Check,
+  BarChart3,
+  Compass,
+  Tag,
 } from "lucide-react";
-import { BarChart3 } from "lucide-react";
 
 export const supervisor = {
   nameKey: "supervisor.name",
@@ -86,12 +97,16 @@ export const teamMembers = [
 ];
 
 export const menuItems = [
+  { id: "qr", labelKey: "menu.qr", icon: QrCode },
   { id: "intro", labelKey: "menu.intro", icon: Home },
   { id: "screens", labelKey: "menu.screens", icon: Image },
+  { id: "roadmap", labelKey: "menu.roadmap", icon: Route },
+  { id: "ownerFlow", labelKey: "menu.ownerFlow", icon: Building2 },
+  { id: "adminFlow", labelKey: "menu.adminFlow", icon: ShieldCheck },
   { id: "build", labelKey: "menu.build", icon: Hammer },
   { id: "tools", labelKey: "menu.tools", icon: Wrench },
-  { id: "roadmap", labelKey: "menu.roadmap", icon: Route },
   { id: "metrics", labelKey: "menu.metrics", icon: BarChart3 },
+  { id: "future", labelKey: "menu.future", icon: Compass },
   { id: "team", labelKey: "menu.team", icon: Users },
 ];
 
@@ -121,4 +136,22 @@ export const userFlowStepKeys = [
   { icon: Heart, key: "userFlow.saveRate" },
   { icon: PhoneCall, key: "userFlow.contactOwner" },
   { icon: CheckCircle2, key: "userFlow.complete" },
+];
+
+export const ownerFlowStepKeys = [
+  { icon: LogIn, key: "ownerFlow.login" },
+  { icon: FileText, key: "ownerFlow.registerBusiness" },
+  { icon: ShieldCheck, key: "ownerFlow.waitApproval" },
+  { icon: MapPin, key: "ownerFlow.addLocation" },
+  { icon: Tag, key: "ownerFlow.createOffer" },
+  { icon: Calendar, key: "ownerFlow.addEvent" },
+  { icon: TrendingUp, key: "ownerFlow.viewAnalytics" },
+];
+
+export const adminFlowStepKeys = [
+  { icon: Lock, key: "adminFlow.login" },
+  { icon: FileText, key: "adminFlow.reviewReq" },
+  { icon: ShieldCheck, key: "adminFlow.approveReq" },
+  { icon: Eye, key: "adminFlow.moderateContent" },
+  { icon: BarChart3, key: "adminFlow.viewGlobalMetrics" },
 ];

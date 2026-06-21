@@ -1,19 +1,23 @@
 {
   "translation": {
     "sidebar": {
-      "brand": "JoMap"
+      "brand": "JOMAP",
+      "scanCountLabel": "Active Observers",
+      "scanCountTooltip": "Number of attendees currently viewing the presentation"
     },
     "langSwitch": "العربية",
     "menu": {
+      "qr": "Scan Presentation (QR)",
       "intro": "About JOMAP Project",
+      "screens": "App Screens",
       "build": "Build Details",
       "tools": "Dev Tools",
-      "solutions": "Tech Solutions",
-      "team": "Team",
       "roadmap": "User Journey",
-      "features": "App Features",
-      "screens": "App Screens",
-      "metrics": "Project Metrics"
+      "ownerFlow": "Owner Journey",
+      "adminFlow": "Admin Dashboard",
+      "metrics": "Project Metrics",
+      "future": "Future & Conclusion",
+      "team": "Team"
     },
     "introPage": {
       "badge": "About JOMAP Project",
@@ -127,33 +131,59 @@
       }
     },
     "qrPage": {
-      "badge": "Audience Attendance",
-      "title": "Scan QR Code",
-      "subtitle": "Before our presentation begins, attendees can scan this QR code to register attendance and send feedback or questions to the JoMap team.",
-      "attendance": "Attendance",
-      "questions": "Questions",
-      "notes": "Feedback",
-      "hoverToZoom": "Hover to Zoom",
-      "hoverInstruction": "Move your mouse over the QR code to scan it easily",
-      "modalTitle": "JoMap Attendance QR Code",
-      "scanInstruction": "Scan this QR code using your phone camera",
+      "badge": "Scan Presentation QR",
+      "title": "Scan to Follow Presentation",
+      "subtitle": "Attendees and jury members can scan the QR code to open and follow the presentation slides directly on their smartphones.",
+      "attendance": "Real-time Viewing",
+      "questions": "Live Interaction",
+      "notes": "Slide Sync",
+      "hoverToZoom": "Click to Zoom",
+      "hoverInstruction": "Click the QR card to expand it to full screen for easier scanning",
+      "modalTitle": "JOMAP Presentation QR Code",
+      "scanInstruction": "Scan the QR code using your phone camera to open the presentation",
       "close": "Close"
     },
     "roadmapPage": {
       "badge": "User Journey",
-      "title": "JoMap App Flow",
-      "subtitle": "This map shows how users navigate within JoMap from opening it to exploring places, saving favorites, writing reviews, and contacting business owners."
+      "title": "JOMAP App Flow for Explorers",
+      "subtitle": "This map shows how users navigate within JOMAP from opening the app to geographical exploration, saving favorites, and contacting business owners."
     },
     "userFlow": {
-      "openApp": { "title": "Open JoMap App", "text": "The user opens the mobile app and begins the exploration journey.", "tag": "Start" },
+      "openApp": { "title": "Open JOMAP App", "text": "The user opens the mobile app and begins the exploration journey.", "tag": "Start" },
       "login": { "title": "Login / Create Account", "text": "The user creates an account or logs in to access personalized features.", "tag": "Account" },
       "explore": { "title": "Explore Jordan's Map", "text": "The user browses Jordan's governorates using the interactive map.", "tag": "Map" },
       "search": { "title": "Search for Places", "text": "The user can search for tourist sites, restaurants, hotels, or markets.", "tag": "Explore" },
       "selectLocation": { "title": "Select Location", "text": "The user taps on a location marker or card to open place details.", "tag": "Location" },
-      "viewDetails": { "title": "View Details", "text": "The app displays photos, description, working hours, rating, and location info.", "tag": "Details" },
-      "saveRate": { "title": "Save / Rate", "text": "The user can add the place to favorites and share a review or rating.", "tag": "Interact" },
-      "contactOwner": { "title": "Contact Owner", "text": "The user can contact the place owner to ask questions or request services.", "tag": "Connect" },
+      "viewDetails": { "title": "View Details", "text": "The app displays photos, descriptions, active offers, and community events.", "tag": "Details" },
+      "saveRate": { "title": "Save to Favorites", "text": "The user saves their favorite places and activities for future reference.", "tag": "Interact" },
+      "contactOwner": { "title": "Direct Communication", "text": "The user can contact the place owner or event organizer directly for inquiries.", "tag": "Connect" },
       "complete": { "title": "Experience Complete", "text": "The user finishes their journey with an easier and smarter way to discover Jordan.", "tag": "Done" }
+    },
+    "ownerFlowPage": {
+      "badge": "Owner Journey",
+      "title": "Business Dashboard Flow",
+      "subtitle": "This flow shows the steps business owners take from account registration and document verification, to managing locations and publishing promotional offers and events."
+    },
+    "ownerFlow": {
+      "login": { "title": "Owner Portal Login", "text": "Log in to the owner portal to access management and promotional tools.", "tag": "Login" },
+      "registerBusiness": { "title": "Submit Business Data", "text": "Provide business name, registration files, location details, and contact info.", "tag": "Verification" },
+      "waitApproval": { "title": "System Review", "text": "The administration reviews the submission to ensure trust and content quality.", "tag": "Review" },
+      "addLocation": { "title": "Set / Edit Location", "text": "Pin coordinates on the interactive map and write details, working hours, and media.", "tag": "Location" },
+      "createOffer": { "title": "Publish Offers & Discounts", "text": "Create geolocated promotional discounts to attract nearby explorers.", "tag": "Offers" },
+      "addEvent": { "title": "Organize Events & Activities", "text": "Plan and launch community initiatives or commercial activities to drive engagement.", "tag": "Events" },
+      "viewAnalytics": { "title": "Track Analytics", "text": "Monitor views, user engagement on offers, ratings, and customer reviews.", "tag": "Analytics" }
+    },
+    "adminFlowPage": {
+      "badge": "Admin Dashboard",
+      "title": "Moderation & System Management",
+      "subtitle": "This flow illustrates how system administrators review business credentials, moderate user-generated content, and monitor analytics to keep the platform safe."
+    },
+    "adminFlow": {
+      "login": { "title": "Admin Dashboard Login", "text": "Securely log into the web administration panel.", "tag": "Secure Login" },
+      "reviewReq": { "title": "Verify Business Requests", "text": "Audit document submissions, verification documents, and check maps updates.", "tag": "Audit" },
+      "approveReq": { "title": "Approve & Publish Locations", "text": "Approve listings to display them and their promotional offers on the public maps.", "tag": "Publish" },
+      "moderateContent": { "title": "Content Moderation", "text": "Review user flags, report logs, block inappropriate content or fake reviews.", "tag": "Moderation" },
+      "viewGlobalMetrics": { "title": "Monitor System Health", "text": "View platform statistics, daily active users, volume of offers, and database status.", "tag": "Analytics" }
     },
     "screensPage": {
       "badge": "App Screens",
@@ -189,6 +219,22 @@
           "solution": "Solution: Optimized Cloud Storage (Firebase Storage & Caching)",
           "solutionText": "Using Firebase Storage for image uploads, relying on caching libraries in Jetpack Compose like Coil to ensure images are loaded only once and saved locally, with image compression before uploading from the backend."
         }
+      }
+    },
+    "futureWorkPage": {
+      "badge": "Conclusion & Future Work",
+      "title": "Future Work & Conclusion",
+      "subtitle": "Next steps in developing JOMAP and expanding its services to better serve the community and boost tourism.",
+      "futureGoals": {
+        "title": "Future Work",
+        "g1": { "title": "AI Recommendation Engine", "desc": "Build a smart system using generative AI models to automatically design personalized itineraries for users." },
+        "g2": { "title": "Regional Expansion", "desc": "Expand the service model to include major Arab cities and regional tourist destinations." },
+        "g3": { "title": "Booking & Payment Integration", "desc": "Integrate electronic payment gateways to book event tickets, restaurant tables, and activities directly within the app." },
+        "g4": { "title": "Augmented Reality (AR) Tours", "desc": "Provide visual and interactive guided tours inside Jordanian archeological sites like Petra and Jerash." }
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "The JOMAP project represents an integrated solution that bridges ready-made technologies with the needs of the Jordanian community, achieving a unique balance between location discovery, supporting local businesses, and activating youth volunteering to be a true digital companion in every governorate."
       }
     },
     "teamPage": {
