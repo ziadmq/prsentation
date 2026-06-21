@@ -15,12 +15,16 @@ function Sidbar({ activePage, setActivePage, menuOpen, setMenuOpen }) {
     <aside className={menuOpen ? "sidebar open" : "sidebar closed"}>
       <div className="sidebar-header">
         <div className="brand">
+<<<<<<< HEAD
           <img 
             src={jomapLogo} 
             alt="JOMAP Logo" 
             style={{ width: '36px', height: '36px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} 
           />
           {menuOpen && <span>{t("sidebar.brand")}</span>}
+=======
+          <img src="/logo.png" alt="JoMap" className="brand-logo" />
+>>>>>>> dc06c38493a4335361fc1bf2411513857f5b201f
         </div>
 
         <div className="sidebar-actions">
