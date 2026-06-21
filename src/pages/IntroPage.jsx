@@ -83,6 +83,15 @@ function IntroPage({ pageAnimation }) {
         <div className="project-description">
           <p dangerouslySetInnerHTML={{ __html: t("introPage.description") }} />
         </div>
+
+        {/* Simple Words Callout Box */}
+        <div className="simple-intro-card">
+          <div className="simple-intro-header">
+            <Sparkles size={18} className="simple-intro-icon" />
+            <span>{t("introPage.simpleIntroTitle")}</span>
+          </div>
+          <p className="simple-intro-text" dangerouslySetInnerHTML={{ __html: t("introPage.simpleDescription") }} />
+        </div>
       </div>
 
       {/* Extended Info Wrapper */}

@@ -10,13 +10,11 @@ import QRPage from "./pages/QrPage";
 import IntroPage from "./pages/IntroPage";
 import BuildDetailsPage from "./pages/BuildDetailsPage";
 import RoadmapPage from "./pages/RoadmapPage";
-import FeaturesPage from "./pages/FeaturesPage";
 import ScreensPage from "./pages/ScreensPage";
 import TechPage from "./pages/TechPage";
 import EmailPage from "./pages/EmailPage";
 import ProjectMetrices from "./pages/ProjectMatrices";
 import ToolsPage from "./pages/ToolsPage";
-import SolutionsPage from "./pages/SolutionsPage";
 
 function App() {
   const [activePage, setActivePage] = useState("intro");
@@ -53,14 +51,8 @@ function App() {
       case "tools":
         return <ToolsPage pageAnimation={pageAnimation} />;
 
-      case "solutions":
-        return <SolutionsPage pageAnimation={pageAnimation} />;
-
       case "roadmap":
         return <RoadmapPage pageAnimation={pageAnimation} />;
-
-      case "features":
-        return <FeaturesPage pageAnimation={pageAnimation} />;
 
       case "screens":
         return <ScreensPage pageAnimation={pageAnimation} />;

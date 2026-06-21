@@ -5,7 +5,7 @@
     },
     "langSwitch": "العربية",
     "menu": {
-      "intro": "Project Intro",
+      "intro": "About JOMAP Project",
       "build": "Build Details",
       "tools": "Dev Tools",
       "solutions": "Tech Solutions",
@@ -16,10 +16,12 @@
       "metrics": "Project Metrics"
     },
     "introPage": {
-      "badge": "Project Introduction",
+      "badge": "About JOMAP Project",
       "title": "JOMAP",
       "subtitle": "A community based locations and activities",
       "description": "A unified digital community platform dedicated and tailored to the Jordanian context. The platform integrates interactive geographical services with activities and events management, enhanced by a collaborative social environment that hosts two main types of entities: profit-seeking commercial businesses that benefit from an innovative promotional system offering exclusive and attractive discounts, and non-profit volunteer teams and organizations that organize community initiatives and events. This actively contributes to stimulating the local economy, supporting youth and volunteer work, and creates a seamless link connecting location discovery, activity participation, and exclusive offers.",
+      "simpleIntroTitle": "JO MAP in Simple Words",
+      "simpleDescription": "JO MAP is a platform that brings all locations, events, and activities happening in Jordan into one place.<br/><br/>Many exciting activities, offers, restaurants, or unique spots in the country struggle to reach people. At the same time, people want to go out and have fun but don't know where to go, simply because there is no real platform connecting them together.<br/><br/>Here comes the idea of JO MAP: the app immediately connects you to your current area, focusing on all nearby offers, events, and locations.<br/><br/>We didn't build maps from scratch or waste time reinventing the wheel; we integrated Google Maps, leveraged its powerful data, and built this interactive system on top. This is the true role of software engineering: combining existing solutions to deliver a real, useful product that serves the user, the business owner, and strengthens the Jordanian community.",
       "rolesTitle": "The Three Main Roles in JOMAP Ecosystem",
       "roles": {
         "actionsLabel": "What do they do?",
@@ -51,12 +53,12 @@
       },
       "problemsTitle": "The Problem & Motivation",
       "problems": {
-        "p1": { "title": "Fragmented Tourist Info", "desc": "Tourism and activity details in Jordan are scattered across multiple unspecialized platforms." },
+        "p1": { "title": "Absence of Unified Platforms", "desc": "Lack of a single application that integrates activities, events, exclusive offers, and interactive maps in one place." },
         "p2": { "title": "Geographic Access Difficulty", "desc": "Difficult for local business owners and projects to reach their target audience geographically." },
-        "p3": { "title": "Lack of Interactive Rewards", "desc": "Absence of a social aspect connecting experience sharing with receiving valuable rewards." },
+        "p3": { "title": "Lack of Community Interaction", "desc": "Absence of an active social and participatory environment that connects individuals with their local community." },
         "p4": { "title": "Content Credibility Challenges", "desc": "Difficult to moderate content and verify offers and locations without a unified authority." },
         "p5": { "title": "Challenges in Volunteer Work", "desc": "Difficulty organizing and promoting youth initiatives and volunteer work due to the lack of a centralized platform connecting non-profit teams with local volunteers." },
-        "p6": { "title": "Limited Modern Tech & AI Integration", "desc": "Limited integration of modern technologies (like real-time geofencing and AI recommendation engines like Gemini API) to smart-guide users to personalized experiences." }
+        "p6": { "title": "Limited Modern Tech & AI Integration", "desc": "Limited integration of modern technologies (like real-time geofencing and AI recommendation engines) to smart-guide users to personalized experiences." }
       },
       "objectivesTitle": "Project Objectives & Vision",
       "objectives": {
@@ -65,7 +67,7 @@
         "o3": { "title": "Support Local Economy", "desc": "Enabling merchants to promote their offers with smart geolocated targeting to attract customers." },
         "o4": { "title": "Ensure Quality & Trust", "desc": "Providing an admin moderation dashboard to verify the credibility of locations and offers." },
         "o5": { "title": "Activate Youth & Volunteer Work", "desc": "Enabling and promoting the culture of volunteerism and youth initiatives by providing tools that make it easy for community teams to organize and promote their activities directly to interested local audiences." },
-        "o6": { "title": "Smart Personalization & UX Improvement", "desc": "Delivering a fully personalized and smart user experience leveraging an AI-powered recommendation engine for itinerary planning and landmark suggestions, making Jordan's exploration a unique custom experience." }
+        "o6": { "title": "Strengthening Jordanian Community Bonds", "desc": "Creating a digital link that supports local initiatives and connects members of the Jordanian community, fostering social cohesion and positive interaction across all governorates." }
       }
     },
     "buildPage": {

@@ -87,14 +87,12 @@ export const teamMembers = [
 
 export const menuItems = [
   { id: "intro", labelKey: "menu.intro", icon: Home },
+  { id: "screens", labelKey: "menu.screens", icon: Image },
   { id: "build", labelKey: "menu.build", icon: Hammer },
   { id: "tools", labelKey: "menu.tools", icon: Wrench },
-  { id: "solutions", labelKey: "menu.solutions", icon: Lightbulb },
-  { id: "team", labelKey: "menu.team", icon: Users },
   { id: "roadmap", labelKey: "menu.roadmap", icon: Route },
-  { id: "features", labelKey: "menu.features", icon: Star },
-  { id: "screens", labelKey: "menu.screens", icon: Image },
   { id: "metrics", labelKey: "menu.metrics", icon: BarChart3 },
+  { id: "team", labelKey: "menu.team", icon: Users },
 ];
 
 export const featureKeys = [
