@@ -114,7 +114,6 @@ function BuildDetailsPage({ pageAnimation }) {
 
   const stats = [
     { icon: Monitor, value: t("buildPage.stats.screens"), label: t("buildPage.stats.screensLabel"), color: "#1E88E5" },
-    { icon: Globe, value: t("buildPage.stats.endpoints"), label: t("buildPage.stats.endpointsLabel"), color: "#26C6DA" },
     { icon: Database, value: t("buildPage.stats.entities"), label: t("buildPage.stats.entitiesLabel"), color: "#a855f7" },
     { icon: FileText, value: t("buildPage.stats.pages"), label: t("buildPage.stats.pagesLabel"), color: "#f59e0b" },
     { icon: Layers, value: t("buildPage.stats.integrations"), label: t("buildPage.stats.integrationsLabel"), color: "#22c55e" },
