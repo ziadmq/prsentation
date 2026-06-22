@@ -88,41 +88,13 @@ function TeamPage({ pageAnimation }) {
               whileHover={{ y: -8 }}
               style={{ "--delay": `${index * 0.1}s` }}
             >
-              <div className="member-image-ring">
+              <div className="member-image-ring" style={{ margin: "0 auto 16px" }}>
                 <img src={member.image} alt={t(member.nameKey)} />
               </div>
               
-              <div className="member-hover-info">
-                <h3 style={{ fontSize: "18px", fontWeight: "950", color: "#fff", margin: "0 0 6px" }}>
-                  {t(member.nameKey)}
-                </h3>
-                <p style={{ color: "var(--cyan)", fontWeight: "800", fontSize: "13px", margin: "0 0 10px" }}>
-                  {t(member.roleKey)}
-                </p>
-                <p style={{ fontSize: "12.5px", color: "var(--text-soft)", margin: "0 0 16px", lineHeight: "1.6" }}>
-                  {t(member.descriptionKey)}
-                </p>
-              </div>
-
-              {/* Skills badges */}
-              <div className="skills-list" style={{ display: "flex", flexWrap: "wrap", gap: "6px", justifyContent: "center", marginBottom: "22px" }}>
-                {member.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    style={{
-                      fontSize: "10.5px",
-                      padding: "4px 8px",
-                      borderRadius: "8px",
-                      background: "rgba(255,255,255,0.03)",
-                      border: "1px solid rgba(255,255,255,0.05)",
-                      color: "var(--text-soft)",
-                      fontWeight: "700"
-                    }}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+              <h3 style={{ fontSize: "19px", fontWeight: "950", color: "#fff", margin: "0 auto 20px", textAlign: "center" }}>
+                {t(member.nameKey)}
+              </h3>
 
               {/* LinkedIn link */}
               <a
@@ -145,7 +117,8 @@ function TeamPage({ pageAnimation }) {
                   textDecoration: "none",
                   width: "100%",
                   boxSizing: "border-box",
-                  transition: "all 0.25s ease"
+                  transition: "all 0.25s ease",
+                  marginTop: "auto"
                 }}
               >
                 <ExternalLink size={15} />
