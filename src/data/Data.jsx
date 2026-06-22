@@ -40,6 +40,8 @@ import {
   BarChart3,
   Compass,
   Tag,
+  Bell,
+  GitMerge,
 } from "lucide-react";
 
 export const supervisor = {
@@ -103,6 +105,7 @@ export const menuItems = [
   { id: "roadmap", labelKey: "menu.roadmap", icon: Route },
   { id: "ownerFlow", labelKey: "menu.ownerFlow", icon: Building2 },
   { id: "adminFlow", labelKey: "menu.adminFlow", icon: ShieldCheck },
+  { id: "integration", labelKey: "menu.integration", icon: GitMerge },
   { id: "build", labelKey: "menu.build", icon: Hammer },
   { id: "tools", labelKey: "menu.tools", icon: Wrench },
   { id: "metrics", labelKey: "menu.metrics", icon: BarChart3 },
@@ -132,20 +135,23 @@ export const userFlowStepKeys = [
   { icon: Map, key: "userFlow.explore" },
   { icon: Search, key: "userFlow.search" },
   { icon: MapPin, key: "userFlow.selectLocation" },
-  { icon: FileText, key: "userFlow.viewDetails" },
-  { icon: Heart, key: "userFlow.saveRate" },
-  { icon: PhoneCall, key: "userFlow.contactOwner" },
+  { icon: Tag, key: "userFlow.viewDetails" },
+  { icon: Calendar, key: "userFlow.saveRate" },
+  { icon: MessageCircle, key: "userFlow.contactOwner" },
   { icon: CheckCircle2, key: "userFlow.complete" },
 ];
 
 export const ownerFlowStepKeys = [
-  { icon: LogIn, key: "ownerFlow.login" },
   { icon: FileText, key: "ownerFlow.registerBusiness" },
-  { icon: ShieldCheck, key: "ownerFlow.waitApproval" },
-  { icon: MapPin, key: "ownerFlow.addLocation" },
-  { icon: Tag, key: "ownerFlow.createOffer" },
+  { icon: LogIn, key: "ownerFlow.login" },
+  { icon: BarChart3, key: "ownerFlow.dashboard" },
+  { icon: MapPin, key: "ownerFlow.manageLocation" },
   { icon: Calendar, key: "ownerFlow.addEvent" },
-  { icon: TrendingUp, key: "ownerFlow.viewAnalytics" },
+  { icon: Users, key: "ownerFlow.manageSubscribers" },
+  { icon: Tag, key: "ownerFlow.createOffer" },
+  { icon: Bell, key: "ownerFlow.notifications" },
+  { icon: Star, key: "ownerFlow.viewReviews" },
+  { icon: CheckCircle2, key: "ownerFlow.complete" },
 ];
 
 export const adminFlowStepKeys = [

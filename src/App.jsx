@@ -17,6 +17,7 @@ import ProjectMetrices from "./pages/ProjectMatrices";
 import ToolsPage from "./pages/ToolsPage";
 import OwnerFlowPage from "./pages/OwnerFlowPage";
 import AdminFlowPage from "./pages/AdminFlowPage";
+import IntegrationPage from "./pages/IntegrationPage";
 import FutureWorkPage from "./pages/FutureWorkPage";
 
 function App() {
@@ -62,6 +63,9 @@ function App() {
 
       case "adminFlow":
         return <AdminFlowPage pageAnimation={pageAnimation} />;
+
+      case "integration":
+        return <IntegrationPage pageAnimation={pageAnimation} />;
 
       case "future":
         return <FutureWorkPage pageAnimation={pageAnimation} />;
