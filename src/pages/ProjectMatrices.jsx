@@ -49,9 +49,9 @@ function ProjectMetrics({ pageAnimation }) {
   const isRtl = i18n.language === "ar";
 
   const totals = [
-    { labelKey: "metricsPage.completedTasks", value: "225", icon: CheckCircle2, color: "#22c55e" },
+    { labelKey: "metricsPage.completedTasks", value: "477", icon: CheckCircle2, color: "#22c55e" },
     { labelKey: "metricsPage.codeComments", value: "450", icon: MessageSquareText, color: "#26C6DA" },
-    { labelKey: "metricsPage.codeLines", value: "50K", icon: Code2, color: "#a855f7" },
+    { labelKey: "metricsPage.codeLines", value: "58K", icon: Code2, color: "#a855f7" },
     { labelKey: "metricsPage.projectFiles", value: "186", icon: FileCode2, color: "#f59e0b" },
   ];
 
@@ -64,10 +64,10 @@ function ProjectMetrics({ pageAnimation }) {
       completion: 88,
       color: "#1E88E5",
       stats: [
-        { labelKey: "metricsPage.tasks", value: "120" },
+        { labelKey: "metricsPage.tasks", value: "372" },
         { labelKey: "metricsPage.comments", value: "250" },
-        { label: "Kotlin Lines", value: "40K" },
-        { labelKey: "metricsPage.screens", value: "32" },
+        { label: "Kotlin Lines", value: "46K" },
+        { labelKey: "metricsPage.screens", value: "60" },
       ],
     },
     {
