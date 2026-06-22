@@ -16,7 +16,7 @@
       "qr": "Scan Presentation (QR)",
       "intro": "About JOMAP Project",
       "screens": "App Screens",
-      "build": "Engineering JO MAP",
+      "build": "JO MAP Development Cycle",
       "uml": "UML Diagrams",
       "tools": "Dev Tools",
       "roadmap": "User Journey",
@@ -83,9 +83,9 @@
       }
     },
     "buildPage": {
-      "title": "Engineering JO MAP",
+      "title": "Details of Build",
       "subtitle": "Built from scratch following Software Engineering principles and the full SDLC across two academic graduation projects",
-      "badge": "Software Engineering & SDLC",
+      "badge": "JOMAP",
       "intro": "JO MAP was engineered from the ground up following rigorous Software Engineering principles and the global Systems Development Life Cycle (SDLC) phases. The entire project — from ideation to testing — was documented, versioned, and managed using Jira, Git, and GitHub across Graduation Project 1 (Analysis & Architecture) and Graduation Project 2 (Implementation & Testing) at The Hashemite University.",
       "tabs": {
         "timeline": "SDLC Timeline",
