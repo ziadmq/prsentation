@@ -165,7 +165,7 @@
       },
       "stats": {
         "title": "مقياس هندسة المشروع بالأرقام",
-        "screens": "37",
+        "screens": "26",
         "screensLabel": "مخطط ورسم هندسي (UML)",
         "endpoints": "15",
         "endpointsLabel": "جدول حالات استخدام تفصيلية",
