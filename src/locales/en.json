@@ -75,15 +75,61 @@
       }
     },
     "buildPage": {
-      "title": "Build Details & Phases",
-      "subtitle": "How JoMap was built step by step",
-      "phasesTitle": "Development Phases",
+      "title": "How JoMap Was Engineered",
+      "subtitle": "Built from scratch following global Software Engineering principles and the full SDLC across two academic graduation projects",
+      "badge": "Software Engineering & SDLC",
+      "intro": "JoMap was engineered from zero following rigorous Software Engineering standards. The entire development lifecycle — from brainstorming to deployment — was documented and tracked using Jira and GitHub across Graduation Project 1 (Analysis & Architecture) and Graduation Project 2 (Implementation & Testing).",
       "phases": {
-        "planning": { "title": "Planning & Analysis", "text": "Identifying the problem JoMap solves, studying the Jordanian market, and gathering requirements for users and business owners." },
-        "design": { "title": "UI/UX Design", "text": "Designing screens and user experience (User Flow) for the app and website using modern design tools to ensure usability and aesthetics." },
-        "backend": { "title": "Backend Development", "text": "Building the database, setting up Spring Boot servers, and programming APIs to connect data with the frontend." },
-        "mobile": { "title": "Mobile App Development", "text": "Developing the actual app using Kotlin, integrating maps (Google Maps), and enabling the notification system and AI." },
-        "testing": { "title": "Testing & Integration", "text": "Conducting comprehensive system tests to verify performance, absence of bugs, and ensuring the app responds effectively." }
+        "phase1": {
+          "tag": "GP1 — Phase 1",
+          "title": "Problem Analysis & Ideation",
+          "text": "Started by brainstorming real problems facing Jordan's tourism and local community discovery. Analyzed the gap: no single platform combines interactive maps, social networking, and event booking. Defined the project scope to serve 3 user roles (Citizens, Business Owners, Administrators) within one unified ecosystem."
+        },
+        "phase2": {
+          "tag": "GP1 — Phase 2",
+          "title": "Requirements Engineering",
+          "text": "Conducted deep requirements gathering: functional requirements (28+ screens, 50+ API endpoints), non-functional requirements (performance, security, scalability), and stakeholder analysis. Defined system boundaries, use cases, and user stories. Prioritized features using MoSCoW methodology."
+        },
+        "phase3": {
+          "tag": "GP1 — Phase 3",
+          "title": "System Design & UML Modeling",
+          "text": "Created comprehensive engineering diagrams following SE standards: Class Diagrams (12+ entities with complex relations), Component Diagrams, State Diagrams (multi-state lifecycles for locations, bookings, moderation), Sequence Diagrams, and Activity Diagrams. All versioned and documented on Jira."
+        },
+        "phase4": {
+          "tag": "GP1 — Phase 4",
+          "title": "Architecture & Documentation",
+          "text": "Designed the full system architecture: 3-tier client-server with REST APIs, JWT authentication, PostgreSQL for geospatial data, Firebase for cloud storage. Culminated in an 84-page final documentation covering every technical specification, approved as the blueprint for implementation."
+        },
+        "phase5": {
+          "tag": "GP2 — Phase 5",
+          "title": "Backend Development",
+          "text": "Implemented the backend using Spring Boot with 10 controllers, 12+ services, and 50+ REST API endpoints. Built 12+ JPA entities with complex relationships. Integrated PostgreSQL (Neon Serverless) for geolocation coordinates, JWT security, Firebase Storage for images, and Spring Mail for email services."
+        },
+        "phase6": {
+          "tag": "GP2 — Phase 6",
+          "title": "Mobile App Development",
+          "text": "Built the Android app using Kotlin following MVVM architecture: 14+ packages, 28+ fragments/screens, 10+ ViewModels, 15+ adapters. Integrated Google Maps SDK, Firebase Cloud Messaging for push notifications, Retrofit for API communication, Gemini AI for an intelligent chatbot, and QR code scanning for tickets."
+        },
+        "phase7": {
+          "tag": "GP2 — Phase 7",
+          "title": "Testing & Integration",
+          "text": "Conducted comprehensive testing: unit tests for backend services, API endpoint testing via Postman (50+ endpoints validated), UI testing on multiple Android devices, integration testing for Maps + Backend + Firebase pipeline. Verified all 3 user role flows (Citizen, Owner with dashboard, Admin with moderation panel)."
+        }
+      },
+      "stats": {
+        "title": "Project Scale in Numbers",
+        "screens": "28+",
+        "screensLabel": "App Screens",
+        "endpoints": "50+",
+        "endpointsLabel": "REST APIs",
+        "entities": "12+",
+        "entitiesLabel": "DB Entities",
+        "pages": "84",
+        "pagesLabel": "Doc Pages",
+        "integrations": "11+",
+        "integrationsLabel": "Tech Integrations",
+        "roles": "3",
+        "rolesLabel": "User Roles"
       }
     },
     "emailPage": {
