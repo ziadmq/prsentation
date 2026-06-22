@@ -14,7 +14,6 @@ import ScreensPage from "./pages/ScreensPage";
 import TechPage from "./pages/TechPage";
 import EmailPage from "./pages/EmailPage";
 import ProjectMetrices from "./pages/ProjectMatrices";
-import ToolsPage from "./pages/ToolsPage";
 import OwnerFlowPage from "./pages/OwnerFlowPage";
 import AdminFlowPage from "./pages/AdminFlowPage";
 import IntegrationPage from "./pages/IntegrationPage";
@@ -51,9 +50,6 @@ function App() {
 
       case "build":
         return <BuildDetailsPage pageAnimation={pageAnimation} />;
-
-      case "tools":
-        return <ToolsPage pageAnimation={pageAnimation} />;
 
       case "roadmap":
         return <RoadmapPage pageAnimation={pageAnimation} />;

@@ -16,7 +16,8 @@
       "qr": "Scan Presentation (QR)",
       "intro": "About JOMAP Project",
       "screens": "App Screens",
-      "build": "Build Details",
+      "build": "Engineering JO MAP",
+      "uml": "UML Diagrams",
       "tools": "Dev Tools",
       "roadmap": "User Journey",
       "ownerFlow": "Owner Journey",
@@ -82,61 +83,176 @@
       }
     },
     "buildPage": {
-      "title": "How JoMap Was Engineered",
-      "subtitle": "Built from scratch following global Software Engineering principles and the full SDLC across two academic graduation projects",
+      "title": "Engineering JO MAP",
+      "subtitle": "Built from scratch following Software Engineering principles and the full SDLC across two academic graduation projects",
       "badge": "Software Engineering & SDLC",
-      "intro": "JoMap was engineered from zero following rigorous Software Engineering standards. The entire development lifecycle — from brainstorming to deployment — was documented and tracked using Jira and GitHub across Graduation Project 1 (Analysis & Architecture) and Graduation Project 2 (Implementation & Testing).",
+      "intro": "JO MAP was engineered from the ground up following rigorous Software Engineering principles and the global Systems Development Life Cycle (SDLC) phases. The entire project — from ideation to testing — was documented, versioned, and managed using Jira, Git, and GitHub across Graduation Project 1 (Analysis & Architecture) and Graduation Project 2 (Implementation & Testing) at The Hashemite University.",
+      "tabs": {
+        "timeline": "SDLC Timeline",
+        "requirements": "System Requirements",
+        "techStack": "Technology Stack",
+        "uml": "UML Diagrams"
+      },
+      "requirements": {
+        "softwareTitle": "Software Requirements",
+        "hardwareTitle": "Hardware Requirements",
+        "headers": {
+          "req": "Requirement",
+          "desc": "Description / Tool"
+        },
+        "software": {
+          "os": { "name": "Operating System", "desc": "Android, Web, iOS" },
+          "ide": { "name": "IDE", "desc": "Android Studio, Visual Studio Code" },
+          "lang": { "name": "Languages / Platforms", "desc": "Kotlin, Java, JavaScript" },
+          "db": { "name": "Database", "desc": "Firebase, PostgreSQL, Neon" },
+          "apis": { "name": "API Services", "desc": "Google Cloud, Google Maps API" },
+          "vc": { "name": "Version Control", "desc": "Git / GitHub" },
+          "design": { "name": "Design Tools", "desc": "Figma / Jira / draw.io" },
+          "pm": { "name": "Project Management", "desc": "Jira" },
+          "ai": { "name": "AI Tools", "desc": "Gemini API" }
+        },
+        "hardware": {
+          "dev": { "name": "Development Machines", "desc": "Laptop or Desktop Computer (8 GB RAM or higher)" },
+          "mobile": { "name": "Mobile Device", "desc": "Android smartphone with GPS Sensors" },
+          "net": { "name": "Internet Connection", "desc": "Stable internet connection for development, testing, and API usage" }
+        }
+      },
+      "techStack": {
+        "frontend": { "title": "Frontend Development", "desc": "Kotlin, Jetpack Compose" },
+        "backend": { "title": "Backend Services", "desc": "Spring Boot, Firebase Authentication, Firestore Database" },
+        "maps": { "title": "Map Services", "desc": "Google Maps API" },
+        "tools": { "title": "Development Tools", "desc": "Android Studio, VS Code" },
+        "design": { "title": "UI/UX Design", "desc": "Figma" },
+        "vc": { "title": "Version Control", "desc": "Git & GitHub" },
+        "platform": { "title": "Platforms", "desc": "Android" }
+      },
       "phases": {
         "phase1": {
-          "tag": "GP1 — Phase 1",
-          "title": "Problem Analysis & Ideation",
-          "text": "Started by brainstorming real problems facing Jordan's tourism and local community discovery. Analyzed the gap: no single platform combines interactive maps, social networking, and event booking. Defined the project scope to serve 3 user roles (Citizens, Business Owners, Administrators) within one unified ecosystem."
+          "tag": "19/10/2025 - 25/10/2025",
+          "title": "Introduction & Project Motivation",
+          "text": "Initiated the project by defining the core vision of JO MAP as a localized community and activity platform. Analyzed problem statement regarding fragmentation of mapping services and event listings in Jordan, establishing the project's aims, objectives, and scope."
         },
         "phase2": {
-          "tag": "GP1 — Phase 2",
-          "title": "Requirements Engineering",
-          "text": "Conducted deep requirements gathering: functional requirements (28+ screens, 50+ API endpoints), non-functional requirements (performance, security, scalability), and stakeholder analysis. Defined system boundaries, use cases, and user stories. Prioritized features using MoSCoW methodology."
+          "tag": "26/10/2025 - 01/11/2025",
+          "title": "Literature & Existing Systems Review",
+          "text": "Evaluated existing applications (OsmAnd, Balady, Eventbrite, LinkedIn) to identify common limitations such as fragmentation of mapping and activity services, lack of community integration, and limited localized personalization."
         },
         "phase3": {
-          "tag": "GP1 — Phase 3",
-          "title": "System Design & UML Modeling",
-          "text": "Created comprehensive engineering diagrams following SE standards: Class Diagrams (12+ entities with complex relations), Component Diagrams, State Diagrams (multi-state lifecycles for locations, bookings, moderation), Sequence Diagrams, and Activity Diagrams. All versioned and documented on Jira."
+          "tag": "02/11/2025 - 16/11/2025",
+          "title": "Requirement Engineering & Analysis",
+          "text": "Elicited functional and non-functional requirements (usability, performance, security, reliability, availability). Documented 15 detailed use case specifications (Tables 6-20) representing user, business owner, and admin roles."
         },
         "phase4": {
-          "tag": "GP1 — Phase 4",
-          "title": "Architecture & Documentation",
-          "text": "Designed the full system architecture: 3-tier client-server with REST APIs, JWT authentication, PostgreSQL for geospatial data, Firebase for cloud storage. Culminated in an 84-page final documentation covering every technical specification, approved as the blueprint for implementation."
+          "tag": "09/11/2025 - 21/12/2025",
+          "title": "System Architecture & UML Modeling",
+          "text": "Designed software architecture logical view (MVVM component diagram), process view (communication diagrams), and physical view (deployment diagram). Developed class diagrams, entity-relationship database diagrams, and state transition lifecycle diagrams."
         },
         "phase5": {
-          "tag": "GP2 — Phase 5",
-          "title": "Backend Development",
-          "text": "Implemented the backend using Spring Boot with 10 controllers, 12+ services, and 50+ REST API endpoints. Built 12+ JPA entities with complex relationships. Integrated PostgreSQL (Neon Serverless) for geolocation coordinates, JWT security, Firebase Storage for images, and Spring Mail for email services."
+          "tag": "01/12/2025 - 06/12/2025",
+          "title": "Implementation Plan & Technology Stack",
+          "text": "Defined major implementation tasks and resources. Selected Kotlin & Jetpack Compose for frontend development, Spring Boot and Firebase (Authentication, Firestore Database, and Storage) for backend services, and Google Maps API for map integration."
         },
         "phase6": {
-          "tag": "GP2 — Phase 6",
-          "title": "Mobile App Development",
-          "text": "Built the Android app using Kotlin following MVVM architecture: 14+ packages, 28+ fragments/screens, 10+ ViewModels, 15+ adapters. Integrated Google Maps SDK, Firebase Cloud Messaging for push notifications, Retrofit for API communication, Gemini AI for an intelligent chatbot, and QR code scanning for tickets."
+          "tag": "07/12/2025 - 14/12/2025",
+          "title": "Testing Plan & Quality Assurance",
+          "text": "Formulated a structured testing plan covering black-box techniques (Equivalence Partitioning, Boundary Value Analysis, Use Case Testing) and white-box methods. Defined automation strategies using Espresso, Appium, JUnit 5, Mockito, and Postman."
         },
         "phase7": {
-          "tag": "GP2 — Phase 7",
-          "title": "Testing & Integration",
-          "text": "Conducted comprehensive testing: unit tests for backend services, API endpoint testing via Postman (50+ endpoints validated), UI testing on multiple Android devices, integration testing for Maps + Backend + Firebase pipeline. Verified all 3 user role flows (Citizen, Owner with dashboard, Admin with moderation panel)."
+          "tag": "15/12/2025 - 21/12/2025",
+          "title": "Conclusion & Future Work",
+          "text": "Summarized project outcomes and established roadmap for mobile app execution. Outlined long-term enhancements such as multi-language support (Arabic & English), advanced AI recommendations, offline capabilities, and iOS/web versions."
         }
       },
       "stats": {
-        "title": "Project Scale in Numbers",
-        "screens": "28+",
-        "screensLabel": "App Screens",
-        "endpoints": "50+",
-        "endpointsLabel": "REST APIs",
-        "entities": "12+",
-        "entitiesLabel": "DB Entities",
-        "pages": "84",
-        "pagesLabel": "Doc Pages",
-        "integrations": "11+",
-        "integrationsLabel": "Tech Integrations",
+        "title": "Project Engineering Scale",
+        "screens": "26",
+        "screensLabel": "UML Diagrams & Figures",
+        "endpoints": "15",
+        "endpointsLabel": "Use Case Specifications",
+        "entities": "36",
+        "entitiesLabel": "Database Tables (ERD)",
+        "pages": "86",
+        "pagesLabel": "Documentation Pages",
+        "integrations": "11",
+        "integrationsLabel": "Technologies & Tools",
         "roles": "3",
         "rolesLabel": "User Roles"
+      }
+    },
+    "umlPage": {
+      "badge": "System Modeling",
+      "title": "UML & Architecture Diagrams",
+      "subtitle": "Technical system blueprints mapping stakeholders, interactions, components, and data structures of JO MAP",
+      "selectDiagram": "Select UML Diagram",
+      "diagrams": {
+        "stakeholder": {
+          "title": "Stakeholder Onion Diagram",
+          "explain": "The Stakeholder Onion Diagram organizes the project participants into concentric layers of proximity to the core system. The innermost layer contains the primary actors directly interacting with JO MAP (Users, Business Owners, Admins). The middle layer represents project facilitators (University Supervisor, Development Team). The outer layer lists external technical stakeholders and integrated services (Google Maps API, Firebase, ChatGPT API, Payment Gateway, Notification Service)."
+        },
+        "usecase": {
+          "title": "System Use Case Diagram",
+          "explain": "The Use Case Diagram defines the functional scope of JO MAP and outlines how different actors interact with system boundaries. It details 15 major use case specifications, highlighting critical operations such as Location/Activity Management for Business Owners, Interactive Map browsing and feedback submission for Users, and account/content moderation for Administrators."
+        },
+        "component": {
+          "title": "Component Diagram (Logical View)",
+          "explain": "Following the MVVM architectural pattern, the Component Diagram illustrates the separation of concerns across different system layers. It details the interaction between Views, ViewModels, Repositories, Models, and external API Services, showing how data flow is decoupled to ensure maintainability, testability, and system extensibility."
+        },
+        "process": {
+          "title": "Process View (Activity Diagram)",
+          "explain": "The Process View Diagram illustrates the dynamic flow of operations and runtime execution paths within JO MAP across View, ViewModel, Repository, and Model layers. It models key system workflows including: (1) Location creation, admin review, and notification dispatch, (2) User registration and check-existence validation, (3) Authentication and login controllers, and (4) Activity registration and payment transaction confirmation loops."
+        },
+        "deployment": {
+          "title": "Deployment Diagram (Physical View)",
+          "explain": "The Deployment Diagram depicts the physical distribution of hardware nodes, client interfaces, backend servers, databases, and third-party integrations. It illustrates how the Android Mobile App client communicates with the Spring Boot Backend Server Cluster via HTTPS REST APIs, and how data is persisted across Firestore and Cloud Storage, alongside external connection protocols."
+        },
+        "class": {
+          "title": "Domain Class Diagram",
+          "explain": "The UML Class Diagram models the object-oriented structure of the JO MAP system. It defines the attributes, methods, relationships, and multiplicities between core domain classes including User, Business Owner, Admin, Post, Location, Activity, and Governorate, establishing a robust blueprint for data modeling."
+        },
+        "er": {
+          "title": "Database Entity-Relationship Diagram (ERD)",
+          "explain": "The Entity-Relationship (ER) Diagram defines the relational database schema, mapping the logical entities and relationships that store platform data. It details primary and foreign keys, attributes, and cardinalities between core tables such as Users, Locations, Activities, Comments, Community Posts, Chats, and Notifications."
+        },
+        "seq_search_location": {
+          "title": "Sequence: Search & View Location",
+          "explain": "Illustrates the interaction steps for searching and viewing locations. (1) The user inputs a keyword, which View forwards to ViewModel. (2) ViewModel queries Repository, which retrieves matching records from the SpecialDataJoMap Model. (3) Results return up to be displayed. (4) The user selects a specific location, triggering an additional request to query detailed page information from the pageInformation Model."
+        },
+        "seq_create_location": {
+          "title": "Sequence: Create Location Listing",
+          "explain": "Models the process for adding new location listings. (1) User enters data via the View, which ViewModel validates and sends to Repository. (2) Repository stores the location with a 'pending' state. (3) Admin Service reviews the listing, leading to an alternative path: [Approved] publishes the location in the Model and sends a confirmation email via Notification Service, or [Rejected] registers the rejection state and notifies the owner."
+        },
+        "seq_submit_comment": {
+          "title": "Sequence: Submit Comment & Report",
+          "explain": "Defines the comment submission and moderation workflow. (1) Comment details are sent from View to ViewModel, validated, and saved in the ReviewModel via Repository. (2) If a user reports a comment, ViewModel opens a review ticket in Admin Service. (3) Admin reviews the ticket, leading to an alternative path: [Approved] deletes the inappropriate comment and notifies the user, or [Rejected] keeps the comment and notifies the reporter."
+        },
+        "seq_post_interaction": {
+          "title": "Sequence: Post Creation & Interaction",
+          "explain": "Illustrates social interactions on the community feed. (1) User creates a post which is validated by ViewModel, saved to the CommunityPost Model via Repository, and published to the feed. (2) When another user interacts with the post (e.g., likes, comments), a new interaction request is processed by ViewModel and Repository, updating the interaction counter and refreshing the view."
+        },
+        "seq_register_activity": {
+          "title": "Sequence: Registration for Activity",
+          "explain": "Tracks the step-by-step activity registration process. (1) User requests registration; ViewModel verifies availability and capacity in the Activity Model via Repository. (2) If capacity is available, ViewModel prompts for payment. (3) Payment Service processes the transaction, and upon success, Repository adds the registration record, confirming the booking and triggering an email confirmation via Notification Service."
+        },
+        "state_location_lifecycle": {
+          "title": "State Lifecycle: Location Listing",
+          "explain": "Traces the states of a location listing. (1) It begins in 'Draft' state where edit/fix operations occur. (2) Once submitted, it enters 'PendingApproval' awaiting admin action. (3) Admin can 'Reject' it (reverting it to Draft for edits) or 'Approve' it. (4) Approved listings are 'Published' and visible. (5) Published locations can be 'Deactivated' (and reactivated later) or 'Deleted' permanently."
+        },
+        "state_comment_lifecycle": {
+          "title": "State Lifecycle: Comment",
+          "explain": "Defines comment moderation states. (1) A comment starts in 'Created' and goes through 'AutomatedCheck'. (2) It is auto-approved into 'Approved' and then 'Published', or 'Rejected' (reverting to Created for edits). (3) Once published, comments can be edited (entering 'Edited' state), reported (entering 'Reported' then 'UnderReview' state), or deleted."
+        },
+        "state_post_lifecycle": {
+          "title": "State Lifecycle: Post Moderation",
+          "explain": "Traces community post moderation states. (1) Starts in 'Created' and moves to 'Published' upon submission. (2) If flagged, it enters 'Reported' state. (3) Admins review reported posts, moving them to 'UnderReview'. (4) The post is either dismissed (reverting back to Published) or 'Removed' permanently from the community feed."
+        },
+        "state_activity_lifecycle": {
+          "title": "State Lifecycle: Activity",
+          "explain": "Traces the lifecycle of a community activity/event. (1) Starts in 'Draft' and moves to 'PendingApproval' upon submission. (2) Upon admin approval, it enters 'Approved' and then 'Published'. (3) Published activities can be completed ('Completed'), cancelled ('Cancelled'), or postponed ('Postponed') before rescheduled."
+        },
+        "state_registration_lifecycle": {
+          "title": "State Lifecycle: Activity Registration",
+          "explain": "Illustrates the states of user registration for activities. (1) Registration is initiated ('RegistrationInitiated'). (2) If free, it bypasses payment and enters 'Registered'. (3) If paid, it enters 'PendingPayment' until payment succeeds ('Registered') or is cancelled ('Cancelled'). (4) Once completed, the status is set to 'Completed'."
+        }
       }
     },
     "emailPage": {
