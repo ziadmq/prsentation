@@ -702,7 +702,7 @@ function BuildDetailsPage({ pageAnimation }) {
                             <Icon size={16} />
                           </div>
                           <span style={{ fontSize: "11px", fontWeight: "700", textAlign: "center", lineHeight: "1.25" }}>
-                            {t(`umlPage.diagrams.${d.id}.title`)}
+                            {t(`umlPage.diagrams.${d.id}.title`, { lng: "en" })}
                           </span>
                         </motion.button>
                       );
@@ -773,7 +773,7 @@ function BuildDetailsPage({ pageAnimation }) {
                       <motion.img
                         key={activeUmlDiagram.id}
                         src={activeUmlDiagram.image}
-                        alt={t(`umlPage.diagrams.${activeUmlDiagram.id}.title`)}
+                        alt={t(`umlPage.diagrams.${activeUmlDiagram.id}.title`, { lng: "en" })}
                         initial={{ opacity: 0, scale: 0.98 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.98 }}
@@ -824,7 +824,7 @@ function BuildDetailsPage({ pageAnimation }) {
                     marginBottom: "12px",
                     lineHeight: 1.3
                   }}>
-                    {t(`umlPage.diagrams.${activeUmlDiagram.id}.title`)}
+                    {t(`umlPage.diagrams.${activeUmlDiagram.id}.title`, { lng: "en" })}
                   </h3>
 
                   <p style={{
