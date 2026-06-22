@@ -3,7 +3,13 @@
     "sidebar": {
       "brand": "JOMAP",
       "scanCountLabel": "Active Observers",
-      "scanCountTooltip": "Number of attendees currently viewing the presentation"
+      "scanCountTooltip": "Number of attendees currently viewing the presentation",
+      "sections": {
+        "overview": "Overview & Screens",
+        "roles": "Roles & System Flows",
+        "dev": "Development & Metrics",
+        "conclusion": "Conclusion & Team"
+      }
     },
     "langSwitch": "العربية",
     "menu": {
@@ -14,10 +20,10 @@
       "tools": "Dev Tools",
       "roadmap": "User Journey",
       "ownerFlow": "Owner Journey",
-      "adminFlow": "Admin Dashboard",
+      "adminFlow": "Admin Journey",
       "integration": "Role Integration",
       "metrics": "Project Metrics",
-      "future": "Future & Conclusion",
+      "future": "Conclusion",
       "team": "Team"
     },
     "introPage": {
@@ -221,7 +227,7 @@
       "viewAnalytics": { "title": "Track Analytics", "text": "Monitor views, user engagement on offers, ratings, and customer reviews.", "tag": "Analytics" }
     },
     "adminFlowPage": {
-      "badge": "Admin Dashboard",
+      "badge": "Admin Journey",
       "title": "Moderation & System Management",
       "subtitle": "This flow illustrates how system administrators review business credentials, moderate user-generated content, and monitor analytics to keep the platform safe."
     },
@@ -269,8 +275,8 @@
       }
     },
     "futureWorkPage": {
-      "badge": "Conclusion & Future Work",
-      "title": "Future Work & Conclusion",
+      "badge": "Conclusion",
+      "title": "Conclusion",
       "subtitle": "Next steps in developing JOMAP and expanding its services to better serve the community and boost tourism.",
       "futureGoals": {
         "title": "Future Work",

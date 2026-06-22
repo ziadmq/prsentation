@@ -56,20 +56,81 @@ function Sidbar({ activePage, setActivePage, menuOpen, setMenuOpen }) {
       </div>
 
       <div className="menu-list">
-        {menuItems.map((item) => {
-          const Icon = item.icon;
+        <div className="sidebar-section-header" style={{ marginTop: "8px" }}>
+          {menuOpen ? t("sidebar.sections.overview") : <span className="section-divider-line" />}
+        </div>
+        <div className="sidebar-section-group">
+          {menuItems.filter(item => ["qr", "intro", "screens"].includes(item.id)).map((item) => {
+            const Icon = item.icon;
+            return (
+              <button
+                key={item.id}
+                className={activePage === item.id ? "menu-item active" : "menu-item"}
+                onClick={() => setActivePage(item.id)}
+              >
+                <Icon size={22} />
+                {menuOpen && <span>{t(item.labelKey)}</span>}
+              </button>
+            );
+          })}
+        </div>
 
-          return (
-            <button
-              key={item.id}
-              className={activePage === item.id ? "menu-item active" : "menu-item"}
-              onClick={() => setActivePage(item.id)}
-            >
-              <Icon size={22} />
-              {menuOpen && <span>{t(item.labelKey)}</span>}
-            </button>
-          );
-        })}
+        <div className="sidebar-section-header">
+          {menuOpen ? t("sidebar.sections.roles") : <span className="section-divider-line" />}
+        </div>
+        <div className="sidebar-section-group">
+          {menuItems.filter(item => ["roadmap", "ownerFlow", "adminFlow", "integration"].includes(item.id)).map((item) => {
+            const Icon = item.icon;
+            return (
+              <button
+                key={item.id}
+                className={activePage === item.id ? "menu-item active" : "menu-item"}
+                onClick={() => setActivePage(item.id)}
+              >
+                <Icon size={22} />
+                {menuOpen && <span>{t(item.labelKey)}</span>}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="sidebar-section-header">
+          {menuOpen ? t("sidebar.sections.dev") : <span className="section-divider-line" />}
+        </div>
+        <div className="sidebar-section-group">
+          {menuItems.filter(item => ["build", "tools", "metrics"].includes(item.id)).map((item) => {
+            const Icon = item.icon;
+            return (
+              <button
+                key={item.id}
+                className={activePage === item.id ? "menu-item active" : "menu-item"}
+                onClick={() => setActivePage(item.id)}
+              >
+                <Icon size={22} />
+                {menuOpen && <span>{t(item.labelKey)}</span>}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="sidebar-section-header">
+          {menuOpen ? t("sidebar.sections.conclusion") : <span className="section-divider-line" />}
+        </div>
+        <div className="sidebar-section-group">
+          {menuItems.filter(item => ["future", "team"].includes(item.id)).map((item) => {
+            const Icon = item.icon;
+            return (
+              <button
+                key={item.id}
+                className={activePage === item.id ? "menu-item active" : "menu-item"}
+                onClick={() => setActivePage(item.id)}
+              >
+                <Icon size={22} />
+                {menuOpen && <span>{t(item.labelKey)}</span>}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <div className="sidebar-footer">
