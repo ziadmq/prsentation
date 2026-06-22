@@ -15,11 +15,13 @@ const phaseKeys = ["phase1", "phase2", "phase3", "phase4", "phase5", "phase6", "
 
 const umlCategories = [
   {
-    id: "class",
-    labelEn: "Class Diagram",
-    labelAr: "مخطط الفئات (Class)",
+    id: "architecture",
+    labelEn: "Structure & Architecture",
+    labelAr: "المخططات الهيكلية والمعمارية",
     items: [
-      { id: "class", icon: Database, image: "/class_diagram.png", color: "#22c55e" }
+      { id: "class", icon: Database, image: "/class_diagram.png", color: "#22c55e" },
+      { id: "usecase", icon: Workflow, image: "/usecase_diagram.png", color: "#26C6DA" },
+      { id: "stakeholder", icon: Users, image: "/stakeholder_diagram.png", color: "#1E88E5" }
     ]
   },
   {
@@ -77,7 +79,7 @@ function BuildDetailsPage({ pageAnimation }) {
   const [activeTab, setActiveTab] = useState("timeline");
 
   // UML sub-states
-  const [selectedCategory, setSelectedCategory] = useState("class");
+  const [selectedCategory, setSelectedCategory] = useState("architecture");
   const [selectedDiagram, setSelectedDiagram] = useState("class");
   const [isZoomed, setIsZoomed] = useState(false);
 
