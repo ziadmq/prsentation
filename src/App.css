@@ -492,7 +492,9 @@ html[dir="ltr"] .content.small-sidebar {
 .team-roadmap-card:hover,
 .screen-description-card:hover,
 .metrics-total-card:hover,
-.repo-showcase-card:hover {
+.repo-showcase-card:hover,
+.supervisor-section:hover,
+.creative-member-card:hover {
   transform: translateY(-6px);
   border-color: var(--line-strong);
   box-shadow: 0 24px 52px rgba(37, 99, 235, 0.16);
@@ -515,15 +517,23 @@ html[dir="ltr"] .content.small-sidebar {
   min-height: 280px;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 260px;
   gap: 35px;
   align-items: center;
   padding: 35px;
   border-radius: 34px;
   overflow: hidden;
-  text-align: right;
   margin-top: 25px;
   animation: fadeUpMetrics 0.85s ease both;
+}
+
+html[dir="rtl"] .supervisor-section {
+  text-align: right;
+  grid-template-columns: 1fr 260px;
+}
+
+html[dir="ltr"] .supervisor-section {
+  text-align: left;
+  grid-template-columns: 260px 1fr;
 }
 
 .supervisor-glow,
