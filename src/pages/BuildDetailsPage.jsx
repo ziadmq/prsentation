@@ -21,7 +21,10 @@ const umlCategories = [
     items: [
       { id: "class", icon: Database, image: "/class_diagram.png", color: "#22c55e" },
       { id: "usecase", icon: Workflow, image: "/usecase_diagram.png", color: "#26C6DA" },
-      { id: "stakeholder", icon: Users, image: "/stakeholder_diagram.png", color: "#1E88E5" }
+      { id: "component", icon: Layers, image: "/component_diagram.png", color: "#a855f7" },
+      { id: "deployment", icon: Server, image: "/deployment_diagram.png", color: "#f59e0b" },
+      { id: "stakeholder", icon: Users, image: "/stakeholder_diagram.png", color: "#1E88E5" },
+      { id: "er", icon: GitBranch, image: "/er_diagram.png", color: "#EC407A" }
     ]
   },
   {
