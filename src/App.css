@@ -645,7 +645,7 @@ html[dir="ltr"] .supervisor-section {
 
 .creative-member-card {
   position: relative;
-  min-height: 320px;
+  min-height: 260px;
   padding: 26px 18px;
   border-radius: 28px;
   overflow: hidden;

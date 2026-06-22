@@ -88,6 +88,9 @@ function TeamPage({ pageAnimation }) {
               whileHover={{ y: -8 }}
               style={{ "--delay": `${index * 0.1}s` }}
             >
+              {/* Background gradient glow */}
+              <div className="team-card-light"></div>
+
               <div className="member-image-ring" style={{ margin: "0 auto 16px" }}>
                 <img src={member.image} alt={t(member.nameKey)} />
               </div>
