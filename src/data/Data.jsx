@@ -42,6 +42,7 @@ import {
   Tag,
   Bell,
   GitMerge,
+  Workflow,
 } from "lucide-react";
 
 export const supervisor = {
