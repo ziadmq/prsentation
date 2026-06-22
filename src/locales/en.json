@@ -101,16 +101,15 @@
           "desc": "Description / Tool"
         },
         "software": {
-          "os": { "name": "Operating System", "desc": "Windows or Linux" },
+          "os": { "name": "Operating System", "desc": "Android, Web, iOS" },
           "ide": { "name": "IDE", "desc": "Android Studio, Visual Studio Code" },
-          "lang": { "name": "Languages / Platforms", "desc": "Kotlin, Java, C#, JS" },
-          "db": { "name": "Database", "desc": "SQL database / Firebase" },
-          "apis": { "name": "API Services", "desc": "Google Maps API / ChatGPT API" },
+          "lang": { "name": "Languages / Platforms", "desc": "Kotlin, Java, JavaScript" },
+          "db": { "name": "Database", "desc": "Firebase, PostgreSQL, Neon" },
+          "apis": { "name": "API Services", "desc": "Google Cloud, Google Maps API" },
           "vc": { "name": "Version Control", "desc": "Git / GitHub" },
           "design": { "name": "Design Tools", "desc": "Figma / Jira / draw.io" },
-          "testing": { "name": "Testing Tools", "desc": "Firebase Test Lab, Appium, Espresso, JUnit, Postman, JMeter, OWASP ZAP" },
           "pm": { "name": "Project Management", "desc": "Jira" },
-          "ai": { "name": "AI Tools", "desc": "ChatGPT, Gemini, Copilot" }
+          "ai": { "name": "AI Tools", "desc": "Gemini API" }
         },
         "hardware": {
           "dev": { "name": "Development Machines", "desc": "Laptop or Desktop Computer (8 GB RAM or higher)" },

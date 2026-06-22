@@ -129,7 +129,6 @@ function BuildDetailsPage({ pageAnimation }) {
     { key: "apis", icon: Layers, color: "#22c55e" },
     { key: "vc", icon: GitBranch, color: "#EC407A" },
     { key: "design", icon: PenTool, color: "#AB47BC" },
-    { key: "testing", icon: TestTubeDiagonal, color: "#26A69A" },
     { key: "pm", icon: ClipboardList, color: "#D4E157" },
     { key: "ai", icon: Cpu, color: "#26C6DA" }
   ];

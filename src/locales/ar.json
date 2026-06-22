@@ -101,16 +101,15 @@
           "desc": "الوصف / الأداة"
         },
         "software": {
-          "os": { "name": "نظام التشغيل", "desc": "Windows أو Linux" },
+          "os": { "name": "نظام التشغيل", "desc": "Android, Web, iOS" },
           "ide": { "name": "بيئة التطوير (IDE)", "desc": "Android Studio, Visual Studio Code" },
-          "lang": { "name": "لغات البرمجة", "desc": "Kotlin, Java, C#, JS" },
-          "db": { "name": "قاعدة البيانات", "desc": "SQL database / Firebase" },
-          "apis": { "name": "الخدمات السحابية و APIs", "desc": "Google Maps API / ChatGPT API" },
+          "lang": { "name": "لغات البرمجة", "desc": "Kotlin, Java, JavaScript" },
+          "db": { "name": "قاعدة البيانات", "desc": "Firebase, PostgreSQL, Neon" },
+          "apis": { "name": "الخدمات السحابية و APIs", "desc": "Google Cloud, Google Maps API" },
           "vc": { "name": "إدارة النسخ", "desc": "Git / GitHub" },
           "design": { "name": "أدوات التصميم والتخطيط", "desc": "Figma / Jira / draw.io" },
-          "testing": { "name": "أدوات الاختبار وضمان الجودة", "desc": "Firebase Test Lab, Appium, Espresso, JUnit, Postman, JMeter, OWASP ZAP" },
           "pm": { "name": "إدارة المهام والمشروع", "desc": "Jira" },
-          "ai": { "name": "أدوات الذكاء الاصطناعي", "desc": "ChatGPT, Gemini, Copilot" }
+          "ai": { "name": "أدوات الذكاء الاصطناعي", "desc": "Gemini API" }
         },
         "hardware": {
           "dev": { "name": "أجهزة التطوير", "desc": "كمبيوتر محمول أو مكتبي (8 جيجابايت رام أو أعلى)" },
