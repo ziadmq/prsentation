@@ -64,7 +64,7 @@ export const teamMembers = [
   {
     nameKey: "teamMembers.musaab.name",
     roleKey: "teamMembers.musaab.role",
-    image: "/team/Mous.jpg",
+    image: "/team/Mousaab Makahleh.jpg",
     icon: Database,
     linkedin: "https://www.linkedin.com/in/mousaab-makahleh-480a04340",
     descriptionKey: "teamMembers.musaab.description",
@@ -82,7 +82,7 @@ export const teamMembers = [
   {
     nameKey: "teamMembers.abd.name",
     roleKey: "teamMembers.abd.role",
-    image: "/team/Abd.jpg",
+    image: "/team/Abdalqader.jpg",
     icon: Handshake,
     linkedin: "#",
     descriptionKey: "teamMembers.abd.description",
@@ -91,7 +91,7 @@ export const teamMembers = [
   {
     nameKey: "teamMembers.ziad.name",
     roleKey: "teamMembers.ziad.role",
-    image: "/team/Zoz.jpg",
+    image: "/team/Ziad Qafisheh.jpg",
     icon: Code2,
     linkedin: "#",
     descriptionKey: "teamMembers.ziad.description",
