@@ -15,17 +15,11 @@ const phaseKeys = ["phase1", "phase2", "phase3", "phase4", "phase5", "phase6", "
 
 const umlCategories = [
   {
-    id: "architecture",
-    labelEn: "Architectural Views",
-    labelAr: "المنظورات المعمارية",
+    id: "class",
+    labelEn: "Class Diagram",
+    labelAr: "مخطط الفئات (Class)",
     items: [
-      { id: "stakeholder", icon: Users, image: "/stakeholder_diagram.png", color: "#1E88E5" },
-      { id: "usecase", icon: Workflow, image: "/usecase_diagram.png", color: "#26C6DA" },
-      { id: "component", icon: Layers, image: "/component_diagram.png", color: "#a855f7" },
-      { id: "process", icon: Activity, image: "/process_diagram.png", color: "#f97316" },
-      { id: "deployment", icon: Server, image: "/deployment_diagram.png", color: "#f59e0b" },
-      { id: "class", icon: Database, image: "/class_diagram.png", color: "#22c55e" },
-      { id: "er", icon: GitBranch, image: "/er_diagram.png", color: "#EC407A" }
+      { id: "class", icon: Database, image: "/class_diagram.png", color: "#22c55e" }
     ]
   },
   {
@@ -83,8 +77,8 @@ function BuildDetailsPage({ pageAnimation }) {
   const [activeTab, setActiveTab] = useState("timeline");
 
   // UML sub-states
-  const [selectedCategory, setSelectedCategory] = useState("architecture");
-  const [selectedDiagram, setSelectedDiagram] = useState("stakeholder");
+  const [selectedCategory, setSelectedCategory] = useState("class");
+  const [selectedDiagram, setSelectedDiagram] = useState("class");
   const [isZoomed, setIsZoomed] = useState(false);
 
   const handleCategoryChange = (catId) => {
@@ -735,55 +729,57 @@ function BuildDetailsPage({ pageAnimation }) {
                 </div>
 
                 {/* UML Diagrams Grid */}
-                <div style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
-                  gap: "8px"
-                }}>
-                  {currentCategory.items.map((d) => {
-                    const Icon = d.icon;
-                    const isSelected = selectedDiagram === d.id;
-                    return (
-                      <motion.button
-                        key={d.id}
-                        onClick={() => {
-                          setSelectedDiagram(d.id);
-                          setIsZoomed(false);
-                        }}
-                        whileHover={{ y: -2, scale: 1.02 }}
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          gap: "6px",
-                          padding: "10px 6px",
-                          borderRadius: "14px",
-                          border: "1px solid",
-                          borderColor: isSelected ? d.color : "var(--line)",
-                          background: isSelected ? `${d.color}12` : "rgba(255, 255, 255, 0.01)",
-                          color: isSelected ? "#fff" : "var(--text-soft)",
-                          cursor: "pointer",
-                          transition: "all 0.25s ease"
-                        }}
-                      >
-                        <div style={{
-                          width: "32px",
-                          height: "32px",
-                          borderRadius: "8px",
-                          background: isSelected ? d.color : "rgba(255, 255, 255, 0.02)",
-                          display: "grid",
-                          placeItems: "center",
-                          color: isSelected ? "#fff" : d.color
-                        }}>
-                          <Icon size={16} />
-                        </div>
-                        <span style={{ fontSize: "11px", fontWeight: "700", textAlign: "center", lineHeight: "1.25" }}>
-                          {t(`umlPage.diagrams.${d.id}.title`)}
-                        </span>
-                      </motion.button>
-                    );
-                  })}
-                </div>
+                {currentCategory.items.length > 1 && (
+                  <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
+                    gap: "8px"
+                  }}>
+                    {currentCategory.items.map((d) => {
+                      const Icon = d.icon;
+                      const isSelected = selectedDiagram === d.id;
+                      return (
+                        <motion.button
+                          key={d.id}
+                          onClick={() => {
+                            setSelectedDiagram(d.id);
+                            setIsZoomed(false);
+                          }}
+                          whileHover={{ y: -2, scale: 1.02 }}
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            gap: "6px",
+                            padding: "10px 6px",
+                            borderRadius: "14px",
+                            border: "1px solid",
+                            borderColor: isSelected ? d.color : "var(--line)",
+                            background: isSelected ? `${d.color}12` : "rgba(255, 255, 255, 0.01)",
+                            color: isSelected ? "#fff" : "var(--text-soft)",
+                            cursor: "pointer",
+                            transition: "all 0.25s ease"
+                          }}
+                        >
+                          <div style={{
+                            width: "32px",
+                            height: "32px",
+                            borderRadius: "8px",
+                            background: isSelected ? d.color : "rgba(255, 255, 255, 0.02)",
+                            display: "grid",
+                            placeItems: "center",
+                            color: isSelected ? "#fff" : d.color
+                          }}>
+                            <Icon size={16} />
+                          </div>
+                          <span style={{ fontSize: "11px", fontWeight: "700", textAlign: "center", lineHeight: "1.25" }}>
+                            {t(`umlPage.diagrams.${d.id}.title`)}
+                          </span>
+                        </motion.button>
+                      );
+                    })}
+                  </div>
+                )}
 
                 {/* Diagram Image Box (Full Width for Large View) */}
                 <div style={{
