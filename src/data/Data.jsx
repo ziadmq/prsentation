@@ -156,8 +156,10 @@ export const ownerFlowStepKeys = [
 
 export const adminFlowStepKeys = [
   { icon: Lock, key: "adminFlow.login" },
-  { icon: FileText, key: "adminFlow.reviewReq" },
-  { icon: ShieldCheck, key: "adminFlow.approveReq" },
-  { icon: Eye, key: "adminFlow.moderateContent" },
-  { icon: BarChart3, key: "adminFlow.viewGlobalMetrics" },
+  { icon: BarChart3, key: "adminFlow.analytics" },
+  { icon: Building2, key: "adminFlow.manageLocations" },
+  { icon: Calendar, key: "adminFlow.manageEvents" },
+  { icon: Users, key: "adminFlow.manageUsers" },
+  { icon: ShieldAlert, key: "adminFlow.moderation" },
+  { icon: CheckCircle2, key: "adminFlow.complete" },
 ];

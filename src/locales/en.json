@@ -223,7 +223,7 @@
       "waitApproval": { "title": "System Review", "text": "The administration reviews the submission to ensure trust and content quality.", "tag": "Review" },
       "addLocation": { "title": "Set / Edit Location", "text": "Pin coordinates on the interactive map and write details, working hours, and media.", "tag": "Location" },
       "createOffer": { "title": "Publish Offers & Discounts", "text": "Create geolocated promotional discounts to attract nearby explorers.", "tag": "Offers" },
-      "addEvent": { "title": "Organize Events & Activities", "text": "Plan and launch community initiatives or commercial activities to drive engagement.", "tag": "Events" },
+      "addEvent": { "title": "Organize Activities & Events", "text": "Organize activities and events. Submitted entries are reviewed by Admin (Approved/Rejected). If rejected, they are locked, and the Owner must create a new one from scratch.", "tag": "Events" },
       "viewAnalytics": { "title": "Track Analytics", "text": "Monitor views, user engagement on offers, ratings, and customer reviews.", "tag": "Analytics" }
     },
     "adminFlowPage": {
@@ -233,10 +233,12 @@
     },
     "adminFlow": {
       "login": { "title": "Admin Dashboard Login", "text": "Securely log into the web administration panel.", "tag": "Secure Login" },
-      "reviewReq": { "title": "Verify Business Requests", "text": "Audit document submissions, verification documents, and check maps updates.", "tag": "Audit" },
-      "approveReq": { "title": "Approve & Publish Locations", "text": "Approve listings to display them and their promotional offers on the public maps.", "tag": "Publish" },
-      "moderateContent": { "title": "Content Moderation", "text": "Review user flags, report logs, block inappropriate content or fake reviews.", "tag": "Moderation" },
-      "viewGlobalMetrics": { "title": "Monitor System Health", "text": "View platform statistics, daily active users, volume of offers, and database status.", "tag": "Analytics" }
+      "analytics": { "title": "Live Analytics & Metrics", "text": "Monitor platform traffic, active users, locations, and real-time dashboard analytics.", "tag": "Analytics" },
+      "manageLocations": { "title": "Verify & Approve Locations", "text": "Audit registration requests: Approve to let Owners publish live, or Reject with feedback.", "tag": "Locations" },
+      "manageEvents": { "title": "Review Activities & Events", "text": "Verify event guidelines. Approves to publish, or Rejects. If rejected, Owner must create a new one.", "tag": "Events" },
+      "manageUsers": { "title": "User Moderation", "text": "View user profiles, active roles, and suspend/unblock accounts to ensure community safety.", "tag": "Users" },
+      "moderation": { "title": "Reports & General Moderation", "text": "Resolve user reports, delete flag messages, and keep the feed clean of inappropriate content.", "tag": "Moderation" },
+      "complete": { "title": "Admin Operations Complete", "text": "Successfully secure the ecosystem, maintain data verification, and drive business/user growth.", "tag": "Complete" }
     },
     "screensPage": {
       "badge": "App Screens",
