@@ -139,15 +139,7 @@ function BuildDetailsPage({ pageAnimation }) {
     { key: "net", icon: Globe, color: "#a855f7" }
   ];
 
-  const techStackItems = [
-    { key: "frontend", icon: Smartphone, color: "#1E88E5" },
-    { key: "backend", icon: Server, color: "#22c55e" },
-    { key: "maps", icon: MapPin, color: "#f59e0b" },
-    { key: "tools", icon: Terminal, color: "#a855f7" },
-    { key: "design", icon: PenTool, color: "#EC407A" },
-    { key: "vc", icon: GitBranch, color: "#26C6DA" },
-    { key: "platform", icon: Globe, color: "#AB47BC" }
-  ];
+
 
   return (
     <motion.section key="build" className="page build-page" {...pageAnimation}>
@@ -258,7 +250,7 @@ function BuildDetailsPage({ pageAnimation }) {
             margin: "0 auto 24px",
             width: "100%"
           }}>
-            {["timeline", "requirements", "techStack", "uml"].map((tab) => (
+            {["timeline", "requirements", "uml"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -594,73 +586,7 @@ function BuildDetailsPage({ pageAnimation }) {
               </motion.div>
             )}
 
-            {activeTab === "techStack" && (
-              <motion.div
-                key="techStack"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                  gap: "16px"
-                }}
-              >
-                {techStackItems.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <motion.div
-                      key={item.key}
-                      whileHover={{ y: -5, scale: 1.02 }}
-                      style={{
-                        background: "var(--bg-card)",
-                        border: "1px solid var(--line)",
-                        borderRadius: "20px",
-                        padding: "20px",
-                        textAlign: "start",
-                        boxShadow: "var(--shadow-card)",
-                        display: "flex",
-                        gap: "16px",
-                        alignItems: "flex-start"
-                      }}
-                    >
-                      <div style={{
-                        width: "44px",
-                        height: "44px",
-                        borderRadius: "12px",
-                        background: `${item.color}15`,
-                        border: `1px solid ${item.color}30`,
-                        display: "grid",
-                        placeItems: "center",
-                        flexShrink: 0
-                      }}>
-                        <Icon size={20} style={{ color: item.color }} />
-                      </div>
-                      <div>
-                        <h4 style={{
-                          fontSize: "16px",
-                          fontWeight: "900",
-                          color: "#fff",
-                          margin: "0 0 6px 0"
-                        }}>
-                          {t(`buildPage.techStack.${item.key}.title`)}
-                        </h4>
-                        <p style={{
-                          fontSize: "14px",
-                          color: "var(--text-soft)",
-                          margin: 0,
-                          lineHeight: "1.5",
-                          fontWeight: "600"
-                        }}>
-                          {t(`buildPage.techStack.${item.key}.desc`)}
-                        </p>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
-            )}
+
 
             {activeTab === "uml" && (
               <motion.div
