@@ -405,7 +405,7 @@ function BuildDetailsPage({ pageAnimation }) {
                             position: "relative",
                             zIndex: 1
                           }}>
-                            {t(`buildPage.phases.${key}.title`)}
+                            {t(`buildPage.phases.${key}.title`, { lng: "en" })}
                           </h4>
 
                           <p style={{
