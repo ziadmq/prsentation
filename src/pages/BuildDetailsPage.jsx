@@ -6,7 +6,7 @@ import {
   Server, Smartphone, TestTubeDiagonal,
   Monitor, Database, Globe, Layers, Users, Cpu,
   MapPin, Terminal, GitBranch, Calendar, Info,
-  Workflow, Activity, ZoomIn
+  Workflow, Activity, ZoomIn, HardDrive
 } from "lucide-react";
 
 const phaseIcons = [Lightbulb, ClipboardList, PenTool, FileText, Server, Smartphone, TestTubeDiagonal];
