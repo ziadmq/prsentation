@@ -111,6 +111,10 @@ function ProjectMetrics({ pageAnimation }) {
 
   return (
     <motion.section key="metrics" className="page metrics-page" {...pageAnimation}>
+      {/* Decorative background orbits */}
+      <div className="metrics-orbit orbit-one"></div>
+      <div className="metrics-orbit orbit-two"></div>
+
       {/* Header section identical to other pages */}
       <div className="page-header">
         <div className="page-badge">
@@ -138,153 +142,106 @@ function ProjectMetrics({ pageAnimation }) {
         }}
       >
         {/* Totals Grid */}
-        <motion.div
-          variants={containerVariants}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "16px",
-            width: "100%"
-          }}
-        >
-          {totals.map((item) => {
+        <div className="metrics-total-grid">
+          {totals.map((item, index) => {
             const Icon = item.icon;
             return (
               <motion.div
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.03 }}
-                style={{
-                  background: "var(--bg-card)",
-                  border: "1px solid var(--line)",
-                  borderRadius: "20px",
-                  padding: "24px 16px",
-                  textAlign: "center",
-                  boxShadow: "var(--shadow-card)",
-                  cursor: "default"
-                }}
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="metrics-total-card"
+                style={{ "--delay": `${index * 0.1}s`, cursor: "default" }}
                 key={item.labelKey}
               >
-                <div style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "12px",
-                  background: `linear-gradient(135deg, ${item.color}22, ${item.color}11)`,
-                  border: `1px solid ${item.color}33`,
-                  display: "grid",
-                  placeItems: "center",
-                  margin: "0 auto 12px"
+                <div className="metrics-total-icon" style={{
+                  background: `linear-gradient(135deg, ${item.color}, ${item.color}bb)`,
+                  boxShadow: `0 8px 20px ${item.color}33`,
+                  margin: "0 auto 12px",
+                  color: "#fff"
                 }}>
-                  <Icon size={20} style={{ color: item.color }} />
+                  <Icon size={20} />
                 </div>
-                <div style={{ fontSize: "32px", fontWeight: "950", color: item.color, lineHeight: 1.1 }}>
+                <h3>
                   <AnimatedCounter target={item.value} />
-                </div>
-                <div style={{ fontSize: "13px", color: "var(--text-muted)", marginTop: "6px", fontWeight: "600" }}>
-                  {t(item.labelKey)}
-                </div>
+                </h3>
+                <p>{t(item.labelKey)}</p>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Repositories Showcase Grid */}
-        <motion.div
-          variants={containerVariants}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))",
-            gap: "24px",
-            width: "100%"
-          }}
-        >
+        <div className="repo-showcase-grid">
           {repositories.map((repo, index) => {
             const Icon = repo.icon;
             return (
               <motion.article
                 variants={itemVariants}
-                whileHover={{ y: -4 }}
-                style={{
-                  background: "var(--bg-card)",
-                  border: "1px solid var(--line)",
-                  borderRadius: "24px",
-                  padding: "26px",
-                  boxShadow: "var(--shadow-card)",
-                  textAlign: "start",
-                  position: "relative",
-                  overflow: "hidden"
-                }}
+                className="repo-showcase-card"
+                style={{ "--delay": `${index * 0.15}s` }}
                 key={repo.name}
               >
+                {/* Glowing light effect behind content */}
+                <div className="repo-card-glow" style={{
+                  background: `radial-gradient(circle, ${repo.color}25 0%, transparent 70%)`
+                }} />
+
                 {/* Repo Card Header */}
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
-                  <div style={{
-                    width: "52px",
-                    height: "52px",
-                    borderRadius: "14px",
-                    background: `linear-gradient(135deg, ${repo.color}22, ${repo.color}11)`,
-                    border: `1px solid ${repo.color}33`,
-                    display: "grid",
-                    placeItems: "center"
+                <div className="repo-card-head">
+                  <div className="repo-icon-box" style={{
+                    background: `linear-gradient(135deg, ${repo.color}, ${repo.color}bb)`,
+                    boxShadow: `0 8px 20px ${repo.color}33`,
+                    color: "#fff"
                   }}>
-                    <Icon size={24} style={{ color: repo.color }} />
+                    <Icon size={24} />
                   </div>
                   <div>
-                    <h3 style={{ fontSize: "20px", fontWeight: "950", color: "#fff", margin: 0 }}>{repo.name}</h3>
-                    <p style={{ fontSize: "13px", color: "var(--text-muted)", margin: "2px 0 0" }}>{repo.layer}</p>
+                    <h2>{repo.name}</h2>
+                    <p>{repo.layer}</p>
                   </div>
-                  <span style={{
+                  <span className="repo-number" style={{
                     marginLeft: isRtl ? "0" : "auto",
                     marginRight: isRtl ? "auto" : "0",
-                    fontSize: "24px",
+                    fontSize: "28px",
                     fontWeight: "950",
-                    color: "rgba(255,255,255,0.05)"
+                    color: "rgba(255,255,255,0.06)",
+                    userSelect: "none"
                   }}>0{index + 1}</span>
                 </div>
 
                 {/* Inner stats boxes */}
-                <div style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(4, 1fr)",
-                  gap: "10px",
-                  marginBottom: "24px"
-                }}>
+                <div className="repo-stats-grid">
                   {repo.stats.map((stat) => (
                     <div
                       key={stat.labelKey || stat.label}
-                      style={{
-                        background: "rgba(255,255,255,0.015)",
-                        border: "1px solid rgba(255,255,255,0.03)",
-                        borderRadius: "14px",
-                        padding: "12px 8px",
-                        textAlign: "center"
-                      }}
+                      className="repo-stat-box"
                     >
-                      <div style={{ fontSize: "18px", fontWeight: "950", color: "#fff" }}>
+                      <strong>
                         <AnimatedCounter target={stat.value} />
-                      </div>
-                      <div style={{ fontSize: "11px", color: "var(--text-muted)", marginTop: "4px", fontWeight: "600" }}>
+                      </strong>
+                      <span>
                         {stat.labelKey ? t(stat.labelKey) : stat.label}
-                      </div>
+                      </span>
                     </div>
                   ))}
                 </div>
 
                 {/* Progress bar info */}
-                <div style={{ marginBottom: "22px" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px", fontSize: "13px", fontWeight: "750" }}>
-                    <span style={{ color: "var(--text-soft)" }}>{t("metricsPage.completionRate")}</span>
+                <div className="repo-progress-area">
+                  <div className="repo-progress-info">
+                    <span>{t("metricsPage.completionRate")}</span>
                     <span style={{ color: repo.color }}>{repo.completion}%</span>
                   </div>
-                  <div style={{ height: "8px", background: "rgba(255,255,255,0.06)", borderRadius: "999px", overflow: "hidden" }}>
+                  <div className="repo-progress-track">
                     <motion.div
+                      className="repo-progress-fill"
                       initial={{ width: 0 }}
                       animate={{ width: `${repo.completion}%` }}
                       transition={{ duration: 1.5, ease: "easeOut" }}
                       style={{
-                        height: "100%",
                         background: `linear-gradient(90deg, ${repo.color}, ${repo.color}aa)`,
-                        borderRadius: "999px",
-                        boxShadow: `0 0 12px ${repo.color}55`
+                        boxShadow: `0 0 16px ${repo.color}55`,
+                        width: `${repo.completion}%`
                       }}
                     />
                   </div>
@@ -295,29 +252,7 @@ function ProjectMetrics({ pageAnimation }) {
                   href={repo.repoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "8px",
-                    padding: "12px",
-                    borderRadius: "14px",
-                    background: `linear-gradient(135deg, ${repo.color}15, ${repo.color}08)`,
-                    border: `1px solid ${repo.color}33`,
-                    color: "#fff",
-                    fontSize: "13.5px",
-                    fontWeight: "750",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = `linear-gradient(135deg, ${repo.color}25, ${repo.color}15)`;
-                    e.currentTarget.style.boxShadow = `0 4px 12px ${repo.color}22`;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = `linear-gradient(135deg, ${repo.color}15, ${repo.color}08)`;
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
+                  className="repo-link-btn"
                 >
                   <GitBranch size={16} />
                   {t("metricsPage.openRepo")}
@@ -326,84 +261,42 @@ function ProjectMetrics({ pageAnimation }) {
               </motion.article>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Repository Links Panel */}
         <motion.div
           variants={itemVariants}
-          style={{
-            background: "var(--bg-card)",
-            border: "1px solid var(--line)",
-            borderRadius: "24px",
-            padding: "24px",
-            boxShadow: "var(--shadow-card)",
-            width: "100%"
-          }}
+          className="repo-access-panel"
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "20px", textAlign: "start" }}>
-            <div style={{
-              width: "44px",
-              height: "44px",
-              borderRadius: "12px",
+          <div className="repo-access-title">
+            <div className="repo-icon-box" style={{
               background: "rgba(38, 198, 218, 0.1)",
               border: "1px solid rgba(38, 198, 218, 0.2)",
-              display: "grid",
-              placeItems: "center",
-              color: "var(--cyan)"
+              color: "var(--cyan)",
+              boxShadow: "none"
             }}>
-              <GitBranch size={20} />
+              <GitBranch size={22} />
             </div>
             <div>
-              <h2 style={{ fontSize: "18px", fontWeight: "950", color: "#fff", margin: 0 }}>
-                {t("metricsPage.repoLinksTitle")}
-              </h2>
-              <p style={{ fontSize: "13px", color: "var(--text-muted)", margin: "2px 0 0" }}>
-                {t("metricsPage.repoLinksSubtitle")}
-              </p>
+              <h2>{t("metricsPage.repoLinksTitle")}</h2>
+              <p style={{ margin: "2px 0 0" }}>{t("metricsPage.repoLinksSubtitle")}</p>
             </div>
           </div>
 
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "12px"
-          }}>
+          <div className="repo-link-list">
             {repositories.map((repo) => (
               <a
                 href={repo.repoUrl}
                 target="_blank"
                 rel="noreferrer"
                 key={repo.name}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "16px 20px",
-                  borderRadius: "16px",
-                  background: "rgba(255,255,255,0.02)",
-                  border: "1px solid var(--line)",
-                  color: "#fff",
-                  fontWeight: "750",
-                  fontSize: "14px",
-                  textDecoration: "none",
-                  transition: "all 0.25s ease"
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = `rgba(38, 198, 218, 0.08)`;
-                  e.currentTarget.style.borderColor = `rgba(38, 198, 218, 0.3)`;
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "rgba(255,255,255,0.02)";
-                  e.currentTarget.style.borderColor = "var(--line)";
-                  e.currentTarget.style.transform = "none";
-                }}
+                className="repo-mini-link"
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <GitBranch size={16} style={{ color: repo.color }} />
                   <span>{repo.name}</span>
                 </div>
-                <ExternalLink size={14} style={{ color: "var(--text-muted)" }} />
+                <ExternalLink size={14} />
               </a>
             ))}
           </div>
@@ -412,96 +305,50 @@ function ProjectMetrics({ pageAnimation }) {
         {/* Development Journey Timeline */}
         <motion.div
           variants={itemVariants}
-          style={{
-            background: "var(--bg-card)",
-            border: "1px solid var(--line)",
-            borderRadius: "24px",
-            padding: "24px",
-            boxShadow: "var(--shadow-card)",
-            width: "100%",
-            marginBottom: "20px"
-          }}
+          className="metrics-bottom-panel"
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "24px", textAlign: "start" }}>
-            <div style={{
-              width: "44px",
-              height: "44px",
-              borderRadius: "12px",
+          <div className="metrics-bottom-title">
+            <div className="repo-icon-box" style={{
               background: "rgba(168, 85, 247, 0.1)",
               border: "1px solid rgba(168, 85, 247, 0.2)",
-              display: "grid",
-              placeItems: "center",
-              color: "#a855f7"
+              color: "#a855f7",
+              boxShadow: "none"
             }}>
-              <Layers3 size={20} />
+              <Layers3 size={22} />
             </div>
             <div>
-              <h2 style={{ fontSize: "18px", fontWeight: "950", color: "#fff", margin: 0 }}>
-                {t("metricsPage.journeyTitle")}
-              </h2>
-              <p style={{ fontSize: "13px", color: "var(--text-muted)", margin: "2px 0 0" }}>
-                {t("metricsPage.journeySubtitle")}
-              </p>
+              <h2>{t("metricsPage.journeyTitle")}</h2>
+              <p style={{ margin: "2px 0 0" }}>{t("metricsPage.journeySubtitle")}</p>
             </div>
           </div>
 
           {/* Stepped Progress timeline */}
-          <div style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            gap: "14px",
-            padding: "10px 0",
-            position: "relative",
-            marginBottom: "26px"
-          }}>
+          <div className="journey-line">
             {workFlow.map((step, index) => (
               <div
                 key={step}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: "8px",
-                  flex: "1 1 120px",
-                  textAlign: "center",
-                  position: "relative"
-                }}
+                className="journey-step"
+                style={{ "--delay": `${index * 0.08}s` }}
               >
-                <div style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "50%",
+                <div className="repo-icon-box journey-dot" style={{
                   background: "linear-gradient(135deg, var(--cyan), var(--blue))",
-                  display: "grid",
-                  placeItems: "center",
                   color: "#fff",
-                  boxShadow: "0 4px 10px rgba(30, 136, 229, 0.25)",
-                  zIndex: 2
+                  boxShadow: "0 4px 10px rgba(30, 136, 229, 0.25)"
                 }}>
-                  <span style={{ fontSize: "12px", fontWeight: "900" }}>{index + 1}</span>
+                  <span style={{ fontSize: "13px", fontWeight: "900" }}>{index + 1}</span>
                 </div>
-                <span style={{ fontSize: "13px", fontWeight: "700", color: "var(--text-soft)" }}>{step}</span>
+                <span>{step}</span>
               </div>
             ))}
           </div>
 
           {/* Impact Callout */}
-          <div style={{
-            padding: "20px",
-            background: "rgba(34, 197, 94, 0.05)",
-            border: "1px solid rgba(34, 197, 94, 0.15)",
-            borderRadius: "18px",
-            display: "flex",
-            gap: "14px",
-            alignItems: "center",
-            textAlign: "start"
-          }}>
+          <div className="impact-card">
             <Activity size={22} style={{ color: "var(--green)", flexShrink: 0 }} />
-            <p style={{ fontSize: "14px", color: "var(--text-soft)", margin: 0, lineHeight: "1.6", fontWeight: "600" }}>
+            <p style={{ margin: 0 }}>
               {t("metricsPage.impactText")}
             </p>
-            <Braces size={22} style={{ color: "var(--green)", flexShrink: 0, marginLeft: isRtl ? "0" : "auto", marginRight: isRtl ? "auto" : "0" }} />
+            <Braces size={22} style={{ color: "var(--green)", flexShrink: 0 }} />
           </div>
         </motion.div>
       </motion.div>
