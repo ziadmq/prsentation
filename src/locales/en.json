@@ -210,7 +210,7 @@
           "explain": "The UML Class Diagram models the object-oriented structure of the JO MAP system. It defines the attributes, methods, relationships, and multiplicities between core domain classes including User, Business Owner, Admin, Post, Location, Activity, and Governorate, establishing a robust blueprint for data modeling."
         },
         "er": {
-          "title": "Entity-Relationship Diagram (ERD)",
+          "title": "Database Entity-Relationship Diagram (ERD)",
           "explain": "The Entity-Relationship (ER) Diagram defines the relational database schema, mapping the logical entities and relationships that store platform data. It details primary and foreign keys, attributes, and cardinalities between core tables such as Users, Locations, Activities, Comments, Community Posts, Chats, and Notifications."
         },
         "seq_search_location": {
