@@ -119,7 +119,7 @@
       },
       "techStack": {
         "frontend": { "title": "Frontend Development", "desc": "Kotlin, Jetpack Compose" },
-        "backend": { "title": "Backend Services", "desc": "Node.js, Firebase Authentication, Firestore Database" },
+        "backend": { "title": "Backend Services", "desc": "Spring Boot, Firebase Authentication, Firestore Database" },
         "maps": { "title": "Map Services", "desc": "Google Maps API" },
         "tools": { "title": "Development Tools", "desc": "Android Studio, VS Code" },
         "design": { "title": "UI/UX Design", "desc": "Figma" },
@@ -150,7 +150,7 @@
         "phase5": {
           "tag": "01/12/2025 - 06/12/2025",
           "title": "Implementation Plan & Technology Stack",
-          "text": "Defined major implementation tasks and resources. Selected Kotlin & Jetpack Compose for frontend development, Node.js and Firebase (Authentication, Firestore Database, and Storage) for backend services, and Google Maps API for map integration."
+          "text": "Defined major implementation tasks and resources. Selected Kotlin & Jetpack Compose for frontend development, Spring Boot and Firebase (Authentication, Firestore Database, and Storage) for backend services, and Google Maps API for map integration."
         },
         "phase6": {
           "tag": "07/12/2025 - 14/12/2025",
@@ -203,7 +203,7 @@
         },
         "deployment": {
           "title": "Deployment Diagram (Physical View)",
-          "explain": "The Deployment Diagram depicts the physical distribution of hardware nodes, client interfaces, backend servers, databases, and third-party integrations. It illustrates how the Android Mobile App client communicates with the Node.js Backend Server Cluster via HTTPS REST APIs, and how data is persisted across Firestore and Cloud Storage, alongside external connection protocols."
+          "explain": "The Deployment Diagram depicts the physical distribution of hardware nodes, client interfaces, backend servers, databases, and third-party integrations. It illustrates how the Android Mobile App client communicates with the Spring Boot Backend Server Cluster via HTTPS REST APIs, and how data is persisted across Firestore and Cloud Storage, alongside external connection protocols."
         },
         "class": {
           "title": "Domain Class Diagram",

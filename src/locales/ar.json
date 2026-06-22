@@ -119,7 +119,7 @@
       },
       "techStack": {
         "frontend": { "title": "تطوير الواجهة الأمامية", "desc": "Kotlin, Jetpack Compose" },
-        "backend": { "title": "الخدمات الخلفية", "desc": "Node.js, Firebase Authentication, Firestore Database" },
+        "backend": { "title": "الخدمات الخلفية", "desc": "Spring Boot, Firebase Authentication, Firestore Database" },
         "maps": { "title": "خدمات الخرائط والموقع", "desc": "Google Maps API" },
         "tools": { "title": "أدوات التطوير الأساسية", "desc": "Android Studio, VS Code" },
         "design": { "title": "تصميم واجهة وتجربة المستخدم", "desc": "Figma" },
@@ -150,7 +150,7 @@
         "phase5": {
           "tag": "01/12/2025 - 06/12/2025",
           "title": "خطة التنفيذ واختيار التقنيات",
-          "text": "تأسيس بيئة التطوير وتحديد الموارد والمهام. تم اختيار تقنيات Kotlin و Jetpack Compose لواجهات الأندرويد، وبيئة Node.js للخدمات الخلفية، وقاعدة بيانات Firestore، وخرائط Google Maps للموقع."
+          "text": "تأسيس بيئة التطوير وتحديد الموارد والمهام. تم اختيار تقنيات Kotlin و Jetpack Compose لواجهات الأندرويد، وإطار عمل Spring Boot للخدمات الخلفية، وقاعدة بيانات Firestore، وخرائط Google Maps للموقع."
         },
         "phase6": {
           "tag": "07/12/2025 - 14/12/2025",
@@ -203,7 +203,7 @@
         },
         "deployment": {
           "title": "مخطط النشر (Deployment Diagram - Physical)",
-          "explain": "يوضح مخطط النشر (Deployment Diagram) التوزيع الفيزيائي لعقد العتاد، وواجهات العميل، وخوادم الواجهة الخلفية، وقواعد البيانات، والتكامل الخارجي. ويبين كيفية اتصال تطبيق الأندرويد بخادم Node.js عبر HTTPS REST APIs، وتخزين البيانات عبر Firestore والتخزين السحابي، بالإضافة لبروتوكولات الاتصال الخارجية."
+          "explain": "يوضح مخطط النشر (Deployment Diagram) التوزيع الفيزيائي لعقد العتاد، وواجهات العميل، وخوادم الواجهة الخلفية، وقواعد البيانات، والتكامل الخارجي. ويبين كيفية اتصال تطبيق الأندرويد بخادم Spring Boot عبر HTTPS REST APIs، وتخزين البيانات عبر Firestore والتخزين السحابي، بالإضافة لبروتوكولات الاتصال الخارجية."
         },
         "class": {
           "title": "مخطط الفئات (Class Diagram)",
