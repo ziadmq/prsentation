@@ -108,7 +108,6 @@ export const menuItems = [
   { id: "adminFlow", labelKey: "menu.adminFlow", icon: ShieldCheck },
   { id: "integration", labelKey: "menu.integration", icon: GitMerge },
   { id: "build", labelKey: "menu.build", icon: Hammer },
-  { id: "tools", labelKey: "menu.tools", icon: Wrench },
   { id: "metrics", labelKey: "menu.metrics", icon: BarChart3 },
   { id: "future", labelKey: "menu.future", icon: Compass },
   { id: "team", labelKey: "menu.team", icon: Users },
