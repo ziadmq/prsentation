@@ -378,24 +378,7 @@ function BuildDetailsPage({ pageAnimation }) {
                             pointerEvents: "none"
                           }} />
 
-                          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px", flexWrap: "wrap" }}>
-                            <span style={{
-                              fontSize: "12px",
-                              fontWeight: "800",
-                              color: color,
-                              background: `${color}15`,
-                              border: `1px solid ${color}30`,
-                              padding: "4px 14px",
-                              borderRadius: "999px",
-                              whiteSpace: "nowrap",
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "6px"
-                            }}>
-                              <Calendar size={12} />
-                              {t(`buildPage.phases.${key}.tag`)}
-                            </span>
-                          </div>
+
 
                           <h4 style={{
                             fontSize: "18px",
