@@ -16,7 +16,7 @@
       "qr": "Scan Presentation (QR)",
       "intro": "About JOMAP Project",
       "screens": "App Screens",
-      "build": "JO MAP Development Cycle",
+      "build": "Build Details",
       "uml": "UML Diagrams",
       "tools": "Dev Tools",
       "roadmap": "User Journey",
@@ -334,13 +334,16 @@
       "subtitle": "This flow shows the steps business owners take from account registration and document verification, to managing locations and publishing promotional offers and events."
     },
     "ownerFlow": {
-      "login": { "title": "Owner Portal Login", "text": "Log in to the owner portal to access management and promotional tools.", "tag": "Login" },
-      "registerBusiness": { "title": "Submit Business Data", "text": "Provide business name, registration files, location details, and contact info.", "tag": "Verification" },
-      "waitApproval": { "title": "System Review", "text": "The administration reviews the submission to ensure trust and content quality.", "tag": "Review" },
-      "addLocation": { "title": "Set / Edit Location", "text": "Pin coordinates on the interactive map and write details, working hours, and media.", "tag": "Location" },
-      "createOffer": { "title": "Publish Offers & Discounts", "text": "Create geolocated promotional discounts to attract nearby explorers.", "tag": "Offers" },
-      "addEvent": { "title": "Organize Activities & Events", "text": "Organize activities and events. Submitted entries are reviewed by Admin (Approved/Rejected). If rejected, they are locked, and the Owner must create a new one from scratch.", "tag": "Events" },
-      "viewAnalytics": { "title": "Track Analytics", "text": "Monitor views, user engagement on offers, ratings, and customer reviews.", "tag": "Analytics" }
+      "registerBusiness": { "title": "Submit Business Registration", "text": "The owner starts by submitting a complete registration request: business name, category, precise location on the map, governorate, working hours, logo, cover photo, and social media links.", "tag": "Start" },
+      "login": { "title": "Login to Personal Account", "text": "After admin approval, the owner logs in with their personal account to securely access the dashboard and manage their listed business.", "tag": "Account" },
+      "dashboard": { "title": "Business Control Dashboard", "text": "Access the personal dashboard which provides a comprehensive overview and real-time analytics of business performance, including total offer views, total clicks, and quick shortcuts to manage content, ratings, and data.", "tag": "Dashboard" },
+      "manageLocation": { "title": "Manage & Update Location", "text": "Continuously manage and update location details to keep information accurate for visitors: edit contact info, update working hours, change promotional images and cover photo to keep the profile fresh.", "tag": "Location" },
+      "addEvent": { "title": "Organize Activities & Events", "text": "The owner organizes activities and events which are submitted for Admin review. If approved they are published immediately; if rejected they are locked and the Owner must create a new one from scratch.", "tag": "Events" },
+      "manageSubscribers": { "title": "Manage Event Subscribers", "text": "A dedicated panel for each event allowing the organizer to manage attendance requests and registered participants individually or in bulk.", "tag": "Subscribers" },
+      "createOffer": { "title": "Launch Geo-targeted Offers", "text": "Create exclusive promotional offers to attract customers in the business's geographic area. Control discount percentages, renew expired offers with one click, and track their performance.", "tag": "Offers" },
+      "notifications": { "title": "Receive Instant Notifications", "text": "Receive real-time notifications to stay updated on everything around the business: approval/rejection of registration or pending edits, new event registrations, and new ratings or comments from visitors.", "tag": "Connect" },
+      "viewReviews": { "title": "Monitor Visitor Reviews", "text": "Analyze star ratings and written reviews from visitors, track rating edit history to see how customer impressions changed after resolving issues, and respond to build strong interactive relationships.", "tag": "Reviews" },
+      "complete": { "title": "Experience Complete & Success", "text": "The business owner achieves maximum promotional and investment benefit through ongoing interaction of app visitors with their offers and events, leading to greater geographic reach and business growth.", "tag": "Done" }
     },
     "adminFlowPage": {
       "badge": "Admin Journey",
