@@ -473,7 +473,6 @@ html[dir="ltr"] .content.small-sidebar {
 .qr-modal-card,
 .roadmap-card,
 .team-roadmap-card,
-.screen-description-card,
 .metrics-total-card,
 .repo-showcase-card,
 .repo-access-panel,
@@ -490,7 +489,6 @@ html[dir="ltr"] .content.small-sidebar {
 .animated-qr-card:hover,
 .roadmap-card:hover,
 .team-roadmap-card:hover,
-.screen-description-card:hover,
 .metrics-total-card:hover,
 .repo-showcase-card:hover,
 .supervisor-section:hover,
@@ -602,7 +600,6 @@ html[dir="ltr"] .supervisor-section {
 .supervisor-info span,
 .team-section-title span,
 .roadmap-card span,
-.screen-description-card span,
 .repo-number {
   color: var(--cyan-soft);
   font-size: 12px;
@@ -620,7 +617,6 @@ html[dir="ltr"] .supervisor-section {
 .roadmap-card p,
 .team-roadmap-card p,
 .feature-card p,
-.screen-description-card p,
 .tech-column p {
   color: var(--text-soft);
   line-height: 1.85;
@@ -1329,50 +1325,308 @@ html[dir="ltr"] .supervisor-section {
 
 /* Screens */
 
-.creative-screens-wrapper {
-  display: grid;
-  gap: 44px;
-}
-
-.creative-screen-row {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 38px;
+.screens-page {
   align-items: center;
+  text-align: center;
 }
 
-.creative-screen-row.reverse {
-  grid-template-columns: 320px 1fr;
+.screens-page .page-badge {
+  margin-inline: auto;
 }
 
-.creative-screen-row.reverse .mobile-mockup {
-  order: 0;
+/* Category Tabs */
+.screens-category-tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 32px 0 40px;
+  flex-wrap: wrap;
 }
 
-.mobile-mockup {
-  position: relative;
-  width: 310px;
-  height: 620px;
-  padding: 14px;
-  border-radius: 44px;
-  background: linear-gradient(145deg, #111827, #020617);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
-}
-
-.phone-notch {
-  position: absolute;
-  top: 18px;
-  left: 50%;
-  width: 96px;
-  height: 24px;
-  transform: translateX(-50%);
+.screens-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
   border-radius: 999px;
-  background: #020617;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.screens-tab:hover {
+  border-color: var(--line-strong);
+  color: var(--text-main);
+  background: rgba(var(--color-surface-variant-rgb), 0.9);
+}
+
+.screens-tab.active {
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 28px rgba(var(--color-primary-rgb), 0.35);
+}
+
+.screens-tab.active svg {
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
+}
+
+/* Screens Gallery */
+.screens-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* Screen Showcase Card */
+.screen-showcase-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Phone Mockup */
+.showcase-phone {
+  position: relative;
+  cursor: pointer;
+  perspective: 800px;
+  transition: transform 0.4s ease;
+}
+
+.showcase-phone-bezel {
+  position: relative;
+  width: 200px;
+  height: 420px;
+  padding: 10px;
+  border-radius: 32px;
+  background: linear-gradient(145deg, #1a1a2e, #0a0a1a);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.showcase-phone:hover .showcase-phone-bezel {
+  border-color: rgba(var(--color-primary-rgb), 0.4);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(var(--color-primary-rgb), 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.showcase-phone-notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 18px;
+  border-radius: 999px;
+  background: #0a0a1a;
   z-index: 3;
 }
 
-.phone-screen {
+.showcase-phone-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #0f172a;
+}
+
+.showcase-phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.showcase-phone:hover .showcase-phone-screen img {
+  transform: scale(1.03);
+}
+
+.showcase-phone-home-bar {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Phone Glow Effect */
+.showcase-phone-glow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(var(--color-primary-rgb), 0.25) 0%, transparent 70%);
+  filter: blur(15px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.showcase-phone:hover .showcase-phone-glow {
+  opacity: 1;
+}
+
+/* Screen Info */
+.screen-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.screen-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.screen-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* Lightbox Overlay */
+.screen-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.screen-lightbox-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 60px;
+  max-height: 95vh;
+}
+
+/* Lightbox Close Button */
+.lightbox-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+/* Lightbox Navigation */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.lightbox-prev {
+  left: 0;
+}
+
+.lightbox-next {
+  right: 0;
+}
+
+.lightbox-nav:hover {
+  background: rgba(var(--color-primary-rgb), 0.3);
+  border-color: rgba(var(--color-primary-rgb), 0.5);
+  box-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.2);
+}
+
+/* Lightbox Phone */
+.lightbox-phone {
+  position: relative;
+}
+
+.lightbox-phone-bezel {
+  position: relative;
+  width: 300px;
+  height: 620px;
+  padding: 14px;
+  border-radius: 44px;
+  background: linear-gradient(145deg, #1a1a2e, #0a0a1a);
+  border: 2px solid rgba(var(--color-primary-rgb), 0.25);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(var(--color-primary-rgb), 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-phone-notch {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88px;
+  height: 22px;
+  border-radius: 999px;
+  background: #0a0a1a;
+  z-index: 3;
+}
+
+.lightbox-phone-screen {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -1380,27 +1634,70 @@ html[dir="ltr"] .supervisor-section {
   background: #0f172a;
 }
 
-.screen-description-card {
-  padding: 32px;
-  border-radius: 28px;
+.lightbox-phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.screen-description-card h2 {
-  font-size: 34px;
-  margin: 8px 0 12px;
-}
-
-.screen-mini-line {
-  display: flex;
-  gap: 10px;
-  margin-top: 22px;
-}
-
-.screen-mini-line div {
-  width: 52px;
-  height: 6px;
+.lightbox-home-bar {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 5px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Lightbox Info */
+.lightbox-info {
+  text-align: center;
+  max-width: 420px;
+}
+
+.lightbox-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.lightbox-info p {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* Lightbox Dots */
+.lightbox-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.lightbox-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.lightbox-dot.active {
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  width: 28px;
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(var(--color-primary-rgb), 0.5);
+}
+
+.lightbox-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* Tech */
@@ -2234,13 +2531,14 @@ html[dir="ltr"] .supervisor-section {
     grid-template-columns: 1fr;
   }
 
-  .creative-screen-row,
-  .creative-screen-row.reverse {
-    grid-template-columns: 1fr;
+  .screens-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
   }
 
-  .mobile-mockup {
-    margin: 0 auto;
+  .showcase-phone-bezel {
+    width: 180px;
+    height: 380px;
   }
 
   .team-roadmap-card {
@@ -2337,9 +2635,18 @@ html[dir="ltr"] .supervisor-section {
     gap: 24px;
   }
 
-  .mobile-mockup {
-    width: min(290px, 100%);
-    height: 580px;
+  .showcase-phone-bezel {
+    width: min(170px, 100%);
+    height: 360px;
+  }
+
+  .lightbox-phone-bezel {
+    width: min(260px, 85vw);
+    height: 540px;
+  }
+
+  .screen-lightbox-content {
+    padding: 20px;
   }
 
   .repo-card-head,

@@ -122,6 +122,97 @@ export const featureKeys = [
   { icon: MessageCircle, key: "features.directComm" },
 ];
 
+export const screenCategories = [
+  {
+    categoryKey: "screens.categories.auth",
+    screens: [
+      { key: "screens.splash", image: "/auth screen/photo_2026-06-23_07-22-23.jpg" },
+      { key: "screens.login", image: "/auth screen/photo_2026-06-23_07-22-27.jpg" },
+      { key: "screens.registerTop", image: "/auth screen/photo_2026-06-23_07-22-24.jpg" },
+      { key: "screens.registerBottom", image: "/auth screen/photo_2026-06-23_07-22-29.jpg" },
+      { key: "screens.forgotPassword", image: "/auth screen/photo_2026-06-23_07-22-31.jpg" },
+      { key: "screens.verifyOtp", image: "/auth screen/photo_2026-06-23_07-22-26.jpg" },
+    ],
+  },
+  {
+    categoryKey: "screens.categories.search",
+    screens: [
+      { key: "screens.searchLocations", image: "/search/photo_2026-06-23_07-29-22.jpg" },
+      { key: "screens.searchOrganizations", image: "/search/photo_2026-06-23_07-29-20.jpg" },
+      { key: "screens.searchUsers", image: "/search/photo_2026-06-23_07-29-18.jpg" },
+      { key: "screens.searchActivities", image: "/search/photo_2026-06-23_07-29-15.jpg" },
+      { key: "screens.searchActivities2", image: "/search/photo_2026-06-23_07-29-17.jpg" },
+      { key: "screens.searchOffers", image: "/search/photo_2026-06-23_07-29-14.jpg" },
+    ],
+  },
+  {
+    categoryKey: "screens.categories.settings",
+    screens: [
+      { key: "screens.userProfile", image: "/SEETINGS AND PROFILE/photo_2026-06-23_07-26-01.jpg" },
+      { key: "screens.settingsExplore", image: "/SEETINGS AND PROFILE/photo_2026-06-23_07-25-59.jpg" },
+      { key: "screens.settingsSocial", image: "/SEETINGS AND PROFILE/photo_2026-06-23_07-25-58.jpg" },
+      { key: "screens.settingsSupport", image: "/SEETINGS AND PROFILE/photo_2026-06-23_07-25-57.jpg" },
+    ],
+  },
+  {
+    categoryKey: "screens.categories.community",
+    screens: [
+      { key: "screens.homeFeed", image: "/community/photo_2026-06-23_07-34-26.jpg" },
+      { key: "screens.savedPosts", image: "/community/photo_2026-06-23_07-34-22.jpg" },
+      { key: "screens.savedLocations", image: "/community/photo_2026-06-23_07-34-23.jpg" },
+      { key: "screens.notifications", image: "/community/photo_2026-06-23_07-34-25.jpg" },
+      { key: "screens.activitiesFeed", image: "/community/photo_2026-06-23_07-34-20.jpg" },
+    ],
+  },
+  {
+    categoryKey: "screens.categories.location",
+    screens: [
+      { key: "screens.locationHeader", image: "/location/photo_2026-06-23_07-36-36.jpg" },
+      { key: "screens.locationDashboard", image: "/location/photo_2026-06-23_07-36-35.jpg" },
+      { key: "screens.locationManage", image: "/location/photo_2026-06-23_07-36-32.jpg" },
+      { key: "screens.locationOverview", image: "/location/photo_2026-06-23_07-36-33.jpg" },
+    ],
+  },
+  {
+    categoryKey: "screens.categories.offer",
+    screens: [
+      { key: "screens.offerDashboardOverview", image: "/offer/photo_2026-06-23_07-38-46.jpg" },
+      { key: "screens.offerDashboardActive", image: "/offer/photo_2026-06-23_07-38-45.jpg" },
+      { key: "screens.offerDashboardExpired", image: "/offer/photo_2026-06-23_07-38-43.jpg" },
+      { key: "screens.offerDetailStats", image: "/offer/photo_2026-06-23_07-38-40.jpg" },
+    ],
+  },
+  {
+    categoryKey: "screens.categories.activityExplorer",
+    screens: [
+      { key: "screens.activityDetail", image: "/activity explorer/photo_2026-06-23_07-42-30.jpg" },
+      { key: "screens.activityRequirements", image: "/activity explorer/photo_2026-06-23_07-42-28.jpg" },
+      { key: "screens.activityRegister", image: "/activity explorer/photo_2026-06-23_07-42-25.jpg" },
+      { key: "screens.activityFeedCommunity", image: "/activity explorer/photo_2026-06-23_07-42-29.jpg" },
+      { key: "screens.activityRegisterSuccess", image: "/activity explorer/photo_2026-06-23_07-42-26.jpg" },
+    ],
+  },
+  {
+    categoryKey: "screens.categories.createPromotion",
+    screens: [
+      { key: "screens.createOfferPart1", image: "/add offer and activity/photo_2026-06-23_07-40-18.jpg" },
+      { key: "screens.createOfferPart2", image: "/add offer and activity/photo_2026-06-23_07-40-19.jpg" },
+      { key: "screens.createActivityPart1", image: "/add offer and activity/photo_2026-06-23_07-40-22.jpg" },
+      { key: "screens.createActivityPart2", image: "/add offer and activity/photo_2026-06-23_07-40-21.jpg" },
+    ],
+  },
+  {
+    categoryKey: "screens.categories.activityManagement",
+    screens: [
+      { key: "screens.activityNotifications", image: "/activitymangment/photo_2026-06-23_07-45-49.jpg" },
+      { key: "screens.activityManageSeats", image: "/activitymangment/photo_2026-06-23_07-45-51.jpg" },
+      { key: "screens.activityApprovedSchedule", image: "/activitymangment/photo_2026-06-23_07-45-53.jpg" },
+      { key: "screens.activityHostPublishing", image: "/activitymangment/photo_2026-06-23_07-46-06.jpg" },
+      { key: "screens.activityReviewsDashboard", image: "/activitymangment/photo_2026-06-23_07-46-05.jpg" },
+    ],
+  },
+];
+
 export const screenKeys = [
   { key: "screens.home", image: "/screens/home.png" },
   { key: "screens.map", image: "/screens/map.png" },
