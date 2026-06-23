@@ -102,7 +102,7 @@
         },
         "software": {
           "os": { "name": "نظام التشغيل", "desc": "Android, Web, iOS" },
-          "ide": { "name": "بيئة التطوير (IDE)", "desc": "Android Studio, Visual Studio Code" },
+          "ide": { "name": "بيئة التطوير (IDE)", "desc": "Android Studio, Visual Studio Code , IntelliJ" },
           "lang": { "name": "لغات البرمجة", "desc": "Kotlin, Java, JavaScript" },
           "db": { "name": "قاعدة البيانات", "desc": "Firebase, PostgreSQL, Neon" },
           "apis": { "name": "الخدمات السحابية و APIs", "desc": "Google Cloud, Google Maps API" },
@@ -425,7 +425,7 @@
     },
     "teamMembers": {
       "ghaleb": {
-        "name": "Ghaleb Shihab",
+        "name": "Ghaleb Shhab",
         "role": "مطور الواجهة الخلفية",
         "description": "مسؤول عن بناء خدمات الواجهة الخلفية، التعامل مع المنطق البرمجي لواجهات برمجة التطبيقات (API)، تدفق المصادقة، وربط التطبيق بقاعدة البيانات."
       },

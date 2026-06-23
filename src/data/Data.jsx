@@ -55,7 +55,7 @@ export const teamMembers = [
   {
     nameKey: "teamMembers.ghaleb.name",
     roleKey: "teamMembers.ghaleb.role",
-    image: "/team/Me.JPEG",
+    image: "/team/Me.jpg",
     icon: Server,
     linkedin: "#",
     descriptionKey: "teamMembers.ghaleb.description",
