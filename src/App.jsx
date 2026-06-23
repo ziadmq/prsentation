@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "./App.css";
+import "./mobile-fixes.css";
 
 import Sidebar from "./components/Sidbar";
 
@@ -76,7 +77,7 @@ function App() {
         return <EmailPage pageAnimation={pageAnimation} />;
 
       case "metrics":
-          return <ProjectMetrices pageAnimation={pageAnimation} />;
+        return <ProjectMetrices pageAnimation={pageAnimation} />;
 
       default:
         return <IntroPage pageAnimation={pageAnimation} />;
