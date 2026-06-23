@@ -53,6 +53,15 @@ export const supervisor = {
 
 export const teamMembers = [
   {
+    nameKey: "teamMembers.ziad.name",
+    roleKey: "teamMembers.ziad.role",
+    image: "/team/Ziad Qafisheh.jpg",
+    icon: Code2,
+    linkedin: "#",
+    descriptionKey: "teamMembers.ziad.description",
+    skills: ["React", "CSS", "Animations", "Frontend Styling"],
+  },
+  {
     nameKey: "teamMembers.ghaleb.name",
     roleKey: "teamMembers.ghaleb.role",
     image: "/team/Me.jpg",
@@ -87,15 +96,6 @@ export const teamMembers = [
     linkedin: "#",
     descriptionKey: "teamMembers.abd.description",
     skills: ["Spring Boot", "Testing Support", "REST API", "Coordination" , "Kotlin"],
-  },
-  {
-    nameKey: "teamMembers.ziad.name",
-    roleKey: "teamMembers.ziad.role",
-    image: "/team/Ziad Qafisheh.jpg",
-    icon: Code2,
-    linkedin: "#",
-    descriptionKey: "teamMembers.ziad.description",
-    skills: ["React", "CSS", "Animations", "Frontend Styling"],
   },
 ];
 
